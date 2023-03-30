@@ -24,9 +24,9 @@ const userInfo = createSlice({
         },
         sortSongs(state, action) {
             console.log("hi");
-        }
+        },
     }
 })
 
-export const {updateSliders} = userInfo.actions;
+export const {updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;

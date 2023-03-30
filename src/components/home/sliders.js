@@ -1,14 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { updateSliders } from "../state/reducers/songreducer";
+import { updateSliders } from "../../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
 
 const Sliders = () => {
 
     const {playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-    console.log(playlists);
-    console.log(songs);
     const dispatcher = useDispatch();
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);
