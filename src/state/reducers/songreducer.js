@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const songInfo = createSlice({
+const userInfo = createSlice({
     name: "intialSongs",
     initialState: {
+        playlists: [],
         songs: [],
         sliders: {
             acousticness: 50,
@@ -19,11 +20,13 @@ const songInfo = createSlice({
     },
     reducers: {
         updateSliders(state, action) {
-            console.log("yuh")
             state.sliders = action.payload;
+        },
+        sortSongs(state, action) {
+            console.log("hi");
         }
     }
 })
 
-export const {updateSliders} = songInfo.actions;
-export default songInfo.reducer;
+export const {updateSliders} = userInfo.actions;
+export default userInfo.reducer;
