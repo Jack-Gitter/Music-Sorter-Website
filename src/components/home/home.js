@@ -7,6 +7,7 @@ import axios from "axios";
 const Home = () => {
     const [searchParams] = useSearchParams(); 
     const code = searchParams.get('code');
+
     return (
         <>
         <HeaderComponent/>
