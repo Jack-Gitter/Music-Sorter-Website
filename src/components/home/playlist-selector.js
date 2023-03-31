@@ -15,7 +15,7 @@ const PlaylistSelector = () => {
 
     return (
         <select onChange={(e) => console.log(getTracks(getPlaylistID(e.target.value)))}>
-            {playlists.map((plist) => <option>{plist.name}</option>)}
+            {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
         </select>
     );
 }
