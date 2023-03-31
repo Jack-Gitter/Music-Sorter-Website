@@ -13,7 +13,7 @@ const CurrentSong = () => {
 
     return (
         <>
-        <h1>Current song is {songs[0]}</h1>
+        {songs.length == 0 ? <h1>nothing</h1> : <h1>Current song is {songs[0].name}</h1>}
         </>
     );
 }

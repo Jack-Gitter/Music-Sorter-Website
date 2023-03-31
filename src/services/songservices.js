@@ -27,8 +27,6 @@ export const getTracksFromPlaylist = async (id) => {
         }
         counter+=100;
     }
-    console.log(res);
     return res;
 }
 
-//export const getUserPlaylistsThunk 

@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setAccessTokenAPI } from "../../services/songservices";
-import { getUserPlaylistsThunk } from "../../services/songthunks";
+import { getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../services/songthunks";
 
 const userInfo = createSlice({
     name: "intialSongs",
@@ -41,6 +41,12 @@ const userInfo = createSlice({
         [getUserPlaylistsThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlists = payload.items;
+            },
+        [getTracksFromPlaylistThunk.fulfilled]:
+            (state, {payload}) => {
+                state.songs = payload;
+                console.log('this is the state \'s songs!')
+                console.log(state.songs);
             }
     },
 })

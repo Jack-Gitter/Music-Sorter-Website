@@ -1,9 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { getTracksFromPlaylist } from "../../services/songservices";
+import { useDispatch, useSelector } from "react-redux";
+import { getTracksFromPlaylistThunk } from "../../services/songthunks";
 
 const PlaylistSelector = () => {
 
+    const dispatcher = useDispatch();
     // eslint-disable-next-line
     const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const getPlaylistID = (n) => {
@@ -15,7 +16,7 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <select onChange={(e) => console.log(getTracksFromPlaylist(getPlaylistID(e.target.value)))}>
+        <select onChange={(e) => console.log(dispatcher(getTracksFromPlaylistThunk(getPlaylistID(e.target.value))))}>
             {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
         </select>
     );
