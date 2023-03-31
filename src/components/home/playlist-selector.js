@@ -16,7 +16,7 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <select onChange={(e) => console.log(dispatcher(getTracksFromPlaylistThunk(getPlaylistID(e.target.value))))}>
+        <select onChange={(e) => dispatcher(getTracksFromPlaylistThunk({id: getPlaylistID(e.target.value), sliders}))}>
             {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
         </select>
     );

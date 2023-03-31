@@ -11,7 +11,7 @@ const Sliders = () => {
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);
     const [danceability, danceabilityUpdater] = useState(sliders.danceability);
-    const [duration, durationUpdater] = useState(sliders.duration);
+    const [duration_ms, durationUpdater] = useState(sliders.duration);
     const [energy, energyUpdater] = useState(sliders.energy);
     const [instrumentalness, instrumentalnessUpdater] = useState(sliders.instrumentalness);
     const [liveness, livenessUpdater] = useState(sliders.liveness);
@@ -35,9 +35,9 @@ const Sliders = () => {
             </label>
             <br/>
             <label>
-                <input onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration}></input>
+                <input onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration_ms}></input>
                 duration
-                {duration}
+                {duration_ms}
             </label>
             <br/>
             <label>
@@ -87,7 +87,7 @@ const Sliders = () => {
                 {
                     acousticness,
                     danceability,
-                    duration,
+                    duration_ms,
                     energy,
                     instrumentalness,
                     liveness,

@@ -12,7 +12,7 @@ const userInfo = createSlice({
         sliders: {
             acousticness: 50,
             danceability: 50,
-            duration: 50,
+            duration_ms: 50,
             energy: 50,
             instrumentalness: 50,
             liveness: 50,

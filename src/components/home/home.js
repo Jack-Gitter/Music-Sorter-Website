@@ -28,6 +28,7 @@ const Home = () => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
         const playlists = dispatcher(getUserPlaylistsThunk());
+    // also load songs here
     })
 
 

@@ -8,5 +8,5 @@ export const getUserPlaylistsThunk = createAsyncThunk(
 
 export const getTracksFromPlaylistThunk = createAsyncThunk(
     'profile/findTracksFromPlaylist',
-    async (id) => await service.getTracksFromPlaylist(id)
+    async ({id, sliders}) => await service.getTracksFromPlaylist(id, sliders)
 )
