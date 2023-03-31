@@ -1,11 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const PlaylistSelector = () => {
+
+    const {playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const dispatcher = useDispatch();
+
     return (
         <select>
-            <option>hi</option>
-            <option>the</option>
-            <option>hi</option>
+            {playlists.map((plist) => <option>plist</option>)}
         </select>
     );
 }
