@@ -22,25 +22,65 @@ const Sliders = () => {
 
     return (
         <div>
-            <input onChange={(e) => {acousticnessUpdater(e.target.value); console.log(e)}} type='range' min='1' max='100' value={acousticness}></input>
+            <label>
+                <input onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='1' max='100' value={acousticness}></input>
+                acousticness
+                {acousticness}
+            </label>
             <br/>
-            <input onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='1' max='100' value={danceability}></input>
+            <label>
+                <input onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='1' max='100' value={danceability}></input>
+                danceability
+                {danceability}
+            </label>
             <br/>
-            <input onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration}></input>
+            <label>
+                <input onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration}></input>
+                duration
+                {duration}
+            </label>
             <br/>
-            <input onChange={(e) => energyUpdater(e.target.value)} type='range' min='1' max='100' value={energy}></input>
+            <label>
+                <input onChange={(e) => energyUpdater(e.target.value)} type='range' min='1' max='100' value={energy}></input>
+                energy
+                {energy}
+            </label>
             <br/>
-            <input onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='1' max='100' value={instrumentalness}></input>
+            <label>
+                <input onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='1' max='100' value={instrumentalness}></input>
+                instrumentalness
+                {instrumentalness}
+            </label>
             <br/>
-            <input onChange={(e) => livenessUpdater(e.target.value)} type='range' min='1' max='100' value={liveness}></input>
+            <label>
+                <input onChange={(e) => livenessUpdater(e.target.value)} type='range' min='1' max='100' value={liveness}></input>
+                liveness
+                {liveness}
+            </label>
             <br/>
-            <input onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='1' max='100' value={loudness}></input>
+            <label>
+                <input onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='1' max='100' value={loudness}></input>
+                loudness
+                {loudness}
+            </label>
             <br/>
-            <input onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='1' max='100' value={speechiness}></input>
+            <label>
+                <input onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='1' max='100' value={speechiness}></input>
+                speechiness
+                {speechiness}
+            </label>
             <br/>
-            <input onChange={(e) => tempoUpdater(e.target.value)} type='range' min='1' max='100' value={tempo}></input>
+            <label>
+                <input onChange={(e) => tempoUpdater(e.target.value)} type='range' min='1' max='100' value={tempo}></input>
+                tempo
+                {tempo}
+            </label>
             <br/>
-            <input onChange={(e) => valenceUpdater(e.target.value)} type='range' min='1' max='100' value={valence}></input>
+            <label>
+                <input onChange={(e) => valenceUpdater(e.target.value)} type='range' min='1' max='100' value={valence}></input>
+                valence
+                {valence}
+            </label>
             <br/>
             <button onClick={() => 
             dispatcher(updateSliders(
