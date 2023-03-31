@@ -5,6 +5,7 @@ import { getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../service
 const userInfo = createSlice({
     name: "intialSongs",
     initialState: {
+        loadingSongs: false,
         accessToken: "",
         refreshToken: "",
         playlists: [],
@@ -36,6 +37,9 @@ const userInfo = createSlice({
         songs(state, action) {
             console.log("hi");
         },
+        setLoadingSongs(state, action) {
+            state.loadingSongs = action.payload
+        }
     },
     extraReducers: {
         [getUserPlaylistsThunk.fulfilled]:
@@ -44,6 +48,8 @@ const userInfo = createSlice({
             },
         [getTracksFromPlaylistThunk.fulfilled]:
             (state, {payload}) => {
+                state.loadingSongs = false;
+                console.log(state.loadingSongs)
                 state.songs = payload;
                 state.songs.sort((song1, song2) => song1.curated_value - song2.curated_value)
                 console.log('this is the state \'s songs!')
@@ -52,5 +58,5 @@ const userInfo = createSlice({
     },
 })
 
-export const {setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;

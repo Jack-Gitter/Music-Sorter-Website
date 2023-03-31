@@ -7,7 +7,7 @@ import { getUserPlaylists } from "../../services/songservices";
 
 const CurrentSong = () => {
 
-    const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const { loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
 
