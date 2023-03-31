@@ -1,17 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { updateSliders } from "../../state/reducers/songreducer";
+import { setLoadingSongs, updateSliders } from "../../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
+import { getTracksFromPlaylist } from "../../services/songservices";
+import { getTracksFromPlaylistThunk } from "../../services/songthunks";
 
 const Sliders = () => {
 
-    const {loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);
     const [danceability, danceabilityUpdater] = useState(sliders.danceability);
-    const [duration_ms, durationUpdater] = useState(sliders.duration);
+    const [duration_ms, durationUpdater] = useState(sliders.duration_ms);
     const [energy, energyUpdater] = useState(sliders.energy);
     const [instrumentalness, instrumentalnessUpdater] = useState(sliders.instrumentalness);
     const [liveness, livenessUpdater] = useState(sliders.liveness);
@@ -82,22 +84,34 @@ const Sliders = () => {
                 {valence}
             </label>
             <br/>
-            <button onClick={() => 
+            <button onClick={() => { 
             dispatcher(updateSliders(
                 {
-                    acousticness,
-                    danceability,
-                    duration_ms,
-                    energy,
-                    instrumentalness,
-                    liveness,
-                    loudness,
-                    speechiness,
-                    tempo,
-                    valence,
+                    acousticness: acousticness/100,
+                    danceability: danceability/100,
+                    duration_ms: duration_ms,
+                    energy: energy/100,
+                    instrumentalness: instrumentalness/100,
+                    liveness: liveness/100,
+                    loudness: loudness/100,
+                    speechiness: speechiness/100,
+                    tempo: tempo/100,
+                    valence: valence/100,
                 }
-            )
-        )} className='btn btn-primary'>Update</button>
+            ));
+            dispatcher(setLoadingSongs(true));
+            dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: 
+                {acousticness: acousticness/100, 
+                danceability: danceability/100, 
+                energy: energy/100, 
+                instrumentalness: instrumentalness/100, 
+                liveness: liveness/100, 
+                loudness: loudness/100, 
+                speechiness: speechiness/100, 
+                tempo: tempo/100, 
+                valence: valence/100}}));
+            }
+        } className='btn btn-primary'>Update</button>
         </div>
     );
 }

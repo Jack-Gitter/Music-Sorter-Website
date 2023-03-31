@@ -19,11 +19,12 @@ const calculateCuratedValue = (audioFeatures, sliders) => {
     for (const [key, value] of Object.entries(sliders)) {
         res += Math.abs(value - audioFeatures[key])
     }
+    console.log(res);
     return res;
 }
 // can get the playlist, find out how many tracks it has from .items.tracks.total then do a loop
 export const getTracksFromPlaylist = async (id, sliders) => {
-    console.log(sliders);
+
     let res = [];
     const playlist = await spotifyWebApiHandler.getPlaylist(id);
     const num_tracks = playlist.tracks.total;
