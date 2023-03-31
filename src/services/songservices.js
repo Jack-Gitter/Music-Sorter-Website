@@ -1,19 +1,6 @@
 
 import axios from "axios";
 
-export const login = async () => {
-    const response = await axios({
-        method: 'get',
-        url: 'http://localhost:8888/login',
-        data: {
-            client_id: '8b475aa1a9774f11bc38e082a8cb8f6b',
-            response_type: 'code',
-            redirect_uri: 'http://localhost:3000'
-        }
-    });
-    return response; 
-}
-
 // find all the songs from a playlist
 export const findSongsFromPlaylist = async (playlist) => {
 
