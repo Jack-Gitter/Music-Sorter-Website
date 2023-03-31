@@ -41,11 +41,8 @@ const userInfo = createSlice({
         [getUserPlaylistsThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlists = payload.items;
-                console.log(state.playlists)
             }
     },
-    
-    
 })
 
 export const {setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
