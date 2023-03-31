@@ -4,12 +4,12 @@ import { useDispatch } from "react-redux";
 
 const PlaylistSelector = () => {
 
-    const {playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
     return (
         <select>
-            {playlists.map((plist) => <option>plist</option>)}
+            {playlists.map((plist) => <option>{plist.name}</option>)}
         </select>
     );
 }

@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 
 const Sliders = () => {
 
-    const {playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);

@@ -1,18 +1,15 @@
+import SpotifyWebApi from "spotify-web-api-js"
+import userInfoReducer from '../state/reducers/songreducer'
 
-import axios from "axios";
+const spotifyWebApiHandler = new SpotifyWebApi();
 
-// find all the songs from a playlist
-export const findSongsFromPlaylist = async (playlist) => {
-
+export const setAccessTokenAPI = (access_token) => {
+    spotifyWebApiHandler.setAccessToken(access_token);
 }
 
-// finds all of the playlists from a user
-export const findUserPlaylists = async (user) => {
-    
+export const getUserPlaylists = async () => {
+    const playlists = await spotifyWebApiHandler.getUserPlaylists();
+    return playlists;
 }
 
-// make a method that does authentication
-// make a method that finds the playlists of a user
-// make a method that finds all of the songs in a specific playlist
-// make a method that gets the metric data for songs
-// make a local method that sorts the songs based on their metrics
+//export const getUserPlaylistsThunk 
