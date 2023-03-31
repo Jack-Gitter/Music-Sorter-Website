@@ -48,7 +48,6 @@ const userInfo = createSlice({
                 state.songs.sort((song1, song2) => song1.curated_value - song2.curated_value)
                 console.log('this is the state \'s songs!')
                 console.log(state.songs);
-                console.log(state.songs[0].curated_value)
             }
     },
 })
