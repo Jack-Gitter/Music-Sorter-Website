@@ -106,9 +106,7 @@ const Sliders = () => {
                 energy: energy/100, 
                 instrumentalness: instrumentalness/100, 
                 liveness: liveness/100, 
-                loudness: loudness/100, 
                 speechiness: speechiness/100, 
-                tempo: tempo/100, 
                 valence: valence/100}}));
             }
         } className='btn btn-primary'>Update</button>
