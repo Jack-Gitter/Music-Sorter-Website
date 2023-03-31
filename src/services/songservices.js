@@ -12,4 +12,10 @@ export const getUserPlaylists = async () => {
     return playlists;
 }
 
+export const getTracks = async (id) => {
+    console.log(id);
+    const tracks = await spotifyWebApiHandler.getAlbumTracks(id);
+    return tracks;
+}
+
 //export const getUserPlaylistsThunk 
