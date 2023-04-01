@@ -10,6 +10,12 @@ const PlaylistSelector = () => {
 
     const dispatcher = useDispatch();
 
+    useEffect(() => {
+        if (playlists.length > 0) {
+            //dispatcher(setLoadingMetrics(true));
+            //dispatcher(getBoundedVariablesThunk(currentPlaylist))
+        }
+    })
     // eslint-disable-next-line
     const {loadingMetrics, currentPlaylist,loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const getPlaylistID = (n) => {
@@ -23,7 +29,7 @@ const PlaylistSelector = () => {
     // is this working?
     return (
         <>
-        <select disabled={loadingSongs} onChange={(e) => {
+        <select disabled={loadingSongs || loadingMetrics} onChange={(e) => {
                 console.log(loadingSongs)
                 let pid = getPlaylistID(e.target.value);
                 dispatcher(setCurrentPlaylist(pid));
