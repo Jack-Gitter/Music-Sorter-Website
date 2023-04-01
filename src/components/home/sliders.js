@@ -50,7 +50,7 @@ const Sliders = () => {
                 {danceability}
             </label>
             {danceabilityEnabled && <button onClick={() => danceabilityStatus(false)}>Disable</button>}
-            {!danceabilityEnabled && <button onClick={() => danceabilityStatus(true)}>Disable</button>}
+            {!danceabilityEnabled && <button onClick={() => danceabilityStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration_ms}></input>
@@ -138,31 +138,31 @@ const Sliders = () => {
                 slider_map.acousticness = acousticness/100
             }
             if (danceability) {
-                slider_map.acousticness = danceability/100
+                slider_map.danceability = danceability/100
             }
             if (durationEnabled) {
-                slider_map.acousticness = ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration
+                slider_map.duration_ms = ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration
             }
             if (tempoEnabled) {
-                slider_map.acousticness = ((tempo) / 100) * (maxTempo - minTempo) + minTempo 
+                slider_map.tempo = ((tempo) / 100) * (maxTempo - minTempo) + minTempo 
             }
             if (energyEnabled) {
-                slider_map.acousticness = energy/100
+                slider_map.energy = energy/100
             }
             if (loudnessEnabled) {
-                slider_map.acousticness = ((loudness) / 100) * 60 + -60
+                slider_map.loudness = ((loudness) / 100) * 60 + -60
             }
             if (instrumentalnessEnabled) {
-                slider_map.acousticness = instrumentalness/100
+                slider_map.instrumentalness = instrumentalness/100
             }
             if (livenessEnabled) {
-                slider_map.acousticness = liveness/100
+                slider_map.liveness = liveness/100
             }
             if (speechinessEnabled) {
-                slider_map.acousticness = speechiness/100
+                slider_map.speechiness = speechiness/100
             }
             if (valenceEnabled) {
-                slider_map.acousticness = valence/100
+                slider_map.valence = valence/100
             }
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
