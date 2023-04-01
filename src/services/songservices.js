@@ -40,7 +40,7 @@ export const getBoundedVariables = async (id) => {
         for (let j = 0; j < tracks.items.length; j++) {
             let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
             max_duration = audioFeatures['duration_ms'] > max_duration ? audioFeatures['duration_ms'] : max_duration;
-            min_duration = audioFeatures['duration_ms'] < max_duration ? audioFeatures['duration_ms'] : max_duration;
+            min_duration = audioFeatures['duration_ms'] < min_duration ? audioFeatures['duration_ms'] : min_duration;
             max_tempo = audioFeatures['tempo'] > max_tempo ? audioFeatures['tempo'] : max_tempo;
             min_tempo = audioFeatures['tempo'] < min_tempo ? audioFeatures['tempo'] : min_tempo;
         }

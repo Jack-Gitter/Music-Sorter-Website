@@ -142,6 +142,7 @@ const Sliders = () => {
             }
             if (durationEnabled) {
                 slider_map.duration_ms = ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration
+                console.log('duration is' + slider_map.duration_ms)
             }
             if (tempoEnabled) {
                 slider_map.tempo = ((tempo) / 100) * (maxTempo - minTempo) + minTempo 
