@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../services/songthunks";
+import { getBoundedVariablesThunk } from "../../services/songthunks";
 
 const userInfo = createSlice({
     name: "intialSongs",
@@ -60,14 +61,21 @@ const userInfo = createSlice({
             (state, {payload}) => {
                 state.loadingSongs = false;
                 console.log(state.loadingSongs)
-                state.songs = payload[0];
-                state.maxDuration = payload[1];
-                state.minDuration = payload[2];
-                state.maxTempo = payload[3];
-                state.minTempo = payload[4];
+                state.songs = payload;
                 state.songs.sort((song1, song2) => song1.curated_value - song2.curated_value);
                 console.log('this is the state \'s songs!')
                 console.log(state.songs);
+            },
+        [getBoundedVariablesThunk.fulfilled]: 
+            (state, {payload}) => {
+                state.maxDuration = payload[0];
+                state.minDuration = payload[1];
+                state.maxTempo = payload[2];
+                state.minTempo = payload[3];
+                console.log('max duration is : ' + state.maxDuration)
+                console.log('min Duration is: ' + state.minDuration)
+                console.log('max tempo is ' + state.maxTempo)
+                console.log('min tempo is: ' + state.minTempo)
             }
     },
 })

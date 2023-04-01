@@ -10,3 +10,8 @@ export const getTracksFromPlaylistThunk = createAsyncThunk(
     'profile/findTracksFromPlaylist',
     async ({id, sliders}) => await service.getTracksFromPlaylist(id, sliders)
 )
+
+export const getBoundedVariablesThunk = createAsyncThunk(
+    'profile/getBoundedVars', 
+    async (id) => await service.getBoundedVariables(id)
+)

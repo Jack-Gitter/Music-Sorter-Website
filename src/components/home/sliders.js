@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { setLoadingSongs, updateSliders } from "../../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
 import { getTracksFromPlaylist } from "../../services/songservices";
-import { getTracksFromPlaylistThunk } from "../../services/songthunks";
+import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../services/songthunks";
 
 const Sliders = () => {
 
@@ -137,7 +137,7 @@ const Sliders = () => {
             if (acousticnessEnabled) {
                 slider_map.acousticness = acousticness/100
             }
-            if (danceability) {
+            if (danceabilityEnabled) {
                 slider_map.danceability = danceability/100
             }
             if (durationEnabled) {

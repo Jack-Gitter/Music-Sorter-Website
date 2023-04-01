@@ -1,7 +1,7 @@
 import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getTracksFromPlaylistThunk } from "../../services/songthunks";
+import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../services/songthunks";
 import { setLoadingSongs } from "../../state/reducers/songreducer"; 
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 
@@ -25,6 +25,7 @@ const PlaylistSelector = () => {
                 console.log(loadingSongs)
                 let pid = getPlaylistID(e.target.value);
                 dispatcher(setCurrentPlaylist(pid));
+                dispatcher(getBoundedVariablesThunk(pid));
                 }
             }>
                 {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
