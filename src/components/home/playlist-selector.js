@@ -27,7 +27,7 @@ const PlaylistSelector = () => {
                 dispatcher(setCurrentPlaylist(pid));
                 }
             }>
-                {playlists.map((plist, index) => <option disabled={loadingSongs}key={index}>{plist.name}</option>)}
+                {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
             </select> 
         </>
     );
