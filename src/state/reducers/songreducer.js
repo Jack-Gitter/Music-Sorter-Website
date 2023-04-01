@@ -6,6 +6,7 @@ import { getBoundedVariablesThunk } from "../../services/songthunks";
 const userInfo = createSlice({
     name: "intialSongs",
     initialState: {
+        loadingMetrics: false,
         maxDuration: 0,
         minDuration: 0,
         maxTempo: 0,
@@ -48,8 +49,10 @@ const userInfo = createSlice({
         },
         setCurrentPlaylist(state, action) {
             state.currentPlaylist = action.payload;
+        },
+        setLoadingMetrics(state, action) {
+            state.loadingMetrics = action.payload;
         }
-
     },
     extraReducers: {
         [getUserPlaylistsThunk.fulfilled]:
@@ -76,9 +79,10 @@ const userInfo = createSlice({
                 console.log('min Duration is: ' + state.minDuration)
                 console.log('max tempo is ' + state.maxTempo)
                 console.log('min tempo is: ' + state.minTempo)
+                state.loadingMetrics = false;
             }
     },
 })
 
-export const {setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;

@@ -8,7 +8,7 @@ import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../serv
 
 const Sliders = () => {
 
-    const {maxDuration, minDuration, maxTempo, minTempo, currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {loadingMetrics, maxDuration, minDuration, maxTempo, minTempo, currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);
@@ -116,7 +116,7 @@ const Sliders = () => {
             {valenceEnabled && <button onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button onClick={() => valenceStatus(true)}>Enable</button>}
             <br/>
-            <button onClick={() => { 
+            <button disabled={loadingMetrics} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness/100,

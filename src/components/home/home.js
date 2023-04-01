@@ -27,7 +27,8 @@ const Home = () => {
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
-        const playlists = dispatcher(getUserPlaylistsThunk());
+        dispatcher(getUserPlaylistsThunk());
+        
     // also load songs here
     })
 
