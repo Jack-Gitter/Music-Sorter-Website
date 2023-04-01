@@ -5,6 +5,10 @@ import { getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../service
 const userInfo = createSlice({
     name: "intialSongs",
     initialState: {
+        maxDuration: 0,
+        minDuration: 0,
+        maxTempo: 0,
+        minTempo: 0,
         currentPlaylist: -1,
         loadingSongs: false,
         accessToken: "",
@@ -56,7 +60,15 @@ const userInfo = createSlice({
             (state, {payload}) => {
                 state.loadingSongs = false;
                 console.log(state.loadingSongs)
-                state.songs = payload;
+                state.songs = payload[0];
+                state.maxDuration = payload[1];
+                state.minDuration = payload[2];
+                state.maxTempo = payload[3];
+                state.minTempo = payload[4];
+                console.log('max duration is: ' + state.maxDuration)
+                console.log('minDuration is' + state.minDuration)
+                console.log('maxTempo is' + state.maxTempo)
+                console.log('minTempo is ' + state.minTempo)
                 state.songs.sort((song1, song2) => song1.curated_value - song2.curated_value);
                 console.log('this is the state \'s songs!')
                 console.log(state.songs);

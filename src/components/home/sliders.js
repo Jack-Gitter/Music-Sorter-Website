@@ -8,7 +8,7 @@ import { getTracksFromPlaylistThunk } from "../../services/songthunks";
 
 const Sliders = () => {
 
-    const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {maxDuration, minDuration, maxTempo, minTempo, currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch();
 
     const [acousticness, acousticnessUpdater] = useState(sliders.acousticness);
@@ -101,8 +101,13 @@ const Sliders = () => {
             ));
             dispatcher(setLoadingSongs(true));
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: 
+                // missing duration and tempo -- this is because the max and min depend on the playlist -- 
+                // so whenever we are getting the playlists songs, just make a global max and min and then 
+                // do the calculation for new range like we did with instrumentalness
                 {acousticness: acousticness/100, 
                 danceability: danceability/100, 
+                duration_ms: ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration,
+                tempo: ((tempo) / 100) * (maxTempo - minTempo) + minTempo,
                 energy: energy/100, 
                 loudness: ((loudness) / 100) * 60 + -60,
                 instrumentalness: instrumentalness/100, 
