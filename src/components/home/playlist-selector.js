@@ -37,6 +37,7 @@ const PlaylistSelector = () => {
                 dispatcher(getBoundedVariablesThunk(pid));
                 }
             }>
+                <option defaultValue={true}>Please Select a Playlist</option>
                 {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
             </select> 
         </>
