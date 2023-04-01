@@ -21,68 +21,100 @@ const Sliders = () => {
     const [speechiness, speechinessUpdater] = useState(sliders.speechiness);
     const [tempo, tempoUpdater] = useState(sliders.tempo);
     const [valence, valenceUpdater] = useState(sliders.valence);
+    
+
+    const [acousticnessEnabled, acousticnessStatus] = useState(true)
+    const [danceabilityEnabled, danceabilityStatus] = useState(true)
+    const [durationEnabled, durationStatus] = useState(true)
+    const [energyEnabled, energyStatus] = useState(true)
+    const [instrumentalnessEnabled, instrumentalnessStatus] = useState(true)
+    const [livenessEnabled, livenessStatus] = useState(true)
+    const [speechinessEnabled, speechinessStatus] = useState(true)
+    const [tempoEnabled, tempoStatus] = useState(true)
+    const [valenceEnabled, valenceStatus] = useState(true)
+    const [loudnessEnabled, loudnessStatus] = useState(true)
 
     return (
         <div>
             <label>
-                <input onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='1' max='100' value={acousticness}></input>
+                <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='1' max='100' value={acousticness}></input>
                 acousticness
                 {acousticness}
             </label>
+            {acousticnessEnabled && <button onClick={() => acousticnessStatus(false)}>Disable</button>}
+            {!acousticnessEnabled && <button onClick={() => acousticnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='1' max='100' value={danceability}></input>
+                <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='1' max='100' value={danceability}></input>
                 danceability
                 {danceability}
             </label>
+            {danceabilityEnabled && <button onClick={() => danceabilityStatus(false)}>Disable</button>}
+            {!danceabilityEnabled && <button onClick={() => danceabilityStatus(true)}>Disable</button>}
             <br/>
             <label>
-                <input onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration_ms}></input>
+                <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration_ms}></input>
                 duration
                 {duration_ms}
             </label>
+            {durationEnabled && <button onClick={() => durationStatus(false)}>Disable</button>}
+            {!durationEnabled && <button onClick={() => durationStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => energyUpdater(e.target.value)} type='range' min='1' max='100' value={energy}></input>
+                <input disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='1' max='100' value={energy}></input>
                 energy
                 {energy}
             </label>
+            {energyEnabled && <button onClick={() => energyStatus(false)}>Disable</button>}
+            {!energyEnabled && <button onClick={() => energyStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='1' max='100' value={instrumentalness}></input>
+                <input disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='1' max='100' value={instrumentalness}></input>
                 instrumentalness
                 {instrumentalness}
             </label>
+            {instrumentalnessEnabled && <button onClick={() => instrumentalnessStatus(false)}>Disable</button>}
+            {!instrumentalnessEnabled && <button onClick={() => instrumentalnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => livenessUpdater(e.target.value)} type='range' min='1' max='100' value={liveness}></input>
+                <input  disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='1' max='100' value={liveness}></input>
                 liveness
                 {liveness}
             </label>
+            {livenessEnabled && <button onClick={() => livenessStatus(false)}>Disable</button>}
+            {!livenessEnabled && <button onClick={() => livenessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='1' max='100' value={loudness}></input>
+                <input  disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='1' max='100' value={loudness}></input>
                 loudness
                 {loudness}
             </label>
+            { loudnessEnabled && <button onClick={() => loudnessStatus(false)}>Disable</button>}
+            {!loudnessEnabled && <button onClick={() => loudnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='1' max='100' value={speechiness}></input>
+                <input disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='1' max='100' value={speechiness}></input>
                 speechiness
                 {speechiness}
             </label>
+            {speechinessEnabled && <button onClick={() => speechinessStatus(false)}>Disable</button>}
+            {!speechinessEnabled && <button onClick={() => speechinessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => tempoUpdater(e.target.value)} type='range' min='1' max='100' value={tempo}></input>
+                <input disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='1' max='100' value={tempo}></input>
                 tempo
                 {tempo}
             </label>
+            {tempoEnabled && <button onClick={() => tempoStatus(false)}>Disable</button>}
+            {!tempoEnabled && <button onClick={() => tempoStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input onChange={(e) => valenceUpdater(e.target.value)} type='range' min='1' max='100' value={valence}></input>
+                <input disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='1' max='100' value={valence}></input>
                 valence
                 {valence}
             </label>
+            {valenceEnabled && <button onClick={() => valenceStatus(false)}>Disable</button>}
+            {!valenceEnabled && <button onClick={() => valenceStatus(true)}>Enable</button>}
             <br/>
             <button onClick={() => { 
             dispatcher(updateSliders(
@@ -100,20 +132,39 @@ const Sliders = () => {
                 }
             ));
             dispatcher(setLoadingSongs(true));
-            dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: 
-                // missing duration and tempo -- this is because the max and min depend on the playlist -- 
-                // so whenever we are getting the playlists songs, just make a global max and min and then 
-                // do the calculation for new range like we did with instrumentalness
-                {acousticness: acousticness/100, 
-                danceability: danceability/100, 
-                duration_ms: ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration,
-                tempo: ((tempo) / 100) * (maxTempo - minTempo) + minTempo,
-                energy: energy/100, 
-                loudness: ((loudness) / 100) * 60 + -60,
-                instrumentalness: instrumentalness/100, 
-                liveness: liveness/100, 
-                speechiness: speechiness/100, 
-                valence: valence/100}}));
+                // when we are calling this, make sure to only include the metrics that are enabled on the website
+            let slider_map = {}
+            if (acousticnessEnabled) {
+                slider_map.acousticness = acousticness/100
+            }
+            if (danceability) {
+                slider_map.acousticness = danceability/100
+            }
+            if (durationEnabled) {
+                slider_map.acousticness = ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration
+            }
+            if (tempoEnabled) {
+                slider_map.acousticness = ((tempo) / 100) * (maxTempo - minTempo) + minTempo 
+            }
+            if (energyEnabled) {
+                slider_map.acousticness = energy/100
+            }
+            if (loudnessEnabled) {
+                slider_map.acousticness = ((loudness) / 100) * 60 + -60
+            }
+            if (instrumentalnessEnabled) {
+                slider_map.acousticness = instrumentalness/100
+            }
+            if (livenessEnabled) {
+                slider_map.acousticness = liveness/100
+            }
+            if (speechinessEnabled) {
+                slider_map.acousticness = speechiness/100
+            }
+            if (valenceEnabled) {
+                slider_map.acousticness = valence/100
+            }
+            dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } className='btn btn-primary'>Update</button>
         </div>
