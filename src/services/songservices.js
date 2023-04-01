@@ -29,8 +29,8 @@ export const getTracksFromPlaylist = async (id, sliders) => {
     const playlist = await spotifyWebApiHandler.getPlaylist(id);
     const num_tracks = playlist.tracks.total;
     let counter = 0;
-    while (counter < num_tracks) {
-        const tracks = await spotifyWebApiHandler.getPlaylistTracks(id);
+    while (counter <= num_tracks) {
+        const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
         for (let j = 0; j < tracks.items.length; j++) {
             let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
             let curated_value = calculateCuratedValue(audioFeatures, sliders);

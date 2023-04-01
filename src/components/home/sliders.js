@@ -104,6 +104,7 @@ const Sliders = () => {
                 {acousticness: acousticness/100, 
                 danceability: danceability/100, 
                 energy: energy/100, 
+                loudness: ((loudness) / 100) * 60 + -60,
                 instrumentalness: instrumentalness/100, 
                 liveness: liveness/100, 
                 speechiness: speechiness/100, 
