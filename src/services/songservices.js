@@ -26,7 +26,6 @@ const calculateCuratedValue = (audioFeatures, sliders) => {
 // can get the playlist, find out how many tracks it has from .items.tracks.total then do a loop
 
 export const getBoundedVariables = async (id) => {
-    
     let max_duration = 0;
     let min_duration = Number.MAX_VALUE; 
     let max_tempo = 0; 
@@ -37,13 +36,20 @@ export const getBoundedVariables = async (id) => {
     let counter = 0;
     while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
-        console.log(tracks);
         const trackIds = [];
+        //console.log('made it here!!!')
         for (let j = 0; j < tracks.items.length; j++) {
+            console.log(tracks.items[j]);
+            if (Object.is(tracks.items[j].track, null)) {
+                continue;
+            }
             trackIds.push(tracks.items[j].track.id);
         }
         let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds)
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
+            if (Object.is(audioFeatures.audio_features[j], null)) {
+                continue;
+            }
             max_duration = audioFeatures.audio_features[j]['duration_ms'] > max_duration ? audioFeatures.audio_features[j]['duration_ms'] : max_duration;
             min_duration = audioFeatures.audio_features[j]['duration_ms'] < min_duration ? audioFeatures.audio_features[j]['duration_ms'] : min_duration;
             max_tempo = audioFeatures.audio_features[j]['tempo'] > max_tempo ? audioFeatures.audio_features[j]['tempo'] : max_tempo;
