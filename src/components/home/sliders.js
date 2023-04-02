@@ -38,7 +38,7 @@ const Sliders = () => {
     return (
         <div>
             <label>
-                <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='1' max='100' value={acousticness}></input>
+                <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 acousticness
                 {acousticness}
             </label>
@@ -46,7 +46,7 @@ const Sliders = () => {
             {!acousticnessEnabled && <button onClick={() => acousticnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='1' max='100' value={danceability}></input>
+                <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
                 danceability
                 {danceability}
             </label>
@@ -54,7 +54,7 @@ const Sliders = () => {
             {!danceabilityEnabled && <button onClick={() => danceabilityStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='1' max='100' value={duration_ms}></input>
+                <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
                 duration
                 {duration_ms}
             </label>
@@ -62,7 +62,7 @@ const Sliders = () => {
             {!durationEnabled && <button onClick={() => durationStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='1' max='100' value={energy}></input>
+                <input disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
                 energy
                 {energy}
             </label>
@@ -70,7 +70,7 @@ const Sliders = () => {
             {!energyEnabled && <button onClick={() => energyStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='1' max='100' value={instrumentalness}></input>
+                <input disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
                 instrumentalness
                 {instrumentalness}
             </label>
@@ -78,7 +78,7 @@ const Sliders = () => {
             {!instrumentalnessEnabled && <button onClick={() => instrumentalnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input  disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='1' max='100' value={liveness}></input>
+                <input  disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
                 liveness
                 {liveness}
             </label>
@@ -86,7 +86,7 @@ const Sliders = () => {
             {!livenessEnabled && <button onClick={() => livenessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input  disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='1' max='100' value={loudness}></input>
+                <input  disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
                 loudness
                 {loudness}
             </label>
@@ -94,7 +94,7 @@ const Sliders = () => {
             {!loudnessEnabled && <button onClick={() => loudnessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='1' max='100' value={speechiness}></input>
+                <input disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
                 speechiness
                 {speechiness}
             </label>
@@ -102,7 +102,7 @@ const Sliders = () => {
             {!speechinessEnabled && <button onClick={() => speechinessStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='1' max='100' value={tempo}></input>
+                <input disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
                 tempo
                 {tempo}
             </label>
@@ -110,7 +110,7 @@ const Sliders = () => {
             {!tempoEnabled && <button onClick={() => tempoStatus(true)}>Enable</button>}
             <br/>
             <label>
-                <input disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='1' max='100' value={valence}></input>
+                <input disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
                 valence
                 {valence}
             </label>

@@ -19,7 +19,6 @@ const calculateCuratedValue = (audioFeatures, sliders) => {
     for (const [key, value] of Object.entries(sliders)) {
         res += Math.abs(value - audioFeatures[key])
     }
-    console.log(res);
     return res;
 }
 // can get the playlist, find out how many tracks it has from .items.tracks.total then do a loop
@@ -36,7 +35,6 @@ export const getBoundedVariables = async (id) => {
     while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
         const trackIds = [];
-        //console.log('made it here!!!')
         for (let j = 0; j < tracks.items.length; j++) {
             if (Object.is(tracks.items[j].track, null)) {
                 continue;
@@ -54,13 +52,6 @@ export const getBoundedVariables = async (id) => {
             min_tempo = audioFeatures.audio_features[j]['tempo'] < min_tempo ? audioFeatures.audio_features[j]['tempo'] : min_tempo;
         }
         
-        /*for (let j = 0; j < tracks.items.length; j++) {
-            let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
-            max_duration = audioFeatures['duration_ms'] > max_duration ? audioFeatures['duration_ms'] : max_duration;
-            min_duration = audioFeatures['duration_ms'] < min_duration ? audioFeatures['duration_ms'] : min_duration;
-            max_tempo = audioFeatures['tempo'] > max_tempo ? audioFeatures['tempo'] : max_tempo;
-            min_tempo = audioFeatures['tempo'] < min_tempo ? audioFeatures['tempo'] : min_tempo;
-        }*/
         counter+=100;
     }
     return [max_duration, min_duration, max_tempo, min_tempo]
@@ -82,6 +73,9 @@ export const getTracksFromPlaylist = async (id, sliders) => {
         }
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
+            if (Object.is(audioFeatures.audio_features[j], null)) {
+                continue;
+            }
             let curated_value = calculateCuratedValue(audioFeatures.audio_features[j], sliders);
             res.push({...tracks.items[j].track, curated_value: curated_value});
         }

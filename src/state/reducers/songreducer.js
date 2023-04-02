@@ -74,10 +74,6 @@ const userInfo = createSlice({
                 state.minDuration = payload[1];
                 state.maxTempo = payload[2];
                 state.minTempo = payload[3];
-                console.log('max duration is : ' + state.maxDuration)
-                console.log('min Duration is: ' + state.minDuration)
-                console.log('max tempo is ' + state.maxTempo)
-                console.log('min tempo is: ' + state.minTempo)
                 state.loadingMetrics = false;
             }
     },
