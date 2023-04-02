@@ -37,6 +37,7 @@ export const getBoundedVariables = async (id) => {
     let counter = 0;
     while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
+        console.log(tracks);
         const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
             trackIds.push(tracks.items[j].track.id);
@@ -48,14 +49,14 @@ export const getBoundedVariables = async (id) => {
             max_tempo = audioFeatures.audio_features[j]['tempo'] > max_tempo ? audioFeatures.audio_features[j]['tempo'] : max_tempo;
             min_tempo = audioFeatures.audio_features[j]['tempo'] < min_tempo ? audioFeatures.audio_features[j]['tempo'] : min_tempo;
         }
+        
         /*for (let j = 0; j < tracks.items.length; j++) {
             let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
             max_duration = audioFeatures['duration_ms'] > max_duration ? audioFeatures['duration_ms'] : max_duration;
             min_duration = audioFeatures['duration_ms'] < min_duration ? audioFeatures['duration_ms'] : min_duration;
             max_tempo = audioFeatures['tempo'] > max_tempo ? audioFeatures['tempo'] : max_tempo;
             min_tempo = audioFeatures['tempo'] < min_tempo ? audioFeatures['tempo'] : min_tempo;
-        }
-        */
+        }*/
         counter+=100;
     }
     return [max_duration, min_duration, max_tempo, min_tempo]
