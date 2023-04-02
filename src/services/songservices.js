@@ -35,15 +35,27 @@ export const getBoundedVariables = async (id) => {
     const playlist = await spotifyWebApiHandler.getPlaylist(id);
     const num_tracks = playlist.tracks.total;
     let counter = 0;
-    while (counter <= num_tracks) {
+    while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
+        const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
+            trackIds.push(tracks.items[j].track.id);
+        }
+        let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds)
+        for (let j = 0; j < audioFeatures.audio_features.length; j++) {
+            max_duration = audioFeatures.audio_features[j]['duration_ms'] > max_duration ? audioFeatures.audio_features[j]['duration_ms'] : max_duration;
+            min_duration = audioFeatures.audio_features[j]['duration_ms'] < min_duration ? audioFeatures.audio_features[j]['duration_ms'] : min_duration;
+            max_tempo = audioFeatures.audio_features[j]['tempo'] > max_tempo ? audioFeatures.audio_features[j]['tempo'] : max_tempo;
+            min_tempo = audioFeatures.audio_features[j]['tempo'] < min_tempo ? audioFeatures.audio_features[j]['tempo'] : min_tempo;
+        }
+        /*for (let j = 0; j < tracks.items.length; j++) {
             let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
             max_duration = audioFeatures['duration_ms'] > max_duration ? audioFeatures['duration_ms'] : max_duration;
             min_duration = audioFeatures['duration_ms'] < min_duration ? audioFeatures['duration_ms'] : min_duration;
             max_tempo = audioFeatures['tempo'] > max_tempo ? audioFeatures['tempo'] : max_tempo;
             min_tempo = audioFeatures['tempo'] < min_tempo ? audioFeatures['tempo'] : min_tempo;
         }
+        */
         counter+=100;
     }
     return [max_duration, min_duration, max_tempo, min_tempo]
@@ -54,11 +66,15 @@ export const getTracksFromPlaylist = async (id, sliders) => {
     const playlist = await spotifyWebApiHandler.getPlaylist(id);
     const num_tracks = playlist.tracks.total;
     let counter = 0;
-    while (counter <= num_tracks) {
+    while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
+        const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
-            let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTrack(tracks.items[j].track.id);
-            let curated_value = calculateCuratedValue(audioFeatures, sliders);
+            trackIds.push(tracks.items[j].track.id);
+        }
+        const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
+        for (let j = 0; j < audioFeatures.audio_features.length; j++) {
+            let curated_value = calculateCuratedValue(audioFeatures.audio_features[j], sliders);
             res.push({...tracks.items[j].track, curated_value: curated_value});
         }
         counter+=100;
