@@ -58,7 +58,6 @@ const userInfo = createSlice({
         [getUserPlaylistsThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlists = payload.items;
-                state.currentPlaylist = payload.items[0].id
             },
         [getTracksFromPlaylistThunk.fulfilled]:
             (state, {payload}) => {

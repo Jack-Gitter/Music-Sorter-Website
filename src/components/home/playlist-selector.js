@@ -18,6 +18,7 @@ const PlaylistSelector = () => {
                 return playlists[i].id;
             }
         } 
+        return -1;
     }
 
     return (
@@ -25,9 +26,13 @@ const PlaylistSelector = () => {
         <select disabled={loadingSongs || loadingMetrics} onChange={(e) => {
                 console.log(loadingSongs)
                 let pid = getPlaylistID(e.target.value);
-                dispatcher(setCurrentPlaylist(pid));
-                dispatcher(setLoadingMetrics(true));
-                dispatcher(getBoundedVariablesThunk(pid));
+                if (pid != -1) {
+                    dispatcher(setCurrentPlaylist(pid));
+                    dispatcher(setLoadingMetrics(true));
+                    dispatcher(getBoundedVariablesThunk(pid));
+                } else {
+                    dispatcher(setCurrentPlaylist(-1));
+                }
                 }
             }>
                 <option defaultValue={true}>Please Select a Playlist</option>

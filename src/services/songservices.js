@@ -10,7 +10,6 @@ export const setAccessTokenAPI = (access_token) => {
 
 export const getUserPlaylists = async () => {
     const playlists = await spotifyWebApiHandler.getUserPlaylists();
-    console.log(playlists);
     return playlists;
 
 }
@@ -39,7 +38,6 @@ export const getBoundedVariables = async (id) => {
         const trackIds = [];
         //console.log('made it here!!!')
         for (let j = 0; j < tracks.items.length; j++) {
-            console.log(tracks.items[j]);
             if (Object.is(tracks.items[j].track, null)) {
                 continue;
             }
@@ -77,6 +75,9 @@ export const getTracksFromPlaylist = async (id, sliders) => {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
         const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
+            if (Object.is(tracks.items[j].track, null)) {
+                continue;
+            }
             trackIds.push(tracks.items[j].track.id);
         }
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);

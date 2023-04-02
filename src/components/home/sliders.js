@@ -117,7 +117,7 @@ const Sliders = () => {
             {valenceEnabled && <button onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button onClick={() => valenceStatus(true)}>Enable</button>}
             <br/>
-            <button disabled={loadingMetrics || loadingSongs} onClick={() => { 
+            <button disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness/100,
