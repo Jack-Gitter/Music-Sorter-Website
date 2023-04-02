@@ -1,5 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/font-awesome/css/font-awesome.min.css'
 import HeaderComponent from './components/home/header';
 import PlaylistSelector from './components/home/playlist-selector';
 import Sliders from './components/home/sliders';
