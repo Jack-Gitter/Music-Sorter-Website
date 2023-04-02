@@ -5,6 +5,7 @@ import { setLoadingSongs, updateSliders } from "../../state/reducers/songreducer
 import { useDispatch } from "react-redux";
 import { getTracksFromPlaylist } from "../../services/songservices";
 import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../services/songthunks";
+import { Link } from "react-router-dom";
 
 const Sliders = () => {
 
@@ -168,6 +169,7 @@ const Sliders = () => {
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } className='btn btn-primary'>Update</button>
+        <Link to={'/'}><button>Logout</button></Link>
         </div>
     );
 }
