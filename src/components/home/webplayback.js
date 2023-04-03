@@ -14,6 +14,8 @@ const WebPlayback = () => {
         <>
         <SpotifyPlayer 
         token={accessToken}
+        layout={'responsive'}
+        play={true}
         uris={songUris}
         />
         </>

@@ -39,7 +39,6 @@ const Home = () => {
             <HeaderComponent/>
             <PlaylistSelector/>
             <Sliders/>
-            <CurrentSong/>
             <WebPlayback/>
         </>
     );
