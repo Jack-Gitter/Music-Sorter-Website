@@ -4,7 +4,7 @@ const Login = () => {
             <h1>
                Login 
             </h1>
-            <a href='http://localhost:8888/login'><button>Login!</button></a>
+            <a href='https://curatedshuffleauthserver.onrender.com/login'><button>Login!</button></a>
         </div>
     );
 }
