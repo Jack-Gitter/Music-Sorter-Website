@@ -13,6 +13,7 @@ import { getUserPlaylists } from "../../services/songservices";
 import { updatePlaylists } from "../../state/reducers/songreducer";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getUserPlaylistsThunk } from "../../services/songthunks";
+import WebPlayback from "./webplayback";
 
 const Home = () => {
 
@@ -23,6 +24,7 @@ const Home = () => {
     const access_token = location.substring(access_start + 'access_token='.length, access_end);
     const refresh_start = location.indexOf('refresh_token');
     const refresh_token = location.substring(refresh_start + 'refresh_token='.length, location.length);
+
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -38,6 +40,7 @@ const Home = () => {
             <PlaylistSelector/>
             <Sliders/>
             <CurrentSong/>
+            <WebPlayback/>
         </>
     );
 }
