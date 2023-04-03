@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-gh-pages/static/css/main.0a2c2224.css",
-    "main.js": "/react-gh-pages/static/js/main.71044d87.js",
+    "main.js": "/react-gh-pages/static/js/main.02534323.js",
     "static/js/787.f9bfca05.chunk.js": "/react-gh-pages/static/js/787.f9bfca05.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/react-gh-pages/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -10,11 +10,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/react-gh-pages/index.html",
     "main.0a2c2224.css.map": "/react-gh-pages/static/css/main.0a2c2224.css.map",
-    "main.71044d87.js.map": "/react-gh-pages/static/js/main.71044d87.js.map",
+    "main.02534323.js.map": "/react-gh-pages/static/js/main.02534323.js.map",
     "787.f9bfca05.chunk.js.map": "/react-gh-pages/static/js/787.f9bfca05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a2c2224.css",
-    "static/js/main.71044d87.js"
+    "static/js/main.02534323.js"
   ]
 }
