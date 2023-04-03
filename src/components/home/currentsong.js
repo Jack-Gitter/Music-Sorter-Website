@@ -14,7 +14,6 @@ const CurrentSong = () => {
         <>
         {songs.length == 0 ? <h1>nothing</h1> : <h1>Current song is {songs[0].name}</h1>}
         <button>Play!</button>
-        <WebPlayback/>
         </>
     );
 }
