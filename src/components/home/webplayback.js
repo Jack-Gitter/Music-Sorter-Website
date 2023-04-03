@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-function WebPlayback(props) {
+function WebPlayback() {
 
 
+  const {loadingMetrics, maxDuration, minDuration, maxTempo, minTempo, currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
   const [player, setPlayer] = useState(undefined);
 
   useEffect(() => {
 
-    console.log('printing props')
-    console.log(props.accessToken);
-  
     const script = document.createElement("script");
     script.src = `https://sdk.scdn.co/spotify-player.js`;
     script.async = true;
@@ -21,7 +19,7 @@ function WebPlayback(props) {
 
         const player = new window.Spotify.Player({
             name: 'Web Playback SDK',
-            getOAuthToken: cb => { cb(props.accessToken); },
+            getOAuthToken: cb => { cb(accessToken); },
             volume: 0.5
         });
 
@@ -39,7 +37,7 @@ function WebPlayback(props) {
 
         
     };
-}, [props.accessToken]);
+}, [accessToken]);
   
 
    return (

@@ -39,6 +39,7 @@ const Home = () => {
             <PlaylistSelector/>
             <Sliders/>
             <CurrentSong/>
+            <WebPlayback/>
         </>
     );
 }
