@@ -12,7 +12,7 @@ const WebPlayback = () => {
     
     return (
         <>
-        <SpotifyPlayer 
+        {songUris.length > 0 && <SpotifyPlayer 
         styles={{
             activeColor: '#fff',
             bgColor: '#333',
@@ -21,12 +21,14 @@ const WebPlayback = () => {
             sliderColor: '#1cb954',
             trackArtistColor: '#ccc',
             trackNameColor: '#fff',
+            sliderHandleColor:'#ffff',
+            errorColor:'#FF0000'
           }}
         token={accessToken}
         layout={'responsive'}
         play={true}
         uris={songUris}
-        />
+        />}
         </>
     );
 }
