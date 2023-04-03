@@ -13,7 +13,6 @@ import { getUserPlaylists } from "../../services/songservices";
 import { updatePlaylists } from "../../state/reducers/songreducer";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getUserPlaylistsThunk } from "../../services/songthunks";
-import WebPlayback from "./webplayback";
 
 const Home = () => {
 
@@ -39,7 +38,6 @@ const Home = () => {
             <PlaylistSelector/>
             <Sliders/>
             <CurrentSong/>
-            <WebPlayback/>
         </>
     );
 }
