@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.0a2c2224.css",
-    "main.js": "/react-gh-pages/static/js/main.02534323.js",
-    "static/js/787.f9bfca05.chunk.js": "/react-gh-pages/static/js/787.f9bfca05.chunk.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/react-gh-pages/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/react-gh-pages/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/react-gh-pages/index.html",
-    "main.0a2c2224.css.map": "/react-gh-pages/static/css/main.0a2c2224.css.map",
-    "main.02534323.js.map": "/react-gh-pages/static/js/main.02534323.js.map",
-    "787.f9bfca05.chunk.js.map": "/react-gh-pages/static/js/787.f9bfca05.chunk.js.map"
+    "main.css": "/Spotify-Web-App/static/css/main.7814efff.css",
+    "main.js": "/Spotify-Web-App/static/js/main.35f742ba.js",
+    "static/js/787.f9bfca05.chunk.js": "/Spotify-Web-App/static/js/787.f9bfca05.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/Spotify-Web-App/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/Spotify-Web-App/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Spotify-Web-App/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/Spotify-Web-App/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Spotify-Web-App/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/Spotify-Web-App/index.html",
+    "main.7814efff.css.map": "/Spotify-Web-App/static/css/main.7814efff.css.map",
+    "main.35f742ba.js.map": "/Spotify-Web-App/static/js/main.35f742ba.js.map",
+    "787.f9bfca05.chunk.js.map": "/Spotify-Web-App/static/js/787.f9bfca05.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a2c2224.css",
-    "static/js/main.02534323.js"
+    "static/css/main.7814efff.css",
+    "static/js/main.35f742ba.js"
   ]
 }
