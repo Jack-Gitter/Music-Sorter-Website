@@ -38,7 +38,7 @@ const PlaylistSelector = () => {
                 <option defaultValue={true}>Please Select a Playlist</option>
                 {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
             </select> 
-            {(loadingSongs || loadingMetrics )&& <i class='fa fas fa-spinner fa-spin'></i>}
+            {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         </>
     );
 }
