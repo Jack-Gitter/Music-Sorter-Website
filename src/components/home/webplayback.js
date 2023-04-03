@@ -1,30 +1,24 @@
-import { useEffect } from "react";
+import SpotifyPlayer from "react-spotify-web-playback"
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 const WebPlayback = () => {
 
-    const {loadingMetrics, maxDuration, minDuration, maxTempo, minTempo, currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            const element = document.getElementById('songplayer')
-            //const test = element.querySelector('.hlkjJv66EOvqb0PbtvMr')
-            //const element = document.getElementsByClassName('ZblRSxh8IUxjcEApoZVg');
-            console.log(element)
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [])
-
-    let str = ""
+    const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     if (songs.length > 0) {
-        console.log(songs[0].id)
-        str = `https://open.spotify.com/embed/track/${songs[0].id}?utm_source=generator`
+        console.log(songs[0].uri)
     }
-
-    //setInterval(console.log('hi'), 1000)
-
+    const songUris = []
+    for (let i = 0; i < songs.length; i++) {
+        songUris.push(songs[i].uri);
+    }
+    
+    if (accessToken.length < 10) return null
     return (
         <>
-        <iframe id='songplayer' src={str} width="100%" height="380" frameBorder="0" allowFullScreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <SpotifyPlayer 
+        token={accessToken}
+        uris={songUris}
+        />
         </>
     );
 }
