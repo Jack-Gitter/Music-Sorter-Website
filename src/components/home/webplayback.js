@@ -4,15 +4,12 @@ import { useEffect, useState } from "react";
 const WebPlayback = () => {
 
     const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-    if (songs.length > 0) {
-        console.log(songs[0].uri)
-    }
+
     const songUris = []
     for (let i = 0; i < songs.length; i++) {
         songUris.push(songs[i].uri);
     }
     
-    if (accessToken.length < 10) return null
     return (
         <>
         <SpotifyPlayer 
