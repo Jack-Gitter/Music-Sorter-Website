@@ -16,8 +16,7 @@ import { Route } from 'react-router-dom';
 
 function App() {
   
-  console.log(store)
-// create routes, so that the login is just the home route, and then the home page is /home, and our redirect url on the sever will go to /home
+
   return (
     <Provider store={store}>
     <BrowserRouter>

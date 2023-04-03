@@ -5,7 +5,10 @@ import { setLoadingSongs, updateSliders } from "../../state/reducers/songreducer
 import { useDispatch } from "react-redux";
 import { getTracksFromPlaylist } from "../../services/songservices";
 import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../services/songthunks";
+import { Slider, ThemeProvider } from "@mui/material";
+import { Stack } from "@mui/system";
 import { Link } from "react-router-dom";
+
 
 const Sliders = () => {
 
@@ -37,13 +40,13 @@ const Sliders = () => {
 
     return (
         <div>
-            <label>
-                <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
+                <Slider disabled={!acousticnessEnabled} color={'secondary'} value={acousticness} min={0} max={100} onChange={(e) => acousticnessUpdater(e.target.value)} />
                 acousticness
                 {acousticness}
-            </label>
-            {acousticnessEnabled && <button onClick={() => acousticnessStatus(false)}>Disable</button>}
-            {!acousticnessEnabled && <button onClick={() => acousticnessStatus(true)}>Enable</button>}
+                {acousticnessEnabled && <button className={'btn btn-success'}onClick={() => acousticnessStatus(false)}>Disable</button>}
+                {!acousticnessEnabled && <button className={'btn btn-secondary'}onClick={() => acousticnessStatus(true)}>Enable</button>}
+                </Stack>
             <br/>
             <label>
                 <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
