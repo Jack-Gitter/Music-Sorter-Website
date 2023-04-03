@@ -9,7 +9,7 @@ export const setAccessTokenAPI = (access_token) => {
 }
 
 export const getUserPlaylists = async () => {
-    const playlists = await spotifyWebApiHandler.getUserPlaylists();
+    const playlists = await spotifyWebApiHandler.getUserPlaylists({limit: 50});
     return playlists;
 
 }
