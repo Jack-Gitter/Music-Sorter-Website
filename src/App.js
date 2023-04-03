@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <div className='container'> 
         <Routes>
-          <Route path={'/'} element={<Login/>}/>
+          <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
         </Routes>
       </div>
