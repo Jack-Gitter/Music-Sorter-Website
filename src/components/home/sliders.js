@@ -40,13 +40,13 @@ const Sliders = () => {
 
     return (
         <div>
-                <Stack spacing={2} direction="row" sx={{ mb: 1 }} alignItems="center">
-                <Slider disabled={!acousticnessEnabled} color={'secondary'} value={acousticness} min={0} max={100} onChange={(e) => acousticnessUpdater(e.target.value)} />
+            <label>
+                <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 acousticness
                 {acousticness}
+            </label>
                 {acousticnessEnabled && <button className={'btn btn-success'}onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-secondary'}onClick={() => acousticnessStatus(true)}>Enable</button>}
-                </Stack>
             <br/>
             <label>
                 <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>

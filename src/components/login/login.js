@@ -1,10 +1,11 @@
 const Login = () => {
+    const LOGIN_LINK = process.env.REACT_APP_LOGIN_LINK
     return (
         <div>
             <h1>
                Login 
             </h1>
-            <a href='https://curatedshuffleauthserver.onrender.com/login'><button>Login!</button></a>
+            <a href={LOGIN_LINK}><button>Login!</button></a>
         </div>
     );
 }
