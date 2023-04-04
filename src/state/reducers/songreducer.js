@@ -68,6 +68,12 @@ const userInfo = createSlice({
                 console.log('this is the state \'s songs!')
                 console.log(state.songs);
             },
+        [getTracksFromPlaylistThunk.rejected]:
+            (state, {payload}) => {
+                state.loadingSongs = false;
+                console.log('failed to get songs from playlist')
+                state.songs = []
+            },
         [getBoundedVariablesThunk.fulfilled]: 
             (state, {payload}) => {
                 state.maxDuration = payload[0];
@@ -75,6 +81,11 @@ const userInfo = createSlice({
                 state.maxTempo = payload[2];
                 state.minTempo = payload[3];
                 state.loadingMetrics = false;
+            }, 
+        [getBoundedVariablesThunk.rejected]:
+            (state, {payload}) => {
+                state.loadingMetrics = false;
+                console.log('loading metrics for the playlist failed')
             }
     },
 })
