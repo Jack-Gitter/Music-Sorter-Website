@@ -16,7 +16,6 @@ export const searchSpotify = async (searchQuery) => {
 export const getUserPlaylists = async () => {
     const playlists = await spotifyWebApiHandler.getUserPlaylists({limit: 50});
     return playlists;
-
 }
 
 const calculateCuratedValue = (audioFeatures, sliders) => {

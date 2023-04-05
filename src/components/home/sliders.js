@@ -45,82 +45,82 @@ const Sliders = () => {
                 acousticness
                 {acousticness}
             </label>
-                {acousticnessEnabled && <button className={'btn btn-success'}onClick={() => acousticnessStatus(false)}>Disable</button>}
-                {!acousticnessEnabled && <button className={'btn btn-secondary'}onClick={() => acousticnessStatus(true)}>Enable</button>}
+                {acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(false)}>Disable</button>}
+                {!acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
                 danceability
                 {danceability}
             </label>
-            {danceabilityEnabled && <button onClick={() => danceabilityStatus(false)}>Disable</button>}
-            {!danceabilityEnabled && <button onClick={() => danceabilityStatus(true)}>Enable</button>}
+            {danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(false)}>Disable</button>}
+            {!danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
                 duration
                 {duration_ms}
             </label>
-            {durationEnabled && <button onClick={() => durationStatus(false)}>Disable</button>}
-            {!durationEnabled && <button onClick={() => durationStatus(true)}>Enable</button>}
+            {durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(false)}>Disable</button>}
+            {!durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
                 energy
                 {energy}
             </label>
-            {energyEnabled && <button onClick={() => energyStatus(false)}>Disable</button>}
-            {!energyEnabled && <button onClick={() => energyStatus(true)}>Enable</button>}
+            {energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(false)}>Disable</button>}
+            {!energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
                 instrumentalness
                 {instrumentalness}
             </label>
-            {instrumentalnessEnabled && <button onClick={() => instrumentalnessStatus(false)}>Disable</button>}
-            {!instrumentalnessEnabled && <button onClick={() => instrumentalnessStatus(true)}>Enable</button>}
+            {instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
+            {!instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input  disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
                 liveness
                 {liveness}
             </label>
-            {livenessEnabled && <button onClick={() => livenessStatus(false)}>Disable</button>}
-            {!livenessEnabled && <button onClick={() => livenessStatus(true)}>Enable</button>}
+            {livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(false)}>Disable</button>}
+            {!livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input  disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
                 loudness
                 {loudness}
             </label>
-            { loudnessEnabled && <button onClick={() => loudnessStatus(false)}>Disable</button>}
-            {!loudnessEnabled && <button onClick={() => loudnessStatus(true)}>Enable</button>}
+            { loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(false)}>Disable</button>}
+            {!loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
                 speechiness
                 {speechiness}
             </label>
-            {speechinessEnabled && <button onClick={() => speechinessStatus(false)}>Disable</button>}
-            {!speechinessEnabled && <button onClick={() => speechinessStatus(true)}>Enable</button>}
+            {speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(false)}>Disable</button>}
+            {!speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
                 tempo
                 {tempo}
             </label>
-            {tempoEnabled && <button onClick={() => tempoStatus(false)}>Disable</button>}
-            {!tempoEnabled && <button onClick={() => tempoStatus(true)}>Enable</button>}
+            {tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(false)}>Disable</button>}
+            {!tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(true)}>Enable</button>}
             <br/>
             <label>
                 <input disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
                 valence
                 {valence}
             </label>
-            {valenceEnabled && <button onClick={() => valenceStatus(false)}>Disable</button>}
-            {!valenceEnabled && <button onClick={() => valenceStatus(true)}>Enable</button>}
+            {valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(false)}>Disable</button>}
+            {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
             <br/>
-            <button disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            <button className={'btn btn-success'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness/100,
@@ -171,8 +171,8 @@ const Sliders = () => {
             }
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
-        } className='btn btn-primary'>Update</button>
-        <Link to={'/'}><button>Logout</button></Link>
+        } className='btn btn-success'>Update</button>
+        <Link to={'/'}><button className={'btn btn-success'}>Logout</button></Link>
         </div>
     );
 }

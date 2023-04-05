@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { searchSpotify } from "../../services/songservices";
 import { Link } from "react-router-dom";
+import Sliders from "../home/sliders";
 
 const Search = () => {
     const [searchQuery, updateSearchQuery] = useState('')
@@ -11,7 +12,7 @@ const Search = () => {
                 searchSpotify(searchQuery);
             }}
             >Search</button>
-            <Link to={'/home'}><button>Back</button></Link>
+        <button>Reload my playlists!</button>
         </div>
     );
 }
