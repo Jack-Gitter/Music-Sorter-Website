@@ -2,14 +2,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Sliders from "../home/sliders";
 import { searchSpotifyThunk } from "../../services/songthunks";
+import { useDispatch } from "react-redux";
 
 const Search = () => {
+    const dispatcher = useDispatch();
     const [searchQuery, updateSearchQuery] = useState('')
     return (
         <div>
             <input value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
             <button onClick={() => {
-                searchSpotifyThunk(searchQuery);
+                dispatcher(searchSpotifyThunk(searchQuery));
             }}
             >Search</button>
         <button>Reload my playlists!</button>
