@@ -171,7 +171,7 @@ const Sliders = () => {
             }
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
-        } className='btn btn-success'>Update</button>
+        } >Update</button>
         <Link to={'/'}><button className={'btn btn-success'}>Logout</button></Link>
         </div>
     );
