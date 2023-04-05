@@ -28,7 +28,7 @@ const PlaylistSelector = () => {
         {playlists.map((plist, index) => 
             <div className="col-4">
             <span className={`fg-green`}>{plist.name}</span>
-            <span className={`p-1 ${plist.id === currentPlaylist ? 'bg-danger': ''}`}><img className={'playlist-img'} onClick={() => {
+            <span className={`p-1 ${plist.id === currentPlaylist ? 'bg-danger': ''} inline-block`}><img className={'playlist-img'} onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     console.log('playlist clikced');
                     console.log(pid);
