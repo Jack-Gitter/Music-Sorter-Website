@@ -41,9 +41,12 @@ const PlaylistSelector = () => {
             {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         </>*/
         <div>
+        <button>
+            This is where the content should be at mannnnn!!!!
+        </button>
         {console.log(playlists)}
         {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
-        {playlists.map((plist, index) => {
+        {playlists.map((plist, index) => { console.log('what');
             /*<button 
             onClick={(e) => {
                 let pid = getPlaylistID(e.target.value);
