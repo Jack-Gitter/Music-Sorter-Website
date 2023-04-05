@@ -41,12 +41,7 @@ const PlaylistSelector = () => {
             {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         </>*/
         <div>
-        <button>
-            This is where the content should be at mannnnn!!!!
-        </button>
-        {console.log(playlists)}
         {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
-        <ul>
         {playlists.map((plist, index) => 
             <button 
             onClick={(e) => {
@@ -62,8 +57,6 @@ const PlaylistSelector = () => {
             }}
             ><img src={plist.images.url}></img></button>
         )}
-        </ul>
-
         </div>
     );
 }
