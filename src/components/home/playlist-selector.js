@@ -27,8 +27,8 @@ const PlaylistSelector = () => {
         {(loadingSongs || loadingMetrics ) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
             <div className="col-4">
-            <span className={`fg-green ${plist.id === currentPlaylist ? 'bg-danger': ''} text-center`}>{plist.name}</span>
-            <img className={'playlist-img'} onClick={() => {
+            <span className={`fg-green`}>{plist.name}</span>
+            <span className={`p-1 ${plist.id === currentPlaylist ? 'bg-danger': ''}`}><img className={'playlist-img'} onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     console.log('playlist clikced');
                     console.log(pid);
@@ -40,9 +40,8 @@ const PlaylistSelector = () => {
                         dispatcher(setCurrentPlaylist(-1));
                     }
                 }}
-            src={plist.images[0].url}></img>
+            src={plist.images[0].url}></img></span>
             </div>
-
         )}
         </div>
     );
