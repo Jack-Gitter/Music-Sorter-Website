@@ -22,12 +22,12 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <div>
+        <div className="row">
         {console.log(playlists)}
-        {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
+        {(loadingSongs || loadingMetrics ) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
-            <label>
-            {plist.name}
+            <div className="col-3">
+            <span className="fg-green">{plist.name}</span>
             <img className={'playlist-img'} onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     console.log('playlist clikced');
@@ -41,7 +41,8 @@ const PlaylistSelector = () => {
                     }
                 }}
             src={plist.images[0].url}></img>
-            </label>
+            </div>
+
         )}
         </div>
     );
