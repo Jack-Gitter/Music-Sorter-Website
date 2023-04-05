@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Sliders from "../home/sliders";
-import { searchSpotifyThunk } from "../../services/songthunks";
+import { getUserPlaylistsThunk, searchSpotifyThunk } from "../../services/songthunks";
 import { useDispatch } from "react-redux";
 
 const Search = () => {
@@ -14,7 +14,9 @@ const Search = () => {
                 dispatcher(searchSpotifyThunk(searchQuery));
             }}
             >Search</button>
-        <button>Reload my playlists!</button>
+        <button onClick={() => {
+            dispatcher(getUserPlaylistsThunk());
+        }}>Reload my playlists!</button>
         </div>
     );
 }
