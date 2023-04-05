@@ -40,7 +40,8 @@ const PlaylistSelector = () => {
             </select> 
             {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         </>*/
-        <>
+        <div>
+        {console.log(playlists)}
         {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => {
             <button 
@@ -58,7 +59,7 @@ const PlaylistSelector = () => {
             ><img src={plist.images.url}></img></button>
         })}
 
-        </>
+        </div>
     );
 }
 export default PlaylistSelector;
