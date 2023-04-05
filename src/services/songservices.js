@@ -8,6 +8,11 @@ export const setAccessTokenAPI = (access_token) => {
     spotifyWebApiHandler.setAccessToken(access_token);
 }
 
+export const searchSpotify = async (searchQuery) => {
+    const results = await spotifyWebApiHandler.searchPlaylists(searchQuery);
+    console.log(results);
+}
+
 export const getUserPlaylists = async () => {
     const playlists = await spotifyWebApiHandler.getUserPlaylists({limit: 50});
     return playlists;

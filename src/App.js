@@ -13,6 +13,7 @@ import Login from './components/login/login';
 import { BrowserRouter, Router } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import Search from './components/search/search';
 import './styles/general.css'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
+          <Route path={'/search/*'} element={<Search/>}/>
         </Routes>
       </div>
       </BrowserRouter>
