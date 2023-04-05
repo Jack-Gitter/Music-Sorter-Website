@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../services/songthunks";
 import { getBoundedVariablesThunk } from "../../services/songthunks";
+import { searchSpotifyThunk } from "../../services/songthunks";
 
 const userInfo = createSlice({
     name: "intialSongs",
@@ -56,6 +57,10 @@ const userInfo = createSlice({
     },
     extraReducers: {
         [getUserPlaylistsThunk.fulfilled]:
+            (state, {payload}) => {
+                state.playlists = payload.items;
+            },
+        [searchSpotifyThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlists = payload.items;
             },

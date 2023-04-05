@@ -6,6 +6,11 @@ export const getUserPlaylistsThunk = createAsyncThunk(
     async () => await service.getUserPlaylists()
 )
 
+export const searchSpotifyThunk = createAsyncThunk(
+    'search/FindPlaylists', 
+    async (searchQuery) => await service.searchSpotify(searchQuery)
+)
+
 export const getTracksFromPlaylistThunk = createAsyncThunk(
     'profile/findTracksFromPlaylist',
     async ({id, sliders}) => await service.getTracksFromPlaylist(id, sliders)
