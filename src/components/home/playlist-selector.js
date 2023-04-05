@@ -56,7 +56,19 @@ const PlaylistSelector = () => {
                     dispatcher(setCurrentPlaylist(-1));
                 }
             }}
-            >*/<img src={plist.images[0].url}></img>//</button>
+            >*/<img className={'playlist-img'} onClick={(e) => {
+                    let pid = getPlaylistID(e.target.value);
+                    console.log('playlist clikced');
+                    console.log(pid);
+                    if (pid != -1) {
+                        dispatcher(setCurrentPlaylist(pid));
+                        dispatcher(setLoadingMetrics(true));
+                        dispatcher(getBoundedVariablesThunk(pid));
+                    } else {
+                        dispatcher(setCurrentPlaylist(-1));
+                    }
+                }}
+            src={plist.images[0].url}></img>//</button>
         )}
         </div>
     );
