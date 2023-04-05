@@ -23,7 +23,9 @@ body {
 }
 
 .playlist-img {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    border-radius: 20px;
 }
 
