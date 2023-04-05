@@ -22,7 +22,7 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <>
+        /*<>
         <select disabled={loadingSongs || loadingMetrics} onChange={(e) => {
                 console.log(loadingSongs)
                 let pid = getPlaylistID(e.target.value);
@@ -39,6 +39,25 @@ const PlaylistSelector = () => {
                 {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
             </select> 
             {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
+        </>*/
+        <>
+        {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
+        {playlists.map((plist, index) => {
+            <button 
+            onClick={(e) => {
+                let pid = getPlaylistID(e.target.value);
+                console.log(pid);
+                if (pid != -1) {
+                    dispatcher(setCurrentPlaylist(pid));
+                    dispatcher(setLoadingMetrics(true));
+                    dispatcher(getBoundedVariablesThunk(pid));
+                } else {
+                    dispatcher(setCurrentPlaylist(-1));
+                }
+            }}
+            ><img src={plist.images.url}></img></button>
+        })}
+
         </>
     );
 }
