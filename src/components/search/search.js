@@ -8,13 +8,13 @@ const Search = () => {
     const dispatcher = useDispatch();
     const [searchQuery, updateSearchQuery] = useState('')
     return (
-        <div>
-            <input value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
-            <button onClick={() => {
+        <div className="">
+            <input className='border border-secondary rounded'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
+            <button className='btn btn-success ms-2' onClick={() => {
                 dispatcher(searchSpotifyThunk(searchQuery));
             }}
             >Search</button>
-        <button onClick={() => {
+        <button className='btn btn-success ms-2'onClick={() => {
             dispatcher(getUserPlaylistsThunk());
         }}>Reload my playlists!</button>
         </div>
