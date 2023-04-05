@@ -26,7 +26,7 @@ const PlaylistSelector = () => {
         {console.log(playlists)}
         {(loadingSongs || loadingMetrics ) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
-            <div className="col-4">
+            <div className="col-3">
             <img className={`${plist.id === currentPlaylist ? 'border border-success border-3': ''} playlist-img`} onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     console.log('playlist clikced');
