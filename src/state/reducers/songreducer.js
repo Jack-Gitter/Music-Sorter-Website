@@ -62,9 +62,7 @@ const userInfo = createSlice({
             },
         [searchSpotifyThunk.fulfilled]:
             (state, {payload}) => {
-                console.log("thunk payload is");
-                console.log(payload);
-                state.playlists = payload.items;
+                state.playlists = payload.playlist.items;
             },
         [getTracksFromPlaylistThunk.fulfilled]:
             (state, {payload}) => {
