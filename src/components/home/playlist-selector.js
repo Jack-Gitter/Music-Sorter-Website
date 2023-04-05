@@ -26,6 +26,8 @@ const PlaylistSelector = () => {
         {console.log(playlists)}
         {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
+            <label>
+            {plist.name}
             <img className={'playlist-img'} onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     console.log('playlist clikced');
@@ -38,7 +40,8 @@ const PlaylistSelector = () => {
                         dispatcher(setCurrentPlaylist(-1));
                     }
                 }}
-            src={plist.images[0].url}></img>//</button>
+            src={plist.images[0].url}></img>
+            </label>
         )}
         </div>
     );
