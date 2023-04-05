@@ -24,7 +24,7 @@ const PlaylistSelector = () => {
     return (
         <div className="row">
         {console.log(playlists)}
-        {(loadingSongs || loadingMetrics ) && <i className='fa fas fa-spinner fa-spin'></i>}
+        {(loadingSongs || loadingMetrics) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
             <div className="col-3">
             <img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} onClick={() => {
