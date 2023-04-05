@@ -9,7 +9,9 @@ export const setAccessTokenAPI = (access_token) => {
 }
 
 export const searchSpotify = async (searchQuery) => {
+    console.log('search query is' + searchQuery)
     const playlists = await spotifyWebApiHandler.searchPlaylists(searchQuery);
+    console.log('playlists are' + playlists);
     return playlists
 }
 

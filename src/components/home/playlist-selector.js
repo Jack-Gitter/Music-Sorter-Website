@@ -22,24 +22,6 @@ const PlaylistSelector = () => {
     }
 
     return (
-        /*<>
-        <select disabled={loadingSongs || loadingMetrics} onChange={(e) => {
-                console.log(loadingSongs)
-                let pid = getPlaylistID(e.target.value);
-                if (pid != -1) {
-                    dispatcher(setCurrentPlaylist(pid));
-                    dispatcher(setLoadingMetrics(true));
-                    dispatcher(getBoundedVariablesThunk(pid));
-                } else {
-                    dispatcher(setCurrentPlaylist(-1));
-                }
-                }
-            }>
-                <option defaultValue={true}>Please Select a Playlist</option>
-                {playlists.map((plist, index) => <option key={index}>{plist.name}</option>)}
-            </select> 
-            {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
-        </>*/
         <div>
         {console.log(playlists)}
         {(loadingSongs || loadingMetrics )&& <i className='fa fas fa-spinner fa-spin'></i>}
