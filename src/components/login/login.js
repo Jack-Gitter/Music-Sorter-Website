@@ -1,10 +1,11 @@
 const Login = () => {
     return (
-        <div>
+        <div className="text-center login-background">
             <h1>
-               Login 
+               Curated Shuffle
             </h1>
-            <a href={'https://curatedshuffleauthserver.onrender.com/login'}><button>Login!</button></a>
+            <a href={'https://curatedshuffleauthserver.onrender.com/login'}>
+                <button className={'btn btn-lg btn-outline-dark login-button'}>Login!</button></a>
         </div>
     );
 }

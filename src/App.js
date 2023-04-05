@@ -13,6 +13,7 @@ import Login from './components/login/login';
 import { BrowserRouter, Router } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import './styles/general.css'
 
 function App() {
   
@@ -20,7 +21,7 @@ function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
-      <div className='container'> 
+      <div className> 
         <Routes>
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>

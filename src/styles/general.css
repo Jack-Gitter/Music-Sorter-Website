@@ -1,0 +1,25 @@
+.login-background {
+    position: absolute;
+    background-color: #1DB954;
+    color: #191414;
+    top: 30%;
+    left:40%;
+    right:40%;
+    bottom:25%;
+    height:300px;
+    width:300px;
+    padding:30px;
+    border-radius: 30px;
+}
+
+body {
+    background-color: #111D01;
+}
+
+
+.login-button {
+    color: black;
+    position:relative;
+    top:20px;
+}
+
