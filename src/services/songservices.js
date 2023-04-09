@@ -92,6 +92,7 @@ export const getTracksFromPlaylist = async (id, sliders) => {
 
 export const getPlaylistIMG = async (plistID) => {
     const playlist = await spotifyWebApiHandler.getPlaylist(plistID);
+    console.log("plist is")
     console.log(playlist)
     return "playlistIMG"
 }
