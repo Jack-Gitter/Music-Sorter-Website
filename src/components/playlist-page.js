@@ -19,13 +19,16 @@ const PlaylistPage = () => {
     const {plistID} = useParams()
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
+    console.log(location)
     const access_start = location.indexOf('access_token')
     const access_end = location.indexOf('/', access_start);
     const access_token = location.substring(access_start + 'access_token='.length, access_end);
-    
+    console.log("access token is: ")
+    console.log(accessToken)
+
     useEffect(() => {
-        dispatcher(setSongs([]))
         dispatcher(setAccessToken(access_token));
+        dispatcher(setSongs([]))
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
