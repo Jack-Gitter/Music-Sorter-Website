@@ -39,12 +39,13 @@ const PlaylistPage = () => {
         if (playerState.nextTracks !== undefined) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
+                console.log(songs[i].id)
                 if (songs[i].id === trackID) {
-                    firstSongDisplayedIDXUpdater(i)
-                    break
+                    firstSongDisplayedIDXUpdater(i);
                 }
             }
         }
+   console.log(firstSongDisplayedIDX) 
     }, [plistID, playerState])
     
    console.log(firstSongDisplayedIDX) 
