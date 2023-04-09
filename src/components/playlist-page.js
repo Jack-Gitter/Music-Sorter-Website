@@ -19,7 +19,7 @@ const PlaylistPage = () => {
     return (
         <>
         <h1 className="fg-green">
-            <img className="playlist-img">src={plist.images[0].url}</img>
+            <img className="playlist-img">src={plistIMG}</img>
         <ul>
             {songs.slice(0,15).map((track) => <li>{track.name}</li>)}
         </ul>
