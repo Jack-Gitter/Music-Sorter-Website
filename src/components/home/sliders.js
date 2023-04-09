@@ -123,6 +123,20 @@ const Sliders = () => {
             {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
             <br/>
             <button className={'btn btn-success'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            dispatcher(updateSliders(
+                {
+                    acousticness: acousticness/100,
+                    danceability: danceability/100,
+                    duration_ms: ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration,
+                    energy: energy/100,
+                    instrumentalness: instrumentalness/100,
+                    liveness: liveness/100,
+                    loudness: ((loudness) / 100) * 60 + -60,
+                    speechiness: speechiness/100,
+                    tempo: ((tempo) / 100) * (maxTempo - minTempo) + minTempo,
+                    valence: valence/100,
+                }
+            ));
             dispatcher(setLoadingSongs(true));
                 // when we are calling this, make sure to only include the metrics that are enabled on the website
             let slider_map = {}
