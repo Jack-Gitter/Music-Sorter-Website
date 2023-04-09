@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Sliders from "./home/sliders";
 import { useSelector } from "react-redux";
+import WebPlayback from "./home/webplayback";
+
 
 
 const PlaylistPage = () => {
@@ -17,7 +19,7 @@ const PlaylistPage = () => {
         <>
         <h1 className="fg-green">
         <ul>
-            {songs.map.slice(0,15)((track) => <li>{track.name}</li>)}
+            {songs.slice(0,15).map((track) => <li>{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
