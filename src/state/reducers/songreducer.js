@@ -57,6 +57,7 @@ const userInfo = createSlice({
             state.loadingMetrics = action.payload;
         },
         setPlayerState(state, action) {
+            console.log(action.payload)
             state.playerState = action.payload
         }
     },
