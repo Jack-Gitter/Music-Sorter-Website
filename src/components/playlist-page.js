@@ -48,7 +48,7 @@ const PlaylistPage = () => {
         <div>
         <img className="playlist-img-big" src={playlistIMG}></img>
         <ul className="list-group">
-            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="align-items-center list-group-item list-group-item-dark">{track.name}</li>)}
+            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="text-align-center list-group-item list-group-item-dark">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
