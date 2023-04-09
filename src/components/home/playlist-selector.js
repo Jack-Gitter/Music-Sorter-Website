@@ -32,12 +32,12 @@ const PlaylistSelector = () => {
                 onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     if (pid != -1) {
-                        dispatcher(setCurrentPlaylist(pid));
-                        dispatcher(setLoadingMetrics(true));
-                        dispatcher(getBoundedVariablesThunk(pid));
-                        dispatcher(setSongs([]))
+                        //dispatcher(setCurrentPlaylist(pid));
+                        //dispatcher(setLoadingMetrics(true));
+                        //dispatcher(getBoundedVariablesThunk(pid));
+                        //dispatcher(setSongs([]))
                     } else {
-                        dispatcher(setCurrentPlaylist(-1));
+                        //dispatcher(setCurrentPlaylist(-1));
                     }
                 }}
             src={plist.images[0].url}></img></Link>
