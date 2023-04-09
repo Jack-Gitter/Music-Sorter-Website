@@ -45,16 +45,14 @@ const PlaylistPage = () => {
         }
 
     return (
-        <>
-        <h1 className="fg-green">
+        <div className="fg-green">
         <img className="playlist-img-big" src={playlistIMG}></img>
         <ul className="list-group">
             {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+15).map((track) => <li className="list-group-item">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
-        </h1>
-        </>
+        </div>
     );
 }
 export default PlaylistPage;

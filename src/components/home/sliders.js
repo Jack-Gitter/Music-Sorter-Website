@@ -127,9 +127,9 @@ const Sliders = () => {
                 <span className="fg-green p-3">valence</span>
                 <span className="fg-green p-3">{valence}</span>
             </label>
-        </div>
             {valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
+        </div>
             <button className={'btn btn-success'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
