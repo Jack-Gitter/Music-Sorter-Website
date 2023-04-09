@@ -29,17 +29,6 @@ const PlaylistSelector = () => {
         {playlists.map((plist, index) => 
             <div className="col-3">
             <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}><img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
-                onClick={() => {
-                    let pid = getPlaylistID(plist.name);
-                    if (pid != -1) {
-                        //dispatcher(setCurrentPlaylist(pid));
-                        //dispatcher(setLoadingMetrics(true));
-                        //dispatcher(getBoundedVariablesThunk(pid));
-                        //dispatcher(setSongs([]))
-                    } else {
-                        //dispatcher(setCurrentPlaylist(-1));
-                    }
-                }}
             src={plist.images[0].url}></img></Link>
             </div>
         )}
