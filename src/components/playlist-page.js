@@ -5,17 +5,18 @@ import { useSelector } from "react-redux";
 import WebPlayback from "./home/webplayback";
 import { setCurrentPlaylist } from "../state/reducers/songreducer";
 import { setLoadingMetrics } from "../state/reducers/songreducer";
-import { getBoundedVariablesThunk } from "../services/songthunks";
+import { getBoundedVariablesThunk, getPlaylistIMG, getPlaylistIMGThunk } from "../services/songthunks";
 import { setSongs } from "../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
 import { setAccessToken } from "../state/reducers/songreducer";
 import { useLocation } from "react-router-dom";
+import { getPlaylist } from "../services/songservices";
 
 
 
 const PlaylistPage = () => {
     
-    const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const {plistID} = useParams()
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
@@ -30,6 +31,7 @@ const PlaylistPage = () => {
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
+        dispatcher(getPlaylistIMGThunk(plistID))
     }, [plistID])
     
     return (
@@ -39,6 +41,7 @@ const PlaylistPage = () => {
         the displayed tracks can just be the nextTracks from the spotify web player nextTracks variable 
         we can get this from using the callback function and getting the state, updating a global state variable, and 
         refreshing the screen. After this is done, we are done!
+        <img className="playlist-img" src={playlistIMG}></img>
         <ul>
             {songs.slice(0,15).map((track) => <li>{track.name}</li>)}
         </ul>

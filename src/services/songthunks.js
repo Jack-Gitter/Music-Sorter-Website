@@ -20,3 +20,8 @@ export const getBoundedVariablesThunk = createAsyncThunk(
     'profile/getBoundedVars', 
     async (id) => await service.getBoundedVariables(id)
 )
+
+export const getPlaylistIMGThunk = createAsyncThunk(
+    'profile/GetPlaylistIMG',
+    async (id) => await service.getPlaylistIMG(id)
+)
