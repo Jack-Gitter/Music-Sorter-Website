@@ -36,7 +36,7 @@ const PlaylistPage = () => {
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
         console.log(playerState)
-        if (playerState !== {}) {
+        if (playerState.nextTracks !== undefined) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
                 if (songs[i].id === trackID) {
