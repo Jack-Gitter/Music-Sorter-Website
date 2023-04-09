@@ -98,3 +98,6 @@ export const getPlaylistIMG = async (plistID) => {
     return playlistIMG
 }
 
+export const setPlayerState = async (state) => {
+    return state
+}

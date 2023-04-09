@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setAccessTokenAPI } from "../../services/songservices";
-import { getPlaylistIMGThunk, getTracksFromPlaylistThunk, getUserPlaylistsThunk } from "../../services/songthunks";
+import { getPlaylistIMGThunk, getTracksFromPlaylistThunk, getUserPlaylistsThunk, setPlayerStateThunk } from "../../services/songthunks";
 import { getBoundedVariablesThunk } from "../../services/songthunks";
 import { searchSpotifyThunk } from "../../services/songthunks";
 
@@ -19,6 +19,7 @@ const userInfo = createSlice({
         playlists: [],
         songs: [],
         playlistIMG: "",
+        playerState: {},
         sliders: {
             acousticness: 50,
             danceability: 50,
@@ -96,6 +97,10 @@ const userInfo = createSlice({
         [getPlaylistIMGThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlistIMG = payload
+            },
+        [setPlayerStateThunk.fulfilled]:
+            (state, {payload}) => {
+                state.playerState = payload
             }
     },
 })

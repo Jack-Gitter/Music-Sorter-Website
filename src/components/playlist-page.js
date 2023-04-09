@@ -16,7 +16,7 @@ import { getPlaylist } from "../services/songservices";
 
 const PlaylistPage = () => {
     
-    const {playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {playerState, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const {plistID} = useParams()
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
@@ -33,6 +33,8 @@ const PlaylistPage = () => {
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
+    
+    console.log(playerState)
     
     return (
         <>
