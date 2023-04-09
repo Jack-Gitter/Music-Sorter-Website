@@ -5,6 +5,7 @@ import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../serv
 import { setLoadingSongs } from "../../state/reducers/songreducer"; 
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
+import { Link } from "react-router-dom";
 
 const PlaylistSelector = () => {
 
@@ -27,11 +28,9 @@ const PlaylistSelector = () => {
         {(loadingSongs || loadingMetrics) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
             <div className="col-3">
-            <img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
+            <Link to={`/playlist/${getPlaylistID(plist.name)}}`}><img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
                 onClick={() => {
                     let pid = getPlaylistID(plist.name);
-                    console.log('playlist clikced');
-                    console.log(pid);
                     if (pid != -1) {
                         dispatcher(setCurrentPlaylist(pid));
                         dispatcher(setLoadingMetrics(true));
@@ -40,7 +39,7 @@ const PlaylistSelector = () => {
                         dispatcher(setCurrentPlaylist(-1));
                     }
                 }}
-            src={plist.images[0].url}></img>
+            src={plist.images[0].url}></img></Link>
             </div>
         )}
         </div>

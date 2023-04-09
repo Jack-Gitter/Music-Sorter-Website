@@ -15,6 +15,7 @@ import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Search from './components/search/search';
 import './styles/general.css'
+import PlaylistPage from './components/playlist-page';
 
 function App() {
   
@@ -27,7 +28,8 @@ function App() {
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
           <Route path={'/search/*'} element={<Search/>}/>
-        </Routes>
+          <Route path={'/playlist/:plistID'} element={<PlaylistPage/>}/> 
+         </Routes>
       </div>
       </BrowserRouter>
     </Provider>
