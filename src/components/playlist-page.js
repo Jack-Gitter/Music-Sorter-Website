@@ -23,8 +23,6 @@ const PlaylistPage = () => {
     const location = useLocation().pathname;
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
-    console.log("access token is: ")
-    console.log(accessToken)
     
     let firstSongDisplayedIDX = 0;
 
@@ -49,9 +47,9 @@ const PlaylistPage = () => {
     return (
         <>
         <h1 className="fg-green">
-        <img className="playlist-img" src={playlistIMG}></img>
-        <ul>
-            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+15).map((track) => <li>{track.name}</li>)}
+        <img className="playlist-img-big" src={playlistIMG}></img>
+        <ul className="list-group">
+            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+15).map((track) => <li className="list-group-item">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>

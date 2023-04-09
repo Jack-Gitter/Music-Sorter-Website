@@ -35,3 +35,10 @@ body {
     border-radius: 20px;
 }
 
+.playlist-img-big {
+    width: 350px;
+    height: 450px;
+    margin: 50px;
+    border-radius: 20px;
+}
+
