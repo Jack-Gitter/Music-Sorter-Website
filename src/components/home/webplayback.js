@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setPlayer } from "../../state/reducers/songreducer";
-const WebPlayback = () => {
-    const dispatcher = useDispatch()
 
+const WebPlayback = () => {
+
+    const dispatcher = useDispatch()
     const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
 
     const songUris = []
@@ -31,7 +32,7 @@ const WebPlayback = () => {
         layout={'responsive'}
         play={true}
         uris={songUris}
-        callback={(state) => { console.log(state); dispatcher(setPlayer(state))}}
+        callback={(state) => { console.log(state); }}//dispatcher(setPlayer(state))}}
         />}
         </>
     );
