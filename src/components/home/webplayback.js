@@ -31,7 +31,7 @@ const WebPlayback = () => {
         layout={'responsive'}
         play={true}
         uris={songUris}
-        callback={(state) => dispatcher(setPlayer(state))}
+        callback={(state) => { console.log(state); dispatcher(setPlayer(state))}}
         />}
         </>
     );
