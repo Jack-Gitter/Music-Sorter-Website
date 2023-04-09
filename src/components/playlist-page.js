@@ -26,7 +26,7 @@ const PlaylistPage = () => {
     console.log("access token is: ")
     console.log(accessToken)
     
-    const [firstSongDisplayedIDX, firstSongDisplayedIDXUpdater] = useState(0)
+    let firstSongDisplayedIDX = 0;
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -42,11 +42,11 @@ const PlaylistPage = () => {
             for (let i = 0; i < songs.length; i++) {
                 console.log(songs[i].id)
                 if (songs[i].id === trackID) {
-                    firstSongDisplayedIDXUpdater(i);
+                    firstSongDisplayedIDX = i
                 }
             }
         }
-   console.log(firstSongDisplayedIDX) 
+
     return (
         <>
         <h1 className="fg-green">
