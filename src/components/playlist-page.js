@@ -49,10 +49,6 @@ const PlaylistPage = () => {
     return (
         <>
         <h1 className="fg-green">
-        current playlist is {plistID}
-        the displayed tracks can just be the nextTracks from the spotify web player nextTracks variable 
-        we can get this from using the callback function and getting the state, updating a global state variable, and 
-        refreshing the screen. After this is done, we are done!
         <img className="playlist-img" src={playlistIMG}></img>
         <ul>
         get the index of playerStatus.nextTracks[0].id in songs and then render from there
