@@ -8,6 +8,7 @@ import { setLoadingMetrics } from "../state/reducers/songreducer";
 import { getBoundedVariablesThunk } from "../services/songthunks";
 import { setSongs } from "../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
+import { setAccessToken } from "../state/reducers/songreducer";
 
 
 
@@ -16,9 +17,14 @@ const PlaylistPage = () => {
     const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const {plistID} = useParams()
     const dispatcher = useDispatch()
+    const location = useLocation().pathname;
+    const access_start = location.indexOf('access_token')
+    const access_end = location.indexOf('&');
+    const access_token = location.substring(access_start + 'access_token='.length, access_end);
     
     useEffect(() => {
         dispatcher(setSongs([]))
+        dispatcher(setAccessToken(access_token));
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
