@@ -40,7 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row">
-        <div className="col-4">
+        <div className="col-4 m-1">
             <label>
                 <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 <span className="fg-green p-1">acousticness</span>
@@ -49,7 +49,7 @@ const Sliders = () => {
                 {acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-4">
+        <div className="col-4 m-1">
             <label>
                 <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
                 <span className="fg-green p-1">danceability</span>
