@@ -9,6 +9,7 @@ import WebPlayback from "./home/webplayback";
 const PlaylistPage = () => {
     
     const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {plistIMG} = useParams()
 
     
     useEffect(() => {
@@ -18,10 +19,7 @@ const PlaylistPage = () => {
     return (
         <>
         <h1 className="fg-green">
-        <h2>
-            current playlist is {currentPlaylist}
-        </h2>
-
+            <img className="playlist-img">src={plist.images[0].url}</img>
         <ul>
             {songs.slice(0,15).map((track) => <li>{track.name}</li>)}
         </ul>
