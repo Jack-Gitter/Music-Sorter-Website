@@ -40,8 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row">
-        <div className="col-5"></div>
-        <div className="col-2">
+        <div className="col-4">
             <label>
                 <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 <span className="fg-green p-3">acousticness</span>
@@ -49,7 +48,8 @@ const Sliders = () => {
             </label>
                 {acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
                 <span className="fg-green p-3">danceability</span>
@@ -57,7 +57,8 @@ const Sliders = () => {
             </label>
             {danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
                 <span className="fg-green p-3">duration</span>
@@ -65,7 +66,8 @@ const Sliders = () => {
             </label>
             {durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
                 <span className="fg-green p-3">energy</span>
@@ -73,7 +75,8 @@ const Sliders = () => {
             </label>
             {energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
                 <span className="fg-green p-3">instrumentalness</span>
@@ -81,7 +84,8 @@ const Sliders = () => {
             </label>
             {instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input  disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
                 <span className="fg-green p-3">liveness</span>
@@ -89,7 +93,8 @@ const Sliders = () => {
             </label>
             {livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input  disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
                 <span className="fg-green p-3">loudness</span>
@@ -97,7 +102,8 @@ const Sliders = () => {
             </label>
             { loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
                 <span className="fg-green p-3">speechiness</span>
@@ -105,7 +111,8 @@ const Sliders = () => {
             </label>
             {speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
                 <span className="fg-green p-3">tempo</span>
@@ -113,15 +120,16 @@ const Sliders = () => {
             </label>
             {tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(true)}>Enable</button>}
-            <br/>
+        </div>
+        <div className="col-4">
             <label>
                 <input disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
                 <span className="fg-green p-3">valence</span>
                 <span className="fg-green p-3">{valence}</span>
             </label>
+        </div>
             {valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
-            <br/>
             <button className={'btn btn-success'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
@@ -175,8 +183,6 @@ const Sliders = () => {
             }
         } >Update</button>
         <Link to={'/'}><button className={'btn btn-success'}>Logout</button></Link>
-        </div>
-        <div className="col-5"></div>
         </div>
     );
 }
