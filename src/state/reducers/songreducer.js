@@ -18,7 +18,7 @@ const userInfo = createSlice({
         refreshToken: "",
         playlists: [],
         songs: [],
-        playlistIMG = '',
+        playlistIMG: "",
         sliders: {
             acousticness: 50,
             danceability: 50,
