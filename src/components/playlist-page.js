@@ -44,7 +44,7 @@ const PlaylistPage = () => {
                 }
             }
         }
-    }, [plistID, playerState])
+    }, [plistID])
     
    console.log(firstSongDisplayedIDX) 
     return (
