@@ -130,7 +130,7 @@ const Sliders = () => {
             {valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
         </div>
-            <button className={'btn btn-success'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            <button className={'btn btn-success m-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness,
@@ -182,7 +182,7 @@ const Sliders = () => {
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
-        <Link to={'/'}><button className={'btn btn-success'}>Logout</button></Link>
+        <Link to={'/'}><button className={'btn btn-success m-2'}>Logout</button></Link>
         </div>
     );
 }
