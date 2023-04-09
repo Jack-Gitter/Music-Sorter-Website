@@ -56,7 +56,7 @@ const PlaylistPage = () => {
         <img className="playlist-img" src={playlistIMG}></img>
         <ul>
         get the index of playerStatus.nextTracks[0].id in songs and then render from there
-            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+15).map((track) => <li>{track.name}</li>)}
+            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+15).map((track) => <li>{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
