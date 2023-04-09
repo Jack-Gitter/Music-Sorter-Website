@@ -42,8 +42,8 @@ const userInfo = createSlice({
         updateSliders(state, action) {
             state.sliders = action.payload;
         },
-        songs(state, action) {
-            console.log("hi");
+        setSongs(state, action) {
+            state.songs = action.payload
         },
         setLoadingSongs(state, action) {
             state.loadingSongs = action.payload
@@ -95,5 +95,5 @@ const userInfo = createSlice({
     },
 })
 
-export const {setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;

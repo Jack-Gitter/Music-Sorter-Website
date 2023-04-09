@@ -2,7 +2,7 @@ import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../services/songthunks";
-import { setLoadingSongs } from "../../state/reducers/songreducer"; 
+import { setLoadingSongs, setSongs } from "../../state/reducers/songreducer"; 
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
 import { Link } from "react-router-dom";
@@ -35,6 +35,7 @@ const PlaylistSelector = () => {
                         dispatcher(setCurrentPlaylist(pid));
                         dispatcher(setLoadingMetrics(true));
                         dispatcher(getBoundedVariablesThunk(pid));
+                        dispatcher(setSongs([]))
                     } else {
                         dispatcher(setCurrentPlaylist(-1));
                     }
