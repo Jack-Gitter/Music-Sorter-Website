@@ -28,7 +28,7 @@ const PlaylistSelector = () => {
         {(loadingSongs || loadingMetrics) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
             <div className="col-3">
-            <Link to={`/playlist/access_token=${accessToken}/${getPlaylistID(plist.name)}`}><img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
+            <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}><img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
                 onClick={() => {
                     let pid = getPlaylistID(plist.name);
                     if (pid != -1) {
