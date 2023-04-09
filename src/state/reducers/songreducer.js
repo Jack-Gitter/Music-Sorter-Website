@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setAccessTokenAPI } from "../../services/songservices";
-import { getPlaylistIMGThunk, getTracksFromPlaylistThunk, getUserPlaylistsThunk, setPlayerStateThunk } from "../../services/songthunks";
+import { getPlaylistIMGThunk, getTracksFromPlaylistThunk, getUserPlaylistsThunk} from "../../services/songthunks";
 import { getBoundedVariablesThunk } from "../../services/songthunks";
 import { searchSpotifyThunk } from "../../services/songthunks";
 
@@ -55,6 +55,9 @@ const userInfo = createSlice({
         },
         setLoadingMetrics(state, action) {
             state.loadingMetrics = action.payload;
+        },
+        setPlayerState(state, action) {
+            state.playerState = action.payload
         }
     },
     extraReducers: {
@@ -97,13 +100,9 @@ const userInfo = createSlice({
         [getPlaylistIMGThunk.fulfilled]:
             (state, {payload}) => {
                 state.playlistIMG = payload
-            },
-        [setPlayerStateThunk.fulfilled]:
-            (state, {payload}) => {
-                state.playerState = payload
             }
     },
 })
 
-export const {setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {setPlayer, setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;

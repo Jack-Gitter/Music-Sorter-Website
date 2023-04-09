@@ -1,8 +1,8 @@
 import SpotifyPlayer from "react-spotify-web-playback"
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { setPlayerStateThunk } from "../../services/songthunks";
 import { useDispatch } from "react-redux";
+import { setPlayer } from "../../state/reducers/songreducer";
 const WebPlayback = () => {
     const dispatcher = useDispatch()
 
@@ -31,7 +31,7 @@ const WebPlayback = () => {
         layout={'responsive'}
         play={true}
         uris={songUris}
-        callback={dispatcher(setPlayerStateThunk)}
+        callback={(state) => dispatcher(setPlayer(state))}
         />}
         </>
     );

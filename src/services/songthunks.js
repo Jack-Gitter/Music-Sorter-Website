@@ -25,8 +25,3 @@ export const getPlaylistIMGThunk = createAsyncThunk(
     'profile/GetPlaylistIMG',
     async (id) => await service.getPlaylistIMG(id)
 )
-
-export const setPlayerStateThunk = createAsyncThunk(
-    'profile/setState', 
-    async (state) => await service.setPlayerState(state)
-)
