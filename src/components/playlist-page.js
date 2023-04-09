@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import WebPlayback from "./home/webplayback";
 import { setCurrentPlaylist } from "../state/reducers/songreducer";
 import { setLoadingMetrics } from "../state/reducers/songreducer";
-import { getBoundedVariablesThunk, getPlaylistIMG, getPlaylistIMGThunk } from "../services/songthunks";
+import { getBoundedVariablesThunk, getPlaylistIMGThunk } from "../services/songthunks";
 import { setSongs } from "../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
 import { setAccessToken } from "../state/reducers/songreducer";
@@ -27,11 +27,11 @@ const PlaylistPage = () => {
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
+        dispatcher(getPlaylistIMGThunk(plistID));
         dispatcher(setSongs([]))
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
-        dispatcher(getPlaylistIMGThunk(plistID))
     }, [plistID])
     
     return (
