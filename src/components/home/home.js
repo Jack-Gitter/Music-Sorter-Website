@@ -38,7 +38,6 @@ const Home = () => {
         <>
             <HeaderComponent/>
             <PlaylistSelector/>
-            <Sliders/> 
         </>
     );
 }
