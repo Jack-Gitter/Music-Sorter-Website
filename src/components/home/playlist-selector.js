@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 const PlaylistSelector = () => {
 
-    const dispatcher = useDispatch();
 
     // eslint-disable-next-line
     const {loadingMetrics, currentPlaylist,loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);

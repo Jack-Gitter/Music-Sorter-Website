@@ -40,8 +40,8 @@ const Sliders = () => {
 
     return (
         <div className="row">
-        <div className="col-3"></div>
-        <div className="col-6">
+        <div className="col-5"></div>
+        <div className="col-2">
             <label>
                 <input disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 <span className="fg-green p-3">acousticness</span>
@@ -176,7 +176,7 @@ const Sliders = () => {
         } >Update</button>
         <Link to={'/'}><button className={'btn btn-success'}>Logout</button></Link>
         </div>
-        <div className="col-3"></div>
+        <div className="col-5"></div>
         </div>
     );
 }
