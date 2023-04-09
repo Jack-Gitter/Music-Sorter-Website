@@ -40,13 +40,13 @@ const PlaylistPage = () => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
-                console.log(songs[i].id)
                 if (songs[i].id === trackID) {
                     firstSongDisplayedIDX = i
                 }
             }
         }
 
+    console.log(firstSongDisplayedIDX)
     return (
         <>
         <h1 className="fg-green">
