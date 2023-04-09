@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { setAccessToken } from "../state/reducers/songreducer";
 import { useLocation } from "react-router-dom";
 import { getPlaylist } from "../services/songservices";
+import { useState } from "react";
 
 
 
@@ -24,6 +25,8 @@ const PlaylistPage = () => {
     const access_token = location.substring(access_start + 'access_token='.length);
     console.log("access token is: ")
     console.log(accessToken)
+    
+    const [firstSongDisplayedIDX, firstSongDisplayedIDXUpdater] = useState(0)
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -32,10 +35,16 @@ const PlaylistPage = () => {
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
-    }, [plistID])
+        let trackID = playerState.nextTracks[0].id
+        for (let i = 0; i < songs.length; i++) {
+            if (songs[i].id === trackID) {
+                firstSongDisplayedIDXUpdater(i)
+                break
+            }
+        }
+    }, [plistID, playerState])
     
-    console.log(playerState)
-    
+   console.log(firstSongDisplayedIDX) 
     return (
         <>
         <h1 className="fg-green">
@@ -45,6 +54,7 @@ const PlaylistPage = () => {
         refreshing the screen. After this is done, we are done!
         <img className="playlist-img" src={playlistIMG}></img>
         <ul>
+        get the index of playerStatus.nextTracks[0].id in songs and then render from there
             {songs.slice(0,15).map((track) => <li>{track.name}</li>)}
         </ul>
         <Sliders/>
