@@ -35,11 +35,13 @@ const PlaylistPage = () => {
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
+        if (playerState !== {}) {
         let trackID = playerState.nextTracks[0].id
-        for (let i = 0; i < songs.length; i++) {
-            if (songs[i].id === trackID) {
-                firstSongDisplayedIDXUpdater(i)
-                break
+            for (let i = 0; i < songs.length; i++) {
+                if (songs[i].id === trackID) {
+                    firstSongDisplayedIDXUpdater(i)
+                    break
+                }
             }
         }
     }, [plistID, playerState])
