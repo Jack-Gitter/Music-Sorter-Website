@@ -17,9 +17,10 @@ const PlaylistPage = () => {
         <>
         <h1 className="fg-green">
         <ul>
-            {songs.map((track) => <li>{track.name}</li>)}
+            {songs.map.slice(0,15)((track) => <li>{track.name}</li>)}
         </ul>
         <Sliders/>
+        <WebPlayback/>
         </h1>
         </>
     );
