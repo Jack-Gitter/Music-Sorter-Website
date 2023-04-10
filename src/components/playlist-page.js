@@ -44,7 +44,7 @@ const PlaylistPage = () => {
                 }
             }
         }
-    })
+    }, [playerState])
     
     return (
         <div>
