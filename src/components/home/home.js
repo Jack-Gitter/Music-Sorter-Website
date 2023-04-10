@@ -14,6 +14,7 @@ import { updatePlaylists } from "../../state/reducers/songreducer";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getUserPlaylistsThunk, searchSpotifyThunk } from "../../services/songthunks";
 import { setPlaylistIMG } from "../../state/reducers/songreducer";
+import { useSelector } from "react-redux";
 import WebPlayback from "./webplayback";
 
 const Home = () => {
