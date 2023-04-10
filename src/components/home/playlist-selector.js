@@ -29,7 +29,7 @@ const PlaylistSelector = () => {
             <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
                 <img className={`playlist-img`} src={`
 
-                    ${ plist.images[0] === undefined ? '' : plist.images[0].url}
+                    ${ plist.images[0] === undefined ? '../../../public/questionmark.avif' : plist.images[0].url}
                 
                 `}></img></Link>
             </div>
