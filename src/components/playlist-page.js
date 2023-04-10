@@ -36,13 +36,10 @@ const PlaylistPage = () => {
     }, [plistID])
     
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
-        dispatcher(setLoadingSongs(true))
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
                 if (songs[i].id === trackID) {
                     firstSongDisplayedIDX = i
-                    dispatcher(setLoadingSongs(false))
-                    //dispatcher(setLoadingSongs(false))
                     break
                 }
             }
@@ -51,7 +48,7 @@ const PlaylistPage = () => {
         <div>
         <img className="playlist-img-big" src={playlistIMG}></img>
         <ul className="list-group">
-            {!loadingSongs && songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
+            {firstSongDisplayedIDX && songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
