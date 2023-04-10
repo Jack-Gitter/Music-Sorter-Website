@@ -67,6 +67,7 @@ const userInfo = createSlice({
                         }
                     }
                 }
+            state.songs = state.songs.slice(state.firstSongDisplayedIDX)
         },
         setPlaylistIMG(state, action) {
             state.playlistIMG = action.payload
