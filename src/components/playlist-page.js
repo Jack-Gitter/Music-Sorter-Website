@@ -50,7 +50,7 @@ const PlaylistPage = () => {
         <div>
         <div className="row">
             <div className="col-4"></div>
-            {playlistIMG !== '' && <img className="playlist-img-big col-4" src={`
+            {<img className="playlist-img-big col-4" src={`
             
             ${playlistIMG === '' ? 'https://picsum.photos/200/300' : playlistIMG}
 
