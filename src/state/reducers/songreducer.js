@@ -20,6 +20,7 @@ const userInfo = createSlice({
         songs: [],
         playlistIMG: "",
         playerState: {},
+        firstSongDisplayedIDX: 0,
         sliders: {
             acousticness: 50,
             danceability: 50,
@@ -57,8 +58,15 @@ const userInfo = createSlice({
             state.loadingMetrics = action.payload;
         },
         setPlayerState(state, action) {
-            console.log(action.payload)
             state.playerState = action.payload
+            if (state.playerState.nextTracks !== undefined && state.playerState.nextTracks.length > 0) {
+                let trackID = state.playerState.nextTracks[0].id
+                    for (let i = 0; i < state.songs.length; i++) {
+                        if (songs[i].id === trackID) {
+                            firstSongDisplayedIDX = i
+                        }
+                    }
+                }
         },
         setPlaylistIMG(state, action) {
             state.playlistIMG = action.payload

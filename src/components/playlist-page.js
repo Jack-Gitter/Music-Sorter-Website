@@ -17,7 +17,7 @@ import { useState } from "react";
 
 const PlaylistPage = () => {
     
-    const {playerState, loadingMetrics, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {firstSongDisplayedIDX, playerState, loadingMetrics, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const {plistID} = useParams()
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
@@ -34,7 +34,7 @@ const PlaylistPage = () => {
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
     
-    let firstSongDisplayedIDX = 0;
+    /*let firstSongDisplayedIDX = 0;
 
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
@@ -44,8 +44,8 @@ const PlaylistPage = () => {
                 }
             }
         }
+    */
     
-    console.log(playlistIMG)
     return (
         <div>
         <div className="row">
