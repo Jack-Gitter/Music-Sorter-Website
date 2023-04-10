@@ -33,8 +33,7 @@ const Home = () => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
         if (playlists.length < 1) {
-
-        dispatcher(getUserPlaylistsThunk());
+            dispatcher(getUserPlaylistsThunk());
         }
         dispatcher(setPlaylistIMG('none'))
     })
