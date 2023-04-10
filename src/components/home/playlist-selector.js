@@ -26,8 +26,12 @@ const PlaylistSelector = () => {
         <div className="row">
         {playlists.map((plist, index) => 
             <div className="col-3">
-            <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}><img className={`playlist-img`} 
-            src={plist.images[0].url}></img></Link>
+            <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
+                <img className={`playlist-img`} src={`
+
+                    ${ plist.images[0] === undefined ? '' : plist.images[0].url}
+                
+                `}></img></Link>
             </div>
         )}
         </div>
