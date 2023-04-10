@@ -47,7 +47,11 @@ const PlaylistPage = () => {
     console.log(firstSongDisplayedIDX)
     return (
         <div>
-        <img className="playlist-img-big" src={playlistIMG}></img>
+        <div className="row">
+            <div className="col-4"></div>
+            <img className="playlist-img-big col-4" src={playlistIMG}></img>
+            <div className="col-4"></div>
+        </div>
         <ul className="list-group">
             {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
         </ul>
