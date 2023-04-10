@@ -26,7 +26,6 @@ const PlaylistPage = () => {
     
     let firstSongDisplayedIDX = 0;
 
-    useEffect(() => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -35,7 +34,6 @@ const PlaylistPage = () => {
                 }
             }
         }
-    })
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
