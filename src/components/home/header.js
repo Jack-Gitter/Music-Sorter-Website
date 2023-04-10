@@ -10,7 +10,7 @@ const HeaderComponent = () => {
             <div className="row">
                 <div className="col-4"></div>
                 <div className="col-5">
-                    <h1>
+                    <h1 className="fg-green">
                         Curated Shuffle
                     </h1>
                 </div>
