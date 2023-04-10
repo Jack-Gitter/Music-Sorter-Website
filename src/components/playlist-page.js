@@ -55,7 +55,6 @@ const PlaylistPage = () => {
         <ul className="list-group">
             {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
                 {track.name}
-                <span className="inline-block float-right">{track.duration_ms}</span>
                 </li>)}
         </ul>
         <Sliders/>
