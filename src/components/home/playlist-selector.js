@@ -21,6 +21,7 @@ const PlaylistSelector = () => {
         return -1;
     }
 
+    console.log(playlists)
     return (
         <div className="row">
         {playlists.map((plist, index) => 
