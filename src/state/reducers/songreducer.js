@@ -59,6 +59,14 @@ const userInfo = createSlice({
         },
         setPlayerState(state, action) {
             state.playerState = action.payload
+            if (state.playerState.nextTracks !== undefined && state.playerState.nextTracks.length > 0) {
+                let trackID = state.playerState.nextTracks[0].id
+                    for (let i = 0; i < state.songs.length; i++) {
+                        if (state.songs[i].id === trackID) {
+                            state.firstSongDisplayedIDX = i
+                        }
+                    }
+                }
         },
         setPlaylistIMG(state, action) {
             state.playlistIMG = action.payload
