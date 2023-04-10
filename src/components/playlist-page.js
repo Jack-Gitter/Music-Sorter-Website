@@ -24,6 +24,7 @@ const PlaylistPage = () => {
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
     
+    let firstSongDisplayedIDX = 0;
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -32,10 +33,6 @@ const PlaylistPage = () => {
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
-    }, [plistID])
-    
-    let firstSongDisplayedIDX = 0;
-
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -44,6 +41,9 @@ const PlaylistPage = () => {
                 }
             }
         }
+    }, [plistID, playerState.nextTracks])
+    
+
     
     console.log(playlistIMG)
     return (
