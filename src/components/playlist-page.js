@@ -46,6 +46,7 @@ const PlaylistPage = () => {
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
     
+    console.log(firstSongDisplayedIDX)
     return (
         <div>
         <img className="playlist-img-big" src={playlistIMG}></img>
