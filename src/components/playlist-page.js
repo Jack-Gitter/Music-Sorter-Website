@@ -36,12 +36,12 @@ const PlaylistPage = () => {
     }, [plistID])
     
     useEffect(() => {
+        console.log('here')
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
                 if (songs[i].id === trackID) {
                     firstSongDisplayedIDX = i
-                    break
                 }
             }
         }
