@@ -24,7 +24,7 @@ const PlaylistPage = () => {
     const access_token = location.substring(access_start + 'access_token='.length);
     
 
-    useMemo(() => {
+    useEffect(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(getPlaylistIMGThunk(plistID));
         dispatcher(setSongs([]))
@@ -38,7 +38,7 @@ const PlaylistPage = () => {
         <div>
         <div className="row">
             <div className="col-4"></div>
-            {(playlistIMG !== 'none' || playlistIMG !== '') && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
+            {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
             <div className="col-4"></div>
         </div>
         <ul cassName="list-group">
