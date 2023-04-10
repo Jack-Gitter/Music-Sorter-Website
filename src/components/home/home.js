@@ -31,7 +31,7 @@ const Home = () => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
         dispatcher(getUserPlaylistsThunk());
-        dispatcher(setPlaylistIMG(''))
+        dispatcher(setPlaylistIMG('none'))
     // also load songs here
     })
 
