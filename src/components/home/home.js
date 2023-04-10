@@ -26,11 +26,16 @@ const Home = () => {
     const refresh_start = location.indexOf('refresh_token');
     const refresh_token = location.substring(refresh_start + 'refresh_token='.length, location.length);
 
+    const {loadingMetrics, currentPlaylist,loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {search} = useParams()
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
+        if (playlists.length < 1) {
+
         dispatcher(getUserPlaylistsThunk());
+        }
         dispatcher(setPlaylistIMG('none'))
     })
 
