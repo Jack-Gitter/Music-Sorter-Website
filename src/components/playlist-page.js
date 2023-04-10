@@ -53,7 +53,10 @@ const PlaylistPage = () => {
             <div className="col-4"></div>
         </div>
         <ul className="list-group">
-            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
+            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
+                {track.name}
+                <span className="float-right">{track.duration_ms}</span>
+                </li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
