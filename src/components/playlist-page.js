@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import Sliders from "./home/sliders";
 import { useSelector } from "react-redux";
 import WebPlayback from "./home/webplayback";
-import { setCurrentPlaylist } from "../state/reducers/songreducer";
+import { setCurrentPlaylist, setLoadingSongs } from "../state/reducers/songreducer";
 import { setLoadingMetrics } from "../state/reducers/songreducer";
 import { getBoundedVariablesThunk, getPlaylistIMGThunk } from "../services/songthunks";
 import { setSongs } from "../state/reducers/songreducer";
@@ -36,10 +36,13 @@ const PlaylistPage = () => {
     }, [plistID])
     
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
+        setLoadingSongs(true)
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
                 if (songs[i].id === trackID) {
                     firstSongDisplayedIDX = i
+                    setLoadingSongs(false)
+                    break
                 }
             }
         }
