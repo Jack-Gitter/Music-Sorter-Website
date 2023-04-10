@@ -17,7 +17,7 @@ import { useState } from "react";
 
 const PlaylistPage = () => {
     
-    const {playerState, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    const {playerState, loadingMetrics, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const {plistID} = useParams()
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
@@ -50,6 +50,7 @@ const PlaylistPage = () => {
         <div className="row">
             <div className="col-4"></div>
             {playlistIMG !== '' && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
+            {(loadingSongs || loadingMetrics) && <i className='fa fas fa-spinner fa-spin'></i>}
             <div className="col-4"></div>
         </div>
         <ul className="list-group">

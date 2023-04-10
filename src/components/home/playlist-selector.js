@@ -23,11 +23,9 @@ const PlaylistSelector = () => {
 
     return (
         <div className="row">
-        {console.log(playlists)}
-        {(loadingSongs || loadingMetrics) && <i className='fa fas fa-spinner fa-spin'></i>}
         {playlists.map((plist, index) => 
             <div className="col-3">
-            <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}><img className={`${plist.id === currentPlaylist ? 'border border-success border-5': ''} playlist-img`} 
+            <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}><img className={`playlist-img`} 
             src={plist.images[0].url}></img></Link>
             </div>
         )}
