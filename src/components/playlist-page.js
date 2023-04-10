@@ -38,7 +38,7 @@ const PlaylistPage = () => {
         <div>
         <div className="row">
             <div className="col-4"></div>
-            {playlistIMG !== 'none' && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
+            {(playlistIMG !== 'none' || playlistIMG !== '') && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
             <div className="col-4"></div>
         </div>
         <ul cassName="list-group">
