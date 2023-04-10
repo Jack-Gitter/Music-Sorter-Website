@@ -23,7 +23,7 @@ const PlaylistPage = () => {
     const location = useLocation().pathname;
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
-    
+    let firstSongDisplayedIDX = 0;
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -34,7 +34,6 @@ const PlaylistPage = () => {
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
 
-    let firstSongDisplayedIDX = 0;
     
     useLayoutEffect(() => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
@@ -46,7 +45,6 @@ const PlaylistPage = () => {
             }
         }
     })
-
     
     return (
         <div>
