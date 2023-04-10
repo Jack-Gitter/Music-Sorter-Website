@@ -24,7 +24,7 @@ const PlaylistPage = () => {
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
     
-    let firstSongDisplayedIDX = -1;
+    let firstSongDisplayedIDX = 0;
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -35,6 +35,7 @@ const PlaylistPage = () => {
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
     
+    useEffect(() => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -44,11 +45,12 @@ const PlaylistPage = () => {
                 }
             }
         }
+    })
     return (
         <div>
         <img className="playlist-img-big" src={playlistIMG}></img>
         <ul className="list-group">
-            {firstSongDisplayedIDX != -1 && songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
+            {songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
