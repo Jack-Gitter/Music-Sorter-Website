@@ -32,7 +32,7 @@ const PlaylistPage = () => {
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
-    }, [plistID, playerState.nextTracks])
+    }, [plistID])
     
     let firstSongDisplayedIDX = 0;
 
