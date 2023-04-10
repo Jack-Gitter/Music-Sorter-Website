@@ -79,7 +79,6 @@ const userInfo = createSlice({
         [getTracksFromPlaylistThunk.rejected]:
             (state, {payload}) => {
                 state.loadingSongs = false;
-                console.log('failed to get songs from playlist')
                 state.songs = []
             },
         [getBoundedVariablesThunk.fulfilled]: 
@@ -93,7 +92,6 @@ const userInfo = createSlice({
         [getBoundedVariablesThunk.rejected]:
             (state, {payload}) => {
                 state.loadingMetrics = false;
-                console.log('loading metrics for the playlist failed')
             },
         [getPlaylistIMGThunk.fulfilled]:
             (state, {payload}) => {
