@@ -35,7 +35,6 @@ const PlaylistPage = () => {
     }, [plistID])
 
     
-    useLayoutEffect(() => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -44,7 +43,6 @@ const PlaylistPage = () => {
                 }
             }
         }
-    }, [playerState])
     
     return (
         <div>
