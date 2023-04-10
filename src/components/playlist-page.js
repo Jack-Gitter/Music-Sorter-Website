@@ -24,7 +24,7 @@ const PlaylistPage = () => {
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
     
-    let firstSongDisplayedIDX = 0;
+    let firstSongDisplayedIDX = -1;
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -48,7 +48,7 @@ const PlaylistPage = () => {
         <div>
         <img className="playlist-img-big" src={playlistIMG}></img>
         <ul className="list-group">
-            {firstSongDisplayedIDX && songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
+            {firstSongDisplayedIDX != -1 && songs.slice(firstSongDisplayedIDX-1,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">{track.name}</li>)}
         </ul>
         <Sliders/>
         <WebPlayback/>
