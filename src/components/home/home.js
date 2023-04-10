@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { getUserPlaylists } from "../../services/songservices";
 import { updatePlaylists } from "../../state/reducers/songreducer";
 import { setAccessTokenAPI } from "../../services/songservices";
-import { getUserPlaylistsThunk } from "../../services/songthunks";
+import { getUserPlaylistsThunk, searchSpotifyThunk } from "../../services/songthunks";
 import { setPlaylistIMG } from "../../state/reducers/songreducer";
 import WebPlayback from "./webplayback";
 
@@ -32,7 +32,6 @@ const Home = () => {
         dispatcher(setRefreshToken(refresh_token));
         dispatcher(getUserPlaylistsThunk());
         dispatcher(setPlaylistIMG('none'))
-    // also load songs here
     })
 
 
