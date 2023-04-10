@@ -34,6 +34,7 @@ const PlaylistPage = () => {
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
     
+    console.log(plistID)
     return (
         <div>
         <div className="row">
