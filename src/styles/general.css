@@ -12,6 +12,10 @@
     border-radius: 30px;
 }
 
+.left-shift {
+    position: relative;
+    right:25%;
+}
 .fg-green {
 
     color: #1DB954
