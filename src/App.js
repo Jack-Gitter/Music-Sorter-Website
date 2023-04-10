@@ -26,8 +26,7 @@ function App() {
       <div className='container'> 
         <Routes>
           <Route index element={<Login/>}/>
-          <Route path={'/home/:access_token'} element={<Home/>}/>
-          <Route path={'/search/*'} element={<Search/>}/>
+          <Route path={'/home/*'} element={<Home/>}/>
           <Route path={'/playlist/:plistID/*'} element={<PlaylistPage/>}/> 
          </Routes>
       </div>

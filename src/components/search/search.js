@@ -11,7 +11,6 @@ const Search = () => {
         <div className="form-group">
             <input className='left-shift p-1 mb-1 form-control border border-secondary rounded'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
             <button className='btn btn-success ms-2' onClick={() => {
-                window.location.href += searchQuery
                 dispatcher(searchSpotifyThunk(searchQuery));
                 // update the URL and add the current search query to it
             }}
