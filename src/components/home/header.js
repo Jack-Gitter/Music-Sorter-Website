@@ -8,16 +8,16 @@ const HeaderComponent = () => {
     return (
     <>
         <div className="row">
-                <div className="col-4"></div>
-                <div className="col-4">
+                <div className="col-5"></div>
+                <div className="col-3">
                     <h1 className="fg-green">Curated Shuffle</h1>
                 </div>
                 <div className="col-4"></div>
         </div>
         <div className="row">
             <div className="col-4"></div>
-            <div className="col-5"><Search/></div>
-            <div className="col-3"></div>
+            <div className="col-6"><Search/></div>
+            <div className="col-2"></div>
         </div>
     </>
     );
