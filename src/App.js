@@ -15,7 +15,7 @@ import { Routes } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import Search from './components/search/search';
 import './styles/general.css'
-import PlaylistPage from './components/playlist-page';
+import PlaylistPage from './components/playlist/playlist-page';
 
 function App() {
   

@@ -1,16 +1,16 @@
 import { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import Sliders from "./home/sliders";
+import Sliders from "../home/sliders";
 import { useSelector } from "react-redux";
-import WebPlayback from "./home/webplayback";
-import { setCurrentPlaylist, setLoadingSongs } from "../state/reducers/songreducer";
-import { setLoadingMetrics } from "../state/reducers/songreducer";
-import { getBoundedVariablesThunk, getPlaylistIMGThunk } from "../services/songthunks";
-import { setSongs } from "../state/reducers/songreducer";
+import WebPlayback from "../home/webplayback";
+import { setCurrentPlaylist, setLoadingSongs } from "../../state/reducers/songreducer";
+import { setLoadingMetrics } from "../../state/reducers/songreducer";
+import { getBoundedVariablesThunk, getPlaylistIMGThunk } from "../../services/songthunks";
+import { setSongs } from "../../state/reducers/songreducer";
 import { useDispatch } from "react-redux";
-import { setAccessToken } from "../state/reducers/songreducer";
+import { setAccessToken } from "../../state/reducers/songreducer";
 import { useLocation } from "react-router-dom";
-import { getPlaylist } from "../services/songservices";
+import { getPlaylist } from "../../services/songservices";
 import { useState } from "react";
 
 
