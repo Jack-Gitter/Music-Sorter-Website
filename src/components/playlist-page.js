@@ -29,7 +29,7 @@ const PlaylistPage = () => {
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(getPlaylistIMGThunk(plistID));
-        //dispatcher(setSongs([]))
+        dispatcher(setSongs([]))
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
