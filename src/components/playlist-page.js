@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import Sliders from "./home/sliders";
 import { useSelector } from "react-redux";
@@ -14,7 +14,6 @@ import { getPlaylist } from "../services/songservices";
 import { useState } from "react";
 
 
-
 const PlaylistPage = () => {
     
     const {plistID} = useParams()
@@ -25,7 +24,7 @@ const PlaylistPage = () => {
     const access_token = location.substring(access_start + 'access_token='.length);
     
 
-    useEffect(() => {
+    useMemo(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(getPlaylistIMGThunk(plistID));
         dispatcher(setSongs([]))
