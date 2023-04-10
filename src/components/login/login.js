@@ -5,7 +5,7 @@ const Login = () => {
                Curated Shuffle
             </h1>
             <a href={'https://curatedshuffleauthserver.onrender.com/login'}>
-                <button className={'btn btn-lg btn-outline-dark login-button'}>Login!</button></a>
+                <button className={'btn btn-lg btn-outline-dark login-button'}>Login with spotify</button></a>
         </div>
     );
 }
