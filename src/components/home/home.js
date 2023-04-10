@@ -13,6 +13,7 @@ import { getUserPlaylists } from "../../services/songservices";
 import { updatePlaylists } from "../../state/reducers/songreducer";
 import { setAccessTokenAPI } from "../../services/songservices";
 import { getUserPlaylistsThunk } from "../../services/songthunks";
+import { setPlaylistIMG } from "../../state/reducers/songreducer";
 import WebPlayback from "./webplayback";
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
         dispatcher(setAccessToken(access_token));
         dispatcher(setRefreshToken(refresh_token));
         dispatcher(getUserPlaylistsThunk());
+        dispatcher(setPlaylistIMG(''))
     // also load songs here
     })
 

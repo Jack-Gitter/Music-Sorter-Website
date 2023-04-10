@@ -59,6 +59,9 @@ const userInfo = createSlice({
         setPlayerState(state, action) {
             console.log(action.payload)
             state.playerState = action.payload
+        },
+        setPlaylistIMG(state, action) {
+            state.playlistIMG = action.payload
         }
     },
     extraReducers: {
@@ -100,5 +103,5 @@ const userInfo = createSlice({
     },
 })
 
-export const {setPlayerState, setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {setPlaylistIMG, setPlayerState, setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;
