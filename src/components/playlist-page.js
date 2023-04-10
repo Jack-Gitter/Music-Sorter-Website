@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import Sliders from "./home/sliders";
 import { useSelector } from "react-redux";
@@ -33,9 +33,10 @@ const PlaylistPage = () => {
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
-    
-    let firstSongDisplayedIDX = 0;
 
+    let firstSongDisplayedIDX = 0;
+    
+    useLayoutEffect(() => {
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -44,6 +45,8 @@ const PlaylistPage = () => {
                 }
             }
         }
+    })
+
     
     return (
         <div>
