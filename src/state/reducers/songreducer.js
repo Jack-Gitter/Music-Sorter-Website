@@ -73,11 +73,8 @@ const userInfo = createSlice({
         [getTracksFromPlaylistThunk.fulfilled]:
             (state, {payload}) => {
                 state.loadingSongs = false;
-                console.log(state.loadingSongs)
-                state.songs = payload;
-                state.songs.sort((song1, song2) => song1.curated_value - song2.curated_value);
-                console.log('this is the state \'s songs!')
-                console.log(state.songs);
+                payload.sort((song1, song2) => song1.curated_value - song2.curated_value)
+                state.songs = payload
             },
         [getTracksFromPlaylistThunk.rejected]:
             (state, {payload}) => {
