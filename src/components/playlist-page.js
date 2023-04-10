@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Sliders from "./home/sliders";
 import { useSelector } from "react-redux";
@@ -23,6 +23,7 @@ const PlaylistPage = () => {
     const location = useLocation().pathname;
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
+    
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -32,9 +33,9 @@ const PlaylistPage = () => {
         dispatcher(setLoadingMetrics(true));
         dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
-
-    let firstSongDisplayedIDX = 0;
     
+    let firstSongDisplayedIDX = 0;
+
     if (playerState.nextTracks !== undefined && playerState.nextTracks.length > 0) {
         let trackID = playerState.nextTracks[0].id
             for (let i = 0; i < songs.length; i++) {
@@ -52,7 +53,7 @@ const PlaylistPage = () => {
             <div className="col-4"></div>
         </div>
         <ul className="list-group">
-            {(songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5)).map((track) => <li className="list-group-item list-group-item-dark">
+            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
                 {track.name}
                 </li>)}
         </ul>
