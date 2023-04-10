@@ -53,7 +53,7 @@ const PlaylistPage = () => {
             <div className="col-4"></div>
         </div>
         <ul className="list-group">
-            {!loadingSongs && !loadingMetrics && songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
+            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
                 {track.name}
                 </li>)}
         </ul>
