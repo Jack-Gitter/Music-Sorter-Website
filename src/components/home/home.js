@@ -41,9 +41,13 @@ const Home = () => {
 
 
     return (
-        <div className="homepage-layout">
+        <div className="row">
+        <div className="col-12">
             <HeaderComponent/>
+        </div>
+        <div className="col-12">
             <PlaylistSelector/>
+        </div>
         </div>
     );
 }
