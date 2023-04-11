@@ -28,9 +28,7 @@ const PlaylistSelector = () => {
             <div className="col-3">
             <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
                 <img className={`playlist-img`} src={`
-
                     ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}
-                
                 `}></img></Link>
             </div>
         )}
