@@ -51,11 +51,6 @@ body {
 }
 
 .playlist-selector {
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .playlist-img {
