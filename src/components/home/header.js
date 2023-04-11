@@ -14,8 +14,8 @@ const HeaderComponent = () => {
         </div>
     </div>
 
-    <div className="row">
-        <div className="col center-block text-center">
+    <div className="row d-flex justify-content-center align-items-center">
+        <div className="col center-block">
             <div className="w-25"><Search/></div>
         </div>
     </div>
