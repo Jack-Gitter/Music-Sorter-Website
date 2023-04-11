@@ -43,12 +43,14 @@ const Home = () => {
     return (
         <div className="container">
         <div className="row">
-        <div className="col-12">
-            <HeaderComponent/>
+            <div className="col">
+                <HeaderComponent/>
+            </div>
         </div>
-        <div className="col-12">
-            <PlaylistSelector/>
-        </div>
+        <div className="row">
+            <div className="col">
+                <PlaylistSelector/>
+            </div>
         </div>
         </div>
     );

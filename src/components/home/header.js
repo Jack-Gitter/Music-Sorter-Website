@@ -16,7 +16,7 @@ const HeaderComponent = () => {
 
     <div className="row">
         <div className="col center-block text-center">
-            <div className="w-50"><Search/></div>
+            <div className="w-25"><Search/></div>
         </div>
     </div>
 
