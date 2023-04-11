@@ -8,14 +8,14 @@ const HeaderComponent = () => {
     return (
     <>
 
-    <div className="row align-items-center">
-        <div className="col align-items-center justify-content-center">
+    <div className="row">
+        <div className="col center-block text-center">
             <h1 className="fg-white">Curated Shuffle</h1>
         </div>
     </div>
 
-    <div className="row align-items-center">
-        <div className="col align-items-center justify-content-center">
+    <div className="row">
+        <div className="col center-block text-center">
             <div className="w-50"><Search/></div>
         </div>
     </div>
