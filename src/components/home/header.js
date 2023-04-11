@@ -7,19 +7,17 @@ const HeaderComponent = () => {
     const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     return (
     <>
-
-    <div className="row">
+    <div className="row header-color">
         <div className="col center-block text-center">
             <h1 className="fg-white">Curated Shuffle</h1>
         </div>
     </div>
 
-    <div className="row d-flex justify-content-center align-items-center">
+    <div className="row header-color">
         <div className="col center-block">
             <div className="w-25"><Search/></div>
         </div>
     </div>
-
     </>
     );
 }
