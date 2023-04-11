@@ -40,6 +40,7 @@ body {
 .album-title {
    top:50%;  
    left:25%;
+   z-index:1;
 }
 
 .header-color {
@@ -59,6 +60,7 @@ body {
     object-fit: cover;
     object-position: 50% 50%;
     overflow: hidden;
+    z-index:0;
 }
 
 .search-buttons {
