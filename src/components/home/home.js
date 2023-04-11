@@ -41,10 +41,10 @@ const Home = () => {
 
 
     return (
-        <>
+        <div className='homepage-alignment'>
             <HeaderComponent/>
             <PlaylistSelector/>
-        </>
+        </div>
     );
 }
 export default Home;
