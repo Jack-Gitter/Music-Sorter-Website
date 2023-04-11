@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
 
 body {
@@ -40,6 +41,7 @@ body {
 .album-title {
    top:30%;  
    left:10%;
+   font-family: 'Oswald'
 }
 
 .header-color {
