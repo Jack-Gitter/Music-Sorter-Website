@@ -6,9 +6,14 @@ import Search from "../search/search";
 const HeaderComponent = () => {
     const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     return (
-    <div className="">
+    <div className="row">
+        <div className="col">
             <h1 className="fg-white">Curated Shuffle</h1>
-            <div className=""><Search/></div>
+        </div>
+        <div className="col">
+            <div className="w-50"><Search/></div>
+        </div>
+
     </div>
     );
 }
