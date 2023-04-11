@@ -13,10 +13,8 @@ const HeaderComponent = () => {
         </div>
     </div>
 
-    <div className="row header-color">
-        <div className="col center-block">
-            <div className="w-25"><Search/></div>
-        </div>
+    <div className="d-flex justify-content-center">
+        <div className="w-25"><Search/></div>
     </div>
     </>
     );
