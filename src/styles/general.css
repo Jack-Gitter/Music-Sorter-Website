@@ -1,35 +1,29 @@
-.login-background {
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); 
+
+
+body {
+    font-family: 'Abel';
+    background-color: #333333;
+}
+
+.centered {
+    overflow: hidden;
     position: absolute;
-    background-color: #1DB954;
-    color: #191414;
-    top: 30%;
-    left:40%;
-    right:40%;
-    bottom:25%;
-    height:300px;
-    width:300px;
-    padding:30px;
-    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left-shift {
     position: relative;
     right:20%;
 }
+
 .fg-green {
-
     color: #1DB954
-
-}
-
-body {
-    background-color: #333333;
-}
-
-.login-button {
-    color: black;
-    position:relative;
-    top:20px;
 }
 
 .playlist-img {

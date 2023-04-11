@@ -23,7 +23,7 @@ function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
-      <div className='container'> 
+      <div> 
         <Routes>
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
