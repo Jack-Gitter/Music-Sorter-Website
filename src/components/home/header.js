@@ -8,13 +8,13 @@ const HeaderComponent = () => {
     return (
     <>
 
-    <div className="row">
+    <div className="row justify-content-center">
         <div className="col">
             <h1 className="fg-white">Curated Shuffle</h1>
         </div>
     </div>
 
-    <div className="row">
+    <div className="row justify-content-center">
         <div className="col">
             <div className="w-50"><Search/></div>
         </div>
