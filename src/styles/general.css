@@ -7,7 +7,7 @@ body {
     background-color: #333333;
 }
 
-.centered {
+.login-page {
     overflow: hidden;
     position: absolute;
     height: 100%;
@@ -17,13 +17,28 @@ body {
     align-items: center;
 }
 
-.left-shift {
-    position: relative;
-    right:20%;
+.fg-white {
+    color: white;
 }
 
-.fg-green {
-    color: #1DB954
+.homepage-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.vertical {
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #3a3d38;
+}
+
+.searchbar {
+    width: 35%;
 }
 
 .playlist-img {

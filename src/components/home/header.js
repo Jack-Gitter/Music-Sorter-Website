@@ -6,20 +6,10 @@ import Search from "../search/search";
 const HeaderComponent = () => {
     const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     return (
-    <>
-        <div className="row">
-                <div className="col-5"></div>
-                <div className="col-3">
-                    <h1 className="fg-green">Curated Shuffle</h1>
-                </div>
-                <div className="col-4"></div>
-        </div>
-        <div className="row">
-            <div className="col-4"></div>
-            <div className="col-6"><Search/></div>
-            <div className="col-2"></div>
-        </div>
-    </>
+    <div className="vertical pb-4 pt-1">
+            <h1 className="fg-white homepage-header">Curated Shuffle</h1>
+            <div className="searchbar"><Search/></div>
+    </div>
     );
 }
 export default HeaderComponent;
