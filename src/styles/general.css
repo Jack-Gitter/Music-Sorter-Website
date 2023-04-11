@@ -37,6 +37,11 @@ body {
     justify-content: center;
 }
 
+.album-title {
+   top:10%;  
+   left:10%;
+}
+
 .header-color {
     background-color: #434541;
 }

@@ -28,10 +28,10 @@ const PlaylistSelector = () => {
             <div className="col-sm-6 col-md-4 col-lg-3 col-xl-2 pt-2">
 
                 <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
+                    <span className="position-relative m-2 fg-white">{plist.name}</span>
                     <img className={`playlist-img`} src={`
                         ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}
                     `}>
-                    <span className="position-relative m-2 fg-white">{plist.name}</span>
                     </img>
 
                 </Link>
