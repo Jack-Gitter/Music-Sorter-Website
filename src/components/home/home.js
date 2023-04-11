@@ -41,7 +41,7 @@ const Home = () => {
 
 
     return (
-        <div className="homepage-header">
+        <div className="homepage-layout">
             <HeaderComponent/>
             <PlaylistSelector/>
         </div>
