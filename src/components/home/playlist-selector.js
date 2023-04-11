@@ -26,7 +26,7 @@ const PlaylistSelector = () => {
         <div className="row">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 col-md-4 col-lg-3 col-xl-2 pt-2">
-                <span className="fg-white position-relative album-title">{plist.name}</span>
+                <span className="fg-white position-absolute album-title">{plist.name}</span>
 
                 <Link className="link-tag" to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
                         <img className={`playlist-img`} src={`
