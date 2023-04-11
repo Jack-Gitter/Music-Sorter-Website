@@ -25,9 +25,6 @@ const PlaylistSelector = () => {
     <div className="playlist-selector">
         <div className="row">
         {playlists.map((plist, index) => 
-            <>
-            <div style={{backgroundImage: `url(${plist.images[0]})`}}>hey there</div>
-            {/*
             <div className="col-3">
             <Link to={`/playlist/${getPlaylistID(plist.name)}/access_token=${accessToken}`}>
 
@@ -37,8 +34,6 @@ const PlaylistSelector = () => {
                 </img>
                 </Link>
             </div>
-            */}
-            </>
         )}
         </div>
     </div>

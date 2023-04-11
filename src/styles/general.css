@@ -59,11 +59,10 @@ body {
 }
 
 .playlist-img {
-    overflow:hidden;
     width: 225px;
     height: 150px;
-    margin: 50px;
-    border-radius: 30px;
+    object-fit: cover;
+    object-position: 25% 25%;
 }
 
 .search-buttons {
