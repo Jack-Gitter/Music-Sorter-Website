@@ -6,8 +6,8 @@ import Search from "../search/search";
 const HeaderComponent = () => {
     const {accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     return (
-    <>
-    <div className="row header-color">
+    <div className="header-color">
+    <div className="row"> 
         <div className="col center-block text-center">
             <h1 className="fg-white">Curated Shuffle</h1>
         </div>
@@ -16,7 +16,7 @@ const HeaderComponent = () => {
     <div className="d-flex justify-content-center">
         <div className="w-25"><Search/></div>
     </div>
-    </>
+    </div>
     );
 }
 export default HeaderComponent;
