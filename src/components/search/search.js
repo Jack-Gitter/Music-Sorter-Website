@@ -9,15 +9,11 @@ const Search = () => {
     const [searchQuery, updateSearchQuery] = useState('')
     return (
         <div className="form-group">
-            <input className='left-shift ps-3 pt-1 pb-1 mb-2 form-control border border-secondary rounded-pill'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
-            <button className='btn btn-success ms-2' onClick={() => {
-                dispatcher(searchSpotifyThunk(searchQuery));
-                // update the URL and add the current search query to it
-            }}
-            >Search</button>
-        <button className='btn btn-success ms-2'onClick={() => {
-            dispatcher(getUserPlaylistsThunk());
-        }}>Reload my playlists!</button>
+            <input className='ps-3 pt-1 pb-1 mb-2 form-control border border-secondary rounded-pill'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
+            <div className="search-buttons">
+            <button className='btn btn-large btn-dark m-2' onClick={() => {dispatcher(searchSpotifyThunk(searchQuery));}}>Search</button>
+            <button className='btn btn-large btn-dark m-2'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>Reload my playlists!</button>
+            </div>
         </div>
     );
 }

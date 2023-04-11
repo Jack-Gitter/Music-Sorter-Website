@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 
-.vertical {
+.homepage-alignment {
     position: absolute;
     flex-direction: column;
     width: 100%;
@@ -37,7 +37,7 @@ body {
     background-color: #3a3d38;
 }
 
-.searchbar {
+.search-bar {
     width: 35%;
 }
 
@@ -46,6 +46,15 @@ body {
     height: 150px;
     margin: 50px;
     border-radius: 30px;
+}
+
+.search-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .playlist-img-big {
