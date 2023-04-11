@@ -41,6 +41,13 @@ body {
     width: 35%;
 }
 
+.playlist-selector {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .playlist-img {
     width: 150px;
     height: 150px;
