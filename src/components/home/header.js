@@ -8,13 +8,15 @@ const HeaderComponent = () => {
     return (
     <div className="header-color">
     <div className="row"> 
-        <div className="col center-block text-center">
+        {/*<div className="col-3">Curated Shuffle</div>
+        <div className="col-6"><Search/></div>
+        */}
+        <div className="col-3 center-block text-center">
             <h1 className="fg-white">Curated Shuffle</h1>
         </div>
-    </div>
-
-    <div className="d-flex justify-content-center">
-        <div className="w-25"><Search/></div>
+        <div className="col-6 pt-2">
+           <Search/> 
+        </div>
     </div>
     </div>
     );
