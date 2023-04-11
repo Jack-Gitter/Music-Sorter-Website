@@ -22,6 +22,7 @@ const PlaylistSelector = () => {
     }
 
     return (
+        <div className="container-fluid">
         <div className="row">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 col-md-4 col-lg-3 col-xl-2">
@@ -33,6 +34,7 @@ const PlaylistSelector = () => {
                 </Link>
             </div>
         )}
+        </div>
         </div>
     );
 }
