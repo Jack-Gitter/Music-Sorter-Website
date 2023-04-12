@@ -37,7 +37,7 @@ const PlaylistPage = () => {
         <div>
         <div className="row">
             <div className="col"></div>
-                {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big col-4 d-block mx-auto" src={playlistIMG}></img>}
+                {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big d-block mx-auto" src={playlistIMG}></img>}
             </div>
         <ul cassName="list-group">
             {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
