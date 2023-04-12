@@ -47,7 +47,7 @@ const Sliders = () => {
                 <input className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
             </label>
         </div>
-        <div className="col-1">
+        <div className="col-1 d-flex align-items-center">
                 {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
