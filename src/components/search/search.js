@@ -14,7 +14,7 @@ const Search = () => {
             </div>
             <div className="col-3">
                 <button className='btn btn-large btn-dark m-2' onClick={() => {dispatcher(searchSpotifyThunk(searchQuery));}}>Search</button>
-                <button className='btn btn-large btn-dark m-2'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>Reload my playlists!</button>
+                <button className='btn btn-large btn-dark m-2'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>My Playlists</button>
             </div>
         </>
     );
