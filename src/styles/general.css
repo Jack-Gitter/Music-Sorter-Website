@@ -99,5 +99,6 @@ body {
     object-fit: cover;
     object-position: 50% 40%;
     overflow: hidden;
+    filter: brightness(75%);
 }
 
