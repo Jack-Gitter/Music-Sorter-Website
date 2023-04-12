@@ -44,6 +44,7 @@ body {
    font-family: 'Oswald';
    font-size: 1.2em;
    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+   z-index: 1;
 }
 
 .header-color {
@@ -64,6 +65,7 @@ body {
     object-position: 50% 50%;
     overflow: hidden;
     filter: brightness(75%);
+    z-index: 0;
 }
 
 .search-buttons {
