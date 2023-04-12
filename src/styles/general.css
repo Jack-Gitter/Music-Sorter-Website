@@ -80,8 +80,8 @@ body {
     z-index: 0;
 }
 
-.playlist-img:zoom {
-    transform: scale(1.1)
+.playlist-img:hover {
+    transform: scale(1.15)
 }
 
 .search-buttons {
