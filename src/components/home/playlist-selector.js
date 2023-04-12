@@ -23,7 +23,7 @@ const PlaylistSelector = () => {
 
     return (
         <div>
-        <div className="row ms-1 me-1">
+        <div className="row">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 position-relative col-md-4 col-lg-3 pt-2">
                 <span className="fg-white m-2 position-absolute album-title">{plist.name}</span>
