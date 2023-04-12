@@ -36,17 +36,18 @@ const PlaylistPage = () => {
     return (
         <div>
         <div className="row">
-            <div className="col-4"></div>
-            {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big col-4" src={playlistIMG}></img>}
-            <div className="col-4"></div>
-        </div>
+            <div className="col"></div>
+                {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big col-4 d-block mx-auto" src={playlistIMG}></img>}
+            </div>
         <ul cassName="list-group">
-            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => <li className="list-group-item list-group-item-dark">
-                {track.name}
-                </li>)}
+            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
+                <li className="list-group-item list-group-item-dark">
+                    {track.name}
+                </li>
+            )}
         </ul>
-        <Sliders/>
-        <WebPlayback/>
+            <Sliders/>
+            <WebPlayback/>
         </div>
     );
 }
