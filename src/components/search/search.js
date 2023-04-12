@@ -11,7 +11,9 @@ const Search = () => {
         <>
             <div className="col-8 pt-2">
             <div class="input-group">
-                 <input type="text" className='form-control'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
+                 <input type="text" 
+                 onKeyDown={(e) =>{ if (e.key === 'Enter') {dispatcher(searchSpotifyThunk(searchQuery))}}}
+                 className='form-control'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
                 <button type="button" class="btn btn-dark" onClick={() => {dispatcher(searchSpotifyThunk(searchQuery));}}>
                     <i class="fa fas fa-search"></i>
                 </button>
