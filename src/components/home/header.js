@@ -8,7 +8,7 @@ const HeaderComponent = () => {
     return (
     <div className="header-color">
     <div className="row"> 
-        <div className="col-3 center-block text-center">
+        <div className="col-2 mt-1 mb-2 center-block text-center">
             <h2 className="fg-white">Curated Shuffle</h2>
         </div>
            <Search/> 

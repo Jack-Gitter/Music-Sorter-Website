@@ -9,7 +9,7 @@ const Search = () => {
     const [searchQuery, updateSearchQuery] = useState('')
     return (
         <>
-            <div className="col-6 pt-2">
+            <div className="col-7 pt-2">
                     <input type="text" className='ps-3 pt-1 pb-1 mb-2 form-control border border-secondary rounded-pill'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
             </div>
             <div className="col-3">
