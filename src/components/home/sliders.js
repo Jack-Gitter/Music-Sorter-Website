@@ -42,90 +42,90 @@ const Sliders = () => {
         <div className="row">
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">acousticness</span>
+                <span className="slider-text-color p-1">acousticness</span>
                 <input className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
-                <span className="fg-green p-1">{acousticness}</span>
+                <span className="slider-text-color p-1">{acousticness}</span>
             </label>
                 {acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-success'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">danceability</span>
+                <span className="slider-text-color p-1">danceability</span>
                 <input className="form-range" disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
-                <span className="fg-green p-1">{danceability}</span>
+                <span className="slider-text-color p-1">{danceability}</span>
             </label>
             {danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-success'} onClick={() => danceabilityStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">duration</span>
+                <span className="slider-text-color p-1">duration</span>
                 <input className="form-range" disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
-                <span className="fg-green p-1">{duration_ms}</span>
+                <span className="slider-text-color p-1">{duration_ms}</span>
             </label>
             {durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-success'} onClick={() => durationStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">energy</span>
+                <span className="slider-text-color p-1">energy</span>
                 <input className="form-range"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
-                <span className="fg-green p-1">{energy}</span>
+                <span className="slider-text-color p-1">{energy}</span>
             </label>
             {energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-success'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">instrumentalness</span>
+                <span className="slider-text-color p-1">instrumentalness</span>
                 <input className="form-range" disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
-                <span className="fg-green p-1">{instrumentalness}</span>
+                <span className="slider-text-color p-1">{instrumentalness}</span>
             </label>
             {instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-success'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">liveness</span>
+                <span className="slider-text-color p-1">liveness</span>
                 <input  className="form-range" disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
-                <span className="fg-green p-1">{liveness}</span>
+                <span className="slider-text-color p-1">{liveness}</span>
             </label>
             {livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-success'} onClick={() => livenessStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">loudness</span>
+                <span className="slider-text-color p-1">loudness</span>
                 <input className="form-range" disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
-                <span className="fg-green p-1">{loudness}</span>
+                <span className="slider-text-color p-1">{loudness}</span>
             </label>
             { loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-success'} onClick={() => loudnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">speechiness</span>
+                <span className="slider-text-color p-1">speechiness</span>
                 <input className="form-range" disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
-                <span className="fg-green p-1">{speechiness}</span>
+                <span className="slider-text-color p-1">{speechiness}</span>
             </label>
             {speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-success'} onClick={() => speechinessStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">tempo</span>
+                <span className="slider-text-color p-1">tempo</span>
                 <input  className="form-range" disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
-                <span className="fg-green p-1">{tempo}</span>
+                <span className="slider-text-color p-1">{tempo}</span>
             </label>
             {tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-success'} onClick={() => tempoStatus(true)}>Enable</button>}
         </div>
         <div className="col-3  m-1">
             <label>
-                <span className="fg-green p-1">valence</span>
+                <span className="slider-text-color p-1">valence</span>
                 <input className="form-range" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
-                <span className="fg-green p-1">{valence}</span>
+                <span className="slider-text-color p-1">{valence}</span>
             </label>
             {valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-success'} onClick={() => valenceStatus(true)}>Enable</button>}
