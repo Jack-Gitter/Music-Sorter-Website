@@ -48,7 +48,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-                {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
+                {acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -59,7 +59,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(false)}>Disable</button>}
+            {danceabilityEnabled && <button className={'btn btn-secondary'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
@@ -70,7 +70,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(false)}>Disable</button>}
+            {durationEnabled && <button className={'btn btn-secondary'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
@@ -81,7 +81,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(false)}>Disable</button>}
+            {energyEnabled && <button className={'btn btn-secondary'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -92,7 +92,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
+            {instrumentalnessEnabled && <button className={'btn btn-secondary'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -103,7 +103,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(false)}>Disable</button>}
+            {livenessEnabled && <button className={'btn btn-secondary'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -114,7 +114,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            { loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(false)}>Disable</button>}
+            { loudnessEnabled && <button className={'btn btn-secondary'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
@@ -125,7 +125,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(false)}>Disable</button>}
+            {speechinessEnabled && <button className={'btn btn-secondary'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
@@ -136,7 +136,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(false)}>Disable</button>}
+            {tempoEnabled && <button className={'btn btn-secondary'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
