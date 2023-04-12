@@ -6,6 +6,8 @@
 body {
     font-family: 'Oswald';
     background-color: #333333;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .login-page {
