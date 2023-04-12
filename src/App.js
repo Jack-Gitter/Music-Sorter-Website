@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
-          <Route path={'/playlist/:plistID/*'} element={<PlaylistPage/>}/> 
+          <Route path={'/playlist/:plistID/plistName/*'} element={<PlaylistPage/>}/> 
          </Routes>
       </div>
       </BrowserRouter>

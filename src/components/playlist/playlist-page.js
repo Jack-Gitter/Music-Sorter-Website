@@ -16,7 +16,7 @@ import { useState } from "react";
 
 const PlaylistPage = () => {
     
-    const {plistID} = useParams()
+    const {plistID, plistName} = useParams()
     const {firstSongDisplayedIDX, playerState, loadingMetrics, playlistIMG, currentPlaylist, currentPlaylistIMG, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const dispatcher = useDispatch()
     const location = useLocation().pathname;
@@ -39,6 +39,7 @@ const PlaylistPage = () => {
             <div className="col"></div>
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big d-block mx-auto" src={playlistIMG}></img>}
             </div>
+            {plistName}
         <ul cassName="list-group">
             {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
                 <li className="list-group-item list-group-item-dark">
