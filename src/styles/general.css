@@ -119,11 +119,11 @@ body {
 
 
 input[type=range]::-webkit-slider-thumb {
-    background: black;
+    background: rgb(33,37,41);
 }
 input[type=range]::-moz-range-thumb {
-    background: black;
+    background: rgb(33,37,41);
 }
 input[type=range]::-ms-thumb {
-    background: black;
+    background: rgb(33,37,41);
 }
