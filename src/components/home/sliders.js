@@ -147,7 +147,7 @@ const Sliders = () => {
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
-            {valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(false)}>Disable</button>}
+            {valenceEnabled && <button className={'btn btn-secondary'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(true)}>Enable</button>}
         </div>
             <button className={'btn btn-dark m-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
