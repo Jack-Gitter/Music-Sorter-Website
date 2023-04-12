@@ -39,14 +39,16 @@ const PlaylistPage = () => {
             <div className="col"></div>
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="fg-white m-2 position-absolute album-title-big">{plistName}</span>}
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big d-block mx-auto" src={playlistIMG}></img>}
-            </div>
-        <ul cassName="list-group">
-            {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                <li className="list-group-item list-group-item-dark">
-                    {track.name}
-                </li>
-            )}
-        </ul>
+        </div>
+        <div className="row">
+            <ul cassName="list-group">
+                {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
+                    <li className="list-group-item list-group-item-dark">
+                        {track.name}
+                    </li>
+                )}
+            </ul>
+        </div>
             <Sliders/>
             <WebPlayback/>
         </div>
