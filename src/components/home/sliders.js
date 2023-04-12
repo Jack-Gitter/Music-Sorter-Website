@@ -146,9 +146,10 @@ const Sliders = () => {
                 <input className="form-range" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
             </label>
         </div>
-        <div></div>
+        <div className="col-1">
             {valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(false)}>Disable</button>}
             {!valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(true)}>Enable</button>}
+        </div>
             <button className={'btn btn-dark m-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
