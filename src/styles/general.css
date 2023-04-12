@@ -102,3 +102,11 @@ body {
     filter: brightness(75%);
 }
 
+.album-title-big {
+   bottom:20%;  
+   left:5%;
+   font-family: 'Oswald';
+   font-size: 2.2em;
+   z-index: 1;
+}
+
