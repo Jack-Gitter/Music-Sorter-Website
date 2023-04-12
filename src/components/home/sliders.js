@@ -40,7 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row">
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">acousticness</span>
                 <span className="slider-text-color p-1">{acousticness}</span>
@@ -51,7 +51,7 @@ const Sliders = () => {
                 {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">danceability</span>
                 <span className="slider-text-color p-1">{danceability}</span>
@@ -62,7 +62,7 @@ const Sliders = () => {
             {danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2  ">
+        <div className="col-md-3 col-lg-2  ">
             <label>
                 <span className="slider-text-color p-1">duration</span>
                 <span className="slider-text-color p-1">{duration_ms}</span>
@@ -73,7 +73,7 @@ const Sliders = () => {
             {durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2  ">
+        <div className="col-md-3 col-lg-2  ">
             <label>
                 <span className="slider-text-color p-1">energy</span>
                 <span className="slider-text-color p-1">{energy}</span>
@@ -84,7 +84,7 @@ const Sliders = () => {
             {energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">instrumentalness</span>
                 <span className="slider-text-color p-1">{instrumentalness}</span>
@@ -95,7 +95,7 @@ const Sliders = () => {
             {instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">liveness</span>
                 <span className="slider-text-color p-1">{liveness}</span>
@@ -106,7 +106,7 @@ const Sliders = () => {
             {livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">loudness</span>
                 <span className="slider-text-color p-1">{loudness}</span>
@@ -117,7 +117,7 @@ const Sliders = () => {
             { loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2">
+        <div className="col-md-3 col-lg-2">
             <label>
                 <span className="slider-text-color p-1">speechiness</span>
                 <span className="slider-text-color p-1">{speechiness}</span>
@@ -128,7 +128,7 @@ const Sliders = () => {
             {speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2  ">
+        <div className="col-md-3 col-lg-2  ">
             <label>
                 <span className="slider-text-color p-1">tempo</span>
                 <span className="slider-text-color p-1">{tempo}</span>
@@ -139,7 +139,7 @@ const Sliders = () => {
             {tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(true)}>Enable</button>}
         </div>
-        <div className="col-md-3 col-2  ">
+        <div className="col-md-3 col-lg-2  ">
             <label>
                 <span className="slider-text-color p-1">valence</span>
                 <span className="slider-text-color p-1">{valence}</span>
