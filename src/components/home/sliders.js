@@ -40,7 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row m-0 d-flex align-items-center">
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">acousticness</span>
                 <span className="slider-text-color ">{acousticness}</span>
@@ -51,7 +51,7 @@ const Sliders = () => {
                 {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">danceability</span>
                 <span className="slider-text-color ">{danceability}</span>
@@ -62,7 +62,7 @@ const Sliders = () => {
             {danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-secondary'} onClick={() => danceabilityStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">duration</span>
                 <span className="slider-text-color ">{duration_ms}</span>
@@ -73,7 +73,7 @@ const Sliders = () => {
             {durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-secondary'} onClick={() => durationStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">energy</span>
                 <span className="slider-text-color ">{energy}</span>
@@ -84,7 +84,7 @@ const Sliders = () => {
             {energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-secondary'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
@@ -95,7 +95,7 @@ const Sliders = () => {
             {instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-secondary'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
@@ -106,7 +106,7 @@ const Sliders = () => {
             {livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-secondary'} onClick={() => livenessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
@@ -117,7 +117,7 @@ const Sliders = () => {
             { loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-secondary'} onClick={() => loudnessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center">
             <label>
                 <span className="slider-text-color ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
@@ -128,7 +128,7 @@ const Sliders = () => {
             {speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-secondary'} onClick={() => speechinessStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center justify-content-center ">
             <label>
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
@@ -139,7 +139,7 @@ const Sliders = () => {
             {tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-secondary'} onClick={() => tempoStatus(true)}>Enable</button>}
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-2 justify-content-center justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-2 d-flex justify-content-center justify-content-center ">
             <label>
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
