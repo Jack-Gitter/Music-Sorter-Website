@@ -71,7 +71,8 @@ body {
    transition: transform .2s;
 }
 
-.album-title:hover {
+
+.increase-size:hover .album-title {
     transform: scale(-.08);
 }
 
