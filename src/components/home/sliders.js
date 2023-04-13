@@ -41,110 +41,90 @@ const Sliders = () => {
     return (
         <div className="row m-0 d-flex align-items-center justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">acousticness</span>
                 <span className="slider-text-color ">{acousticness}</span>
                 <input className="form-range " disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
                 {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
                 {!acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">danceability</span>
                 <span className="slider-text-color ">{danceability}</span>
                 <input className="form-range " disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {danceabilityEnabled && <button className={'btn btn-dark'} onClick={() => danceabilityStatus(false)}>Disable</button>}
             {!danceabilityEnabled && <button className={'btn btn-secondary'} onClick={() => danceabilityStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">duration</span>
                 <span className="slider-text-color ">{duration_ms}</span>
                 <input className="form-range " disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {durationEnabled && <button className={'btn btn-dark'} onClick={() => durationStatus(false)}>Disable</button>}
             {!durationEnabled && <button className={'btn btn-secondary'} onClick={() => durationStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">energy</span>
                 <span className="slider-text-color ">{energy}</span>
                 <input className="form-range "disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(false)}>Disable</button>}
             {!energyEnabled && <button className={'btn btn-secondary'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
                 <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
             {!instrumentalnessEnabled && <button className={'btn btn-secondary'} onClick={() => instrumentalnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
                 <input  className="form-range " disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {livenessEnabled && <button className={'btn btn-dark'} onClick={() => livenessStatus(false)}>Disable</button>}
             {!livenessEnabled && <button className={'btn btn-secondary'} onClick={() => livenessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
                 <input className="form-range " disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             { loudnessEnabled && <button className={'btn btn-dark'} onClick={() => loudnessStatus(false)}>Disable</button>}
             {!loudnessEnabled && <button className={'btn btn-secondary'} onClick={() => loudnessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <label>
                 <span className="slider-text-color ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
                 <input className="form-range " disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {speechinessEnabled && <button className={'btn btn-dark'} onClick={() => speechinessStatus(false)}>Disable</button>}
             {!speechinessEnabled && <button className={'btn btn-secondary'} onClick={() => speechinessStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
-            <label>
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
                 <input  className="form-range " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {tempoEnabled && <button className={'btn btn-dark'} onClick={() => tempoStatus(false)}>Disable</button>}
             {!tempoEnabled && <button className={'btn btn-secondary'} onClick={() => tempoStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
-            <label>
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
                 <input className="form-range " disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
-            </label>
         </div>
         <div className="col-1 d-flex align-items-end">
             {valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(false)}>Disable</button>}
