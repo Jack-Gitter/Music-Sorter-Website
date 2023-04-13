@@ -73,7 +73,7 @@ body {
 
 
 .increase-size:hover .album-title {
-    transform: scale(-.08);
+    transform: scale(1.00);
 }
 
 .playlist-img {
