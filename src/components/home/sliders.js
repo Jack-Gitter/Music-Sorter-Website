@@ -123,7 +123,7 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
-                <br></br>
+                <br/>
                 <input  className="form-range " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -133,7 +133,7 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
-                <br></br>
+                <br/>
                 <input className="form-range " disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
