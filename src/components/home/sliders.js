@@ -41,7 +41,7 @@ const Sliders = () => {
     return (
         <div className="row m-0 d-flex align-items-center justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-3"> 
-                <div className="row">
+                <div className="row m-1 p-1">
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color ">acousticness</span>
                         <span className="slider-text-color ">{acousticness}</span>
@@ -49,8 +49,8 @@ const Sliders = () => {
                         {!acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(true)}>Enable</button>}
                     </label>
                 </div>
-                <div className="row">
-                    <input id="acousticness-range" className="form-range m-1" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                <div className="row m-1 p-1">
+                    <input id="acousticness-range" className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
