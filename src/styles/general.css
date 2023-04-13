@@ -75,6 +75,12 @@ body {
     transform: scale(.92);
 }
 
+.increase-size:hover .playlist-img {
+    increase-size
+    border-style: solid;
+    border-color: antiquewhite;
+}
+
 .playlist-img {
     width: 100%;
     height: 100px;
@@ -88,8 +94,6 @@ body {
 
 .increase-size:hover {
     transform: scale(1.08);
-    border-style: solid;
-    border-color: antiquewhite;
 }
 
 /*
