@@ -39,11 +39,11 @@ const Sliders = () => {
     const [loudnessEnabled, loudnessStatus] = useState(true)
 
     return (
-        <div className="row">
+        <div className="row m-0">
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">acousticness</span>
-                <span className="slider-text-color p-0">{acousticness}</span>
+                <span className="slider-text-color p-0 m-0">acousticness</span>
+                <span className="slider-text-color p-0 m-0">{acousticness}</span>
                 <input className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
             </label>
         </div>
@@ -53,8 +53,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">danceability</span>
-                <span className="slider-text-color p-0">{danceability}</span>
+                <span className="slider-text-color p-0 m-0">danceability</span>
+                <span className="slider-text-color p-0 m-0">{danceability}</span>
                 <input className="form-range" disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
             </label>
         </div>
@@ -64,8 +64,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
             <label>
-                <span className="slider-text-color p-0">duration</span>
-                <span className="slider-text-color p-0">{duration_ms}</span>
+                <span className="slider-text-color p-0 m-0">duration</span>
+                <span className="slider-text-color p-0 m-0">{duration_ms}</span>
                 <input className="form-range" disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
             </label>
         </div>
@@ -75,8 +75,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
             <label>
-                <span className="slider-text-color p-0">energy</span>
-                <span className="slider-text-color p-0">{energy}</span>
+                <span className="slider-text-color p-0 m-0">energy</span>
+                <span className="slider-text-color p-0 m-0">{energy}</span>
                 <input className="form-range"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
             </label>
         </div>
@@ -86,8 +86,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">instrumentalness</span>
-                <span className="slider-text-color p-0">{instrumentalness}</span>
+                <span className="slider-text-color p-0 m-0">instrumentalness</span>
+                <span className="slider-text-color p-0 m-0">{instrumentalness}</span>
                 <input className="form-range" disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
             </label>
         </div>
@@ -97,8 +97,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">liveness</span>
-                <span className="slider-text-color p-0">{liveness}</span>
+                <span className="slider-text-color p-0 m-0">liveness</span>
+                <span className="slider-text-color p-0 m-0">{liveness}</span>
                 <input  className="form-range" disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
             </label>
         </div>
@@ -108,8 +108,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">loudness</span>
-                <span className="slider-text-color p-0">{loudness}</span>
+                <span className="slider-text-color p-0 m-0">loudness</span>
+                <span className="slider-text-color p-0 m-0">{loudness}</span>
                 <input className="form-range" disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
             </label>
         </div>
@@ -119,8 +119,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2">
             <label>
-                <span className="slider-text-color p-0">speechiness</span>
-                <span className="slider-text-color p-0">{speechiness}</span>
+                <span className="slider-text-color p-0 m-0">speechiness</span>
+                <span className="slider-text-color p-0 m-0">{speechiness}</span>
                 <input className="form-range" disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
             </label>
         </div>
@@ -130,8 +130,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
             <label>
-                <span className="slider-text-color p-0">tempo</span>
-                <span className="slider-text-color p-0">{tempo}</span>
+                <span className="slider-text-color p-0 m-0">tempo</span>
+                <span className="slider-text-color p-0 m-0">{tempo}</span>
                 <input  className="form-range" disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
             </label>
         </div>
@@ -141,8 +141,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-4 col-md-3 col-lg-2  ">
             <label>
-                <span className="slider-text-color p-0">valence</span>
-                <span className="slider-text-color p-0">{valence}</span>
+                <span className="slider-text-color p-0 m-0">valence</span>
+                <span className="slider-text-color p-0 m-0">{valence}</span>
                 <input className="form-range" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
             </label>
         </div>
@@ -202,7 +202,7 @@ const Sliders = () => {
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
-        <Link to={'/'}><button className={'btn btn-dark p-0'}>Logout</button></Link>
+        <Link to={'/'}><button className={'btn btn-dark p-0 m-0'}>Logout</button></Link>
         </div>
     );
 }
