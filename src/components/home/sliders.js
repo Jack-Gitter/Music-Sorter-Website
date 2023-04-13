@@ -49,12 +49,12 @@ const Sliders = () => {
                         {!acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(true)}>Enable</button>}
                     </label>
                 </div>
-                <div className="row m-1 p-1">
+                <div className="row">
                     <input id="acousticness-range" className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
                 <label for="danceability-range">
                     <span className="slider-text-color ">danceability</span>
                     <span className="slider-text-color ">{danceability}</span>
@@ -67,7 +67,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
                 <label for="duration-range">
                     <span className="slider-text-color ">duration</span>
                     <span className="slider-text-color ">{duration_ms}</span>
@@ -80,7 +80,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
                 <label for="energy-range">
                     <span className="slider-text-color ">energy</span>
                     <span className="slider-text-color ">{energy}</span>
@@ -93,7 +93,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
             <label for="instrumental-range">
                 <span className="slider-text-color ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
@@ -106,7 +106,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
             <label for="liveness-range">
                 <span className="slider-text-color ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
@@ -119,7 +119,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
             <label for="loudness-range">
                 <span className="slider-text-color ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
@@ -132,7 +132,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 ">
-            <div className="row">
+            <div className="row m-1 p-1">
             <label for="speechiness-range">
                 <span className="slider-text-color ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
@@ -145,7 +145,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3  justify-content-center ">
-            <div className="row">
+            <div className="row m-1 p-1">
             <label for="tempo-range">
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
@@ -158,7 +158,7 @@ const Sliders = () => {
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3  justify-content-center ">
-           <div className="row">
+           <div className="row m-1 p-1">
            <label for="valence-range">
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
