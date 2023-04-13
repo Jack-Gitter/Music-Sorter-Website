@@ -9,7 +9,7 @@ const Search = () => {
     const [searchQuery, updateSearchQuery] = useState('')
     return (
         <>
-            <div className="col-sm-3 col-md-7 col-7 pt-2">
+            <div className="col-sm-3 col-md-6 col-7 pt-2">
             <div class="input-group">
                  <input type="text" 
                  onKeyDown={(e) =>{ if (e.key === 'Enter') {dispatcher(searchSpotifyThunk(searchQuery))}}}
