@@ -42,13 +42,9 @@ const Sliders = () => {
         <div className="row m-0 d-flex align-items-center justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <label>
-        <div className="row">
                 <span className="slider-text-color ">acousticness</span>
                 <span className="slider-text-color ">{acousticness}</span>
-        </div>
-        <div className="row">
                 <input className="form-range" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
-        </div>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -57,13 +53,9 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <label>
-        <div className="row">
                 <span className="slider-text-color ">danceability</span>
                 <span className="slider-text-color ">{danceability}</span>
-        </div>
-        <div className="row">
                 <input className="form-range" disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
-        </div>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
