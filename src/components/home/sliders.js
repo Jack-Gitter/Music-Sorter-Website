@@ -44,7 +44,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">acousticness</span>
                 <span className="slider-text-color ">{acousticness}</span>
-                <input className="form-range d-inline" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                <input className="form-range " disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -55,7 +55,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">danceability</span>
                 <span className="slider-text-color ">{danceability}</span>
-                <input className="form-range d-inline" disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
+                <input className="form-range " disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -66,7 +66,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">duration</span>
                 <span className="slider-text-color ">{duration_ms}</span>
-                <input className="form-range d-inline" disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
+                <input className="form-range " disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -77,7 +77,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">energy</span>
                 <span className="slider-text-color ">{energy}</span>
-                <input className="form-range d-inline"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
+                <input className="form-range "disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -88,7 +88,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
-                <input className="form-range d-inline" disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
+                <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -99,7 +99,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
-                <input  className="form-range d-inline" disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
+                <input  className="form-range " disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -110,7 +110,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
-                <input className="form-range d-inline" disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
+                <input className="form-range " disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -121,7 +121,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
-                <input className="form-range d-inline" disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
+                <input className="form-range " disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -132,7 +132,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
-                <input  className="form-range d-inline" disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
+                <input  className="form-range " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -143,7 +143,7 @@ const Sliders = () => {
             <label>
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
-                <input className="form-range d-inline" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
+                <input className="form-range " disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
             </label>
         </div>
         <div className="col-1 d-flex align-items-end">
