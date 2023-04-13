@@ -222,7 +222,6 @@ const Sliders = () => {
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
-        <Link to={'/'}><button className={'btn btn-dark ms-2'}>Logout</button></Link>
         </div>
     );
 }
