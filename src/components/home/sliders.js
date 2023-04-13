@@ -41,10 +41,11 @@ const Sliders = () => {
     return (
         <div className="row m-0 d-flex align-items-center justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-                <span className="slider-text-color ">acousticness</span>
-                <span className="slider-text-color ">{acousticness}</span>
-                <br></br>
-                <input className="form-range " disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                <label className="form-label" for="acousticness-range">
+                    <span className="slider-text-color ">acousticness</span>
+                    <span className="slider-text-color ">{acousticness}</span>
+                </label>
+                <input id="acousticness-range" className="form-range " disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
                 {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
@@ -53,7 +54,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">danceability</span>
                 <span className="slider-text-color ">{danceability}</span>
-                <br></br>
                 <input className="form-range " disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -63,7 +63,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">duration</span>
                 <span className="slider-text-color ">{duration_ms}</span>
-                <br></br>
                 <input className="form-range " disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -80,17 +79,9 @@ const Sliders = () => {
             {!energyEnabled && <button className={'btn btn-secondary'} onClick={() => energyStatus(true)}>Enable</button>}
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-            <div className="row">
-                <div className="col-12">
-                    <span className="slider-text-color ">instrumentalness</span>
-                    <span className="slider-text-color ">{instrumentalness}</span>
-                </div>
-            </div>
-            <div className="row">
-                <div className="col-12">
-                    <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
-                </div>
-            </div>
+            <span className="slider-text-color ">instrumentalness</span>
+            <span className="slider-text-color ">{instrumentalness}</span>
+            <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
             {instrumentalnessEnabled && <button className={'btn btn-dark'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
@@ -99,7 +90,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
-                <br></br>
                 <input  className="form-range " disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -109,7 +99,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
-                <br></br>
                 <input className="form-range " disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -119,7 +108,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
-                <br></br>
                 <input className="form-range " disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -129,7 +117,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
                 <span className="slider-text-color ">tempo</span>
                 <span className="slider-text-color ">{tempo}</span>
-                <br/>
                 <input  className="form-range " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
@@ -139,7 +126,6 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center justify-content-center ">
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
-                <br/>
                 <input className="form-range" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
