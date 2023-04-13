@@ -81,13 +81,13 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <div className="row">
-                <div className="col">
+                <div className="col-12">
                     <span className="slider-text-color ">instrumentalness</span>
                     <span className="slider-text-color ">{instrumentalness}</span>
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col-12">
                     <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
                 </div>
             </div>
