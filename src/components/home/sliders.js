@@ -43,7 +43,7 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <label className="form-label" for="acousticness-range">
                     <span className="slider-text-color ">acousticness</span>
-                    <span className="slider-text-color ">{acousticness}</span>
+                    {/*<span className="slider-text-color ">{acousticness}</span>*/}
                 </label>
                 <input id="acousticness-range" className="form-range " disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
         </div>
