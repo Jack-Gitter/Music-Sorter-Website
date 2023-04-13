@@ -68,10 +68,7 @@ body {
    font-family: 'Oswald';
    font-size: 1.2em;
    z-index: 1;
-}
-
-.album-title:hover ~ .playlist-img:hover{
-    transform:scale(1.08);
+   transition: transform .1s;
 }
 
 .playlist-img {
@@ -83,6 +80,10 @@ body {
     transition: transform .1s;
     filter: brightness(75%);
     z-index: 0;
+}
+
+.increase-size:hover {
+    transform: scale(1.08);
 }
 
 .playlist-img:hover {
