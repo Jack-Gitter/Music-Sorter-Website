@@ -45,6 +45,8 @@ const Sliders = () => {
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color ">acousticness</span>
                         <span className="slider-text-color ">{acousticness}</span>
+                        {acousticnessEnabled && <button className={'btn btn-dark'} onClick={() => acousticnessStatus(false)}>Disable</button>}
+                        {!acousticnessEnabled && <button className={'btn btn-secondary'} onClick={() => acousticnessStatus(true)}>Enable</button>}
                     </label>
                 </div>
                 <div className="row">
