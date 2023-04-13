@@ -73,8 +73,7 @@ const Sliders = () => {
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                 <span className="slider-text-color ">energy</span>
                 <span className="slider-text-color ">{energy}</span>
-                <br></br>
-                <input className="form-range "disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
+                <input className="form-range d-block"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
             {energyEnabled && <button className={'btn btn-dark'} onClick={() => energyStatus(false)}>Disable</button>}
@@ -134,7 +133,7 @@ const Sliders = () => {
                 <span className="slider-text-color ">valence</span>
                 <span className="slider-text-color ">{valence}</span>
                 <br/>
-                <input className="form-range " disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
+                <input className="form-range" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
         </div>
         <div className="col-1 d-flex align-items-end">
             {valenceEnabled && <button className={'btn btn-dark'} onClick={() => valenceStatus(false)}>Disable</button>}
