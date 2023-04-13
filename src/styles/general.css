@@ -76,7 +76,6 @@ body {
 }
 
 .increase-size:hover .playlist-img {
-    increase-size
     border-style: solid;
     border-color: antiquewhite;
 }
