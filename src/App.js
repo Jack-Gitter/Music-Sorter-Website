@@ -23,13 +23,11 @@ function App() {
   return (
     <Provider store={store}>
     <BrowserRouter>
-      <div className="row position-relative"> 
         <Routes>
           <Route index element={<Login/>}/>
           <Route path={'/home/*'} element={<Home/>}/>
           <Route path={'/playlist/:plistID/:plistName/*'} element={<PlaylistPage/>}/> 
          </Routes>
-      </div>
       </BrowserRouter>
     </Provider>
   );
