@@ -40,7 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row m-0 d-flex align-items-center justify-content-center">
-        <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <div className="col-sm-6 col-md-4 col-lg-3"> 
                 <div className="row">
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color ">acousticness</span>
