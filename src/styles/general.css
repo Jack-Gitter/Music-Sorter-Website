@@ -78,7 +78,7 @@ body {
 .increase-size:hover .playlist-img {
     border-style: solid;
     border-color: antiquewhite;
-    border-width: 7px;
+    border-width: 3px;
 }
 
 .playlist-img {
@@ -93,7 +93,7 @@ body {
 }
 
 .increase-size:hover {
-    transform: scale(1.08);
+    transform: scale(1.10);
 }
 
 /*
