@@ -42,7 +42,7 @@ const PlaylistPage = () => {
         <div className="row m-0 p-0">
             <ul cassName="list-group m-0 p-0">
                 {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                    <li className="list-group-item list-group-item-dark">
+                    <li className="list-group-item list-group-item-dark m-0 p-0">
                         {track.name}
                     </li>
                 )}
