@@ -35,11 +35,11 @@ const PlaylistPage = () => {
     
     return (
         <>
-        <div className="row position-relative">
+        <div className="row position-relative m-0 p-0">
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big">{plistName}</span>}
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
         </div>
-        <div className="row">
+        <div className="row m-0 p-0">
             <ul cassName="list-group">
                 {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
                     <li className="list-group-item list-group-item-dark">
