@@ -81,11 +81,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
             <div className="row">
-                <span className="slider-text-color ">instrumentalness</span>
-                <span className="slider-text-color ">{instrumentalness}</span>
+                <div className="col">
+                    <span className="slider-text-color ">instrumentalness</span>
+                    <span className="slider-text-color ">{instrumentalness}</span>
+                </div>
             </div>
             <div className="row">
-                <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
+                <div className="col">
+                    <input className="form-range " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
+                </div>
             </div>
         </div>
         <div className="col-1 d-flex align-items-end">
