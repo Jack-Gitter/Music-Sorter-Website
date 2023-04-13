@@ -93,7 +93,7 @@ body {
 }
 
 .increase-size:hover {
-    transform: scale(1.10);
+    transform: scale(1.08);
 }
 
 .search-buttons {
