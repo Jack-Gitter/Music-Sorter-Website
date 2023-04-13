@@ -96,12 +96,6 @@ body {
     transform: scale(1.10);
 }
 
-/*
-.playlist-img:hover {
-    transform: scale(1.08)
-}
-*/
-
 .search-buttons {
     position: relative;
     display: flex;
