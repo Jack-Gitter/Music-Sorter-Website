@@ -48,7 +48,7 @@ const PlaylistPage = () => {
                 )}
             </ul>
         </div>
-        <div className="row">
+        <div className="row m-0 p-0">
             <Sliders/>
             <WebPlayback/>
         </div>
