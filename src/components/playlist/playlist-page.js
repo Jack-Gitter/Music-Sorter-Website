@@ -35,7 +35,7 @@ const PlaylistPage = () => {
     
     return (
         <div className="m-0 p-0">
-        <div className="row position-relative">
+        <div className="row">
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big">{plistName}</span>}
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
         </div>
