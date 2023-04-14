@@ -111,14 +111,14 @@ body {
 }
 
 .playlist-img-big {
-    /*width:100%;*/
-    /*height: 300px;
-    /*overflow: hidden;*/
-    /*object-fit: cover;*/
-    /*object-position: 50% 40%;*/
-    /*filter: brightness(75%);*/
-    /*padding:0px;
-    margin:0px;*/
+    width:100%;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+     object-position: 50% 40%;
+    filter: brightness(75%);
+    padding:0px;
+    margin:0px;
 }
 
 .album-title-big {
