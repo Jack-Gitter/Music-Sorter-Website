@@ -40,7 +40,7 @@ const Sliders = () => {
 
     return (
         <div className="row d-flex align-items-center justify-content-center m-0 p-0">
-        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1"> 
+        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0"> 
                 <div className="row text-center">
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
@@ -170,7 +170,7 @@ const Sliders = () => {
                 <input id="valence-range" className="form-range p-4" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
             </div>
         </div>
-            {/*<button className={'btn btn-dark m-0 p-0'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            <button className={'btn btn-dark m-0 p-0'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness,
@@ -221,7 +221,7 @@ const Sliders = () => {
             }
             dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
-        } >Update</button>*/}
+        } >Update</button>
         </div>
     );
 }
