@@ -50,7 +50,7 @@ const Sliders = () => {
                     </label>
                 </div>
                 <div className="row">
-                    <input id="acousticness-range" className="form-range p-4" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                    <input id="acousticness-range" className="form-range m-1" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
