@@ -39,8 +39,8 @@ const Sliders = () => {
     const [loudnessEnabled, loudnessStatus] = useState(true)
 
     return (
-        /*
-        <div className="row ">
+        
+        <div className="row d-flex align-items-center justify-content-center">
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0"> 
                 <div className="row text-center">
                     <label className="form-label m-0 p-0" for="acousticness-range">
@@ -224,8 +224,6 @@ const Sliders = () => {
             }
         } >Update</button>
         </div>
-        */
-        <></>
     );
 
 }
