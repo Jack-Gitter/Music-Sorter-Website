@@ -114,9 +114,9 @@ body {
     right: 0px;
     left: 0px;
     height: 300px;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: 50% 40%;
+    /*overflow: hidden;*/
+    /*object-fit: cover;*/
+    /*object-position: 50% 40%;*/
     filter: brightness(75%);
     padding:0px;
     margin:0px;
