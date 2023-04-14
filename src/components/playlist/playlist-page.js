@@ -34,7 +34,7 @@ const PlaylistPage = () => {
     }, [plistID])
     
     return (
-        <>
+        <div className="m-0 p-0">
         <div className="row position-relative m-0 p-0">
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big m-0 p-0">{plistName}</span>}
                 {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big m-0 p-0" src={playlistIMG}></img>}
@@ -54,7 +54,7 @@ const PlaylistPage = () => {
         <div className="row">
             <WebPlayback/>
         </div>
-        </>
+        </div>
     );
 }
 export default PlaylistPage;
