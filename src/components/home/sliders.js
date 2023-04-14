@@ -39,11 +39,10 @@ const Sliders = () => {
     const [loudnessEnabled, loudnessStatus] = useState(true)
 
     return (
-        
         <div className="row d-flex align-items-center justify-content-center">
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0"> 
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1"> 
                 <div className="row text-center">
-                    <label className="form-label m-0 p-0" for="acousticness-range">
+                    <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
                         <span className="slider-text-color ">{acousticness}</span>
                         {acousticnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => acousticnessStatus(false)}>Disable</button>}
@@ -51,12 +50,12 @@ const Sliders = () => {
                     </label>
                 </div>
                 <div className="row">
-                    <input id="acousticness-range" className="form-range m-0" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
+                    <input id="acousticness-range" className="form-range p-4" disabled={!acousticnessEnabled} onChange={(e) => acousticnessUpdater(e.target.value)} type='range' min='0' max='100' value={acousticness}></input>
                 </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-                <label className="form-label m-0 p-0" for="danceability-range">
+                <label for="danceability-range">
                     <span className="slider-text-color me-2 ">danceability</span>
                     <span className="slider-text-color ">{danceability}</span>
             {danceabilityEnabled && <button className={'btn btn-dark ms-2'} onClick={() => danceabilityStatus(false)}>Disable</button>}
@@ -64,12 +63,12 @@ const Sliders = () => {
                 </label>
             </div>
             <div className="row">
-                <input id="danceability-range" className="form-range m-0 " disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
+                <input id="danceability-range" className="form-range p-4 " disabled={!danceabilityEnabled} onChange={(e) => danceabilityUpdater(e.target.value)} type='range' min='0' max='100' value={danceability}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1 ">
             <div className="row text-center">
-                <label className="form-label m-0 p-0" for="duration-range">
+                <label for="duration-range">
                     <span className="slider-text-color me-2 ">duration</span>
                     <span className="slider-text-color ">{duration_ms}</span>
             {durationEnabled && <button className={'btn btn-dark ms-2'} onClick={() => durationStatus(false)}>Disable</button>}
@@ -77,12 +76,12 @@ const Sliders = () => {
                 </label>
             </div> 
             <div className="row">
-                <input id="duration-range" className="form-range m-0 " disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
+                <input id="duration-range" className="form-range p-4 " disabled={!durationEnabled}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-                <label className="form-label m-0 p-0" for="energy-range">
+                <label for="energy-range">
                     <span className="slider-text-color me-2 ">energy</span>
                     <span className="slider-text-color ">{energy}</span>
             {energyEnabled && <button className={'btn btn-dark ms-2'} onClick={() => energyStatus(false)}>Disable</button>}
@@ -90,12 +89,12 @@ const Sliders = () => {
                 </label>
             </div>
             <div className="row">
-                <input id="energy-range" className="form-range m-0 d-block"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
+                <input id="energy-range" className="form-range p-4 d-block"disabled={!energyEnabled} onChange={(e) => energyUpdater(e.target.value)} type='range' min='0' max='100' value={energy}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-            <label className="form-label m-0 p-0" for="instrumental-range">
+            <label for="instrumental-range">
                 <span className="slider-text-color me-2 ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
             {instrumentalnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => instrumentalnessStatus(false)}>Disable</button>}
@@ -103,12 +102,12 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input id="instrumental-range" className="form-range m-0 " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
+                <input id="instrumental-range" className="form-range p-4 " disabled={!instrumentalnessEnabled} onChange={(e) => instrumentalnessUpdater(e.target.value)} type='range' min='0' max='100' value={instrumentalness}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-            <label className="form-label m-0 p-0" for="liveness-range">
+            <label for="liveness-range">
                 <span className="slider-text-color me-2 ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
             {livenessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => livenessStatus(false)}>Disable</button>}
@@ -116,12 +115,12 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input  id="liveness-range" className="form-range m-0 " disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
+                <input  id="liveness-range" className="form-range p-4 " disabled={!livenessEnabled} onChange={(e) => livenessUpdater(e.target.value)} type='range' min='0' max='100' value={liveness}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-            <label className="form-label m-0 p-0" for="loudness-range">
+            <label for="loudness-range">
                 <span className="slider-text-color me-2 ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
             { loudnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => loudnessStatus(false)}>Disable</button>}
@@ -129,12 +128,12 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input id="loudness-range" className="form-range m-0 " disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
+                <input id="loudness-range" className="form-range p-4 " disabled={!loudnessEnabled} onChange={(e) => loudnessUpdater(e.target.value)} type='range' min='0' max='100' value={loudness}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1">
             <div className="row text-center">
-            <label className="form-label m-0 p-0" for="speechiness-range">
+            <label for="speechiness-range">
                 <span className="slider-text-color me-2 ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
             {speechinessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => speechinessStatus(false)}>Disable</button>}
@@ -142,12 +141,12 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input id="speechiness-range" className="form-range m-0 " disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
+                <input id="speechiness-range" className="form-range p-4 " disabled={!speechinessEnabled} onChange={(e) => speechinessUpdater(e.target.value)} type='range' min='0' max='100' value={speechiness}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0 justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1 justify-content-center ">
             <div className="row text-center">
-            <label className="form-label m-0 p-0" for="tempo-range">
+            <label for="tempo-range">
                 <span className="slider-text-color me-2 ">tempo</span>
                 <span className="slider-text-color  ">{tempo}</span>
             {tempoEnabled && <button className={'btn btn-dark ms-2'} onClick={() => tempoStatus(false)}>Disable</button>}
@@ -155,12 +154,12 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input  id="tempo-range" className="form-range m-0 " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
+                <input  id="tempo-range" className="form-range p-4 " disabled={!tempoEnabled} onChange={(e) => tempoUpdater(e.target.value)} type='range' min='0' max='100' value={tempo}></input>
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0  justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1  justify-content-center ">
            <div className="row text-center">
-           <label className="form-label m-0 p-0" for="valence-range">
+           <label for="valence-range">
                 <span className="slider-text-color me-2 ">valence</span>
                 <span className="slider-text-color  ">{valence}</span>
             {valenceEnabled && <button className={'btn btn-dark ms-2'} onClick={() => valenceStatus(false)}>Disable</button>}
@@ -168,10 +167,10 @@ const Sliders = () => {
             </label>
             </div>
             <div className="row">
-                <input id="valence-range" className="form-range m-0" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
+                <input id="valence-range" className="form-range p-4" disabled={!valenceEnabled} onChange={(e) => valenceUpdater(e.target.value)} type='range' min='0' max='100' value={valence}></input>
             </div>
         </div>
-            <button className={'btn btn-dark m-0 p-0'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            <button className={'btn btn-dark ms-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(updateSliders(
                 {
                     acousticness: acousticness,
@@ -225,6 +224,5 @@ const Sliders = () => {
         } >Update</button>
         </div>
     );
-
 }
 export default Sliders;
