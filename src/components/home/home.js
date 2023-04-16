@@ -41,7 +41,7 @@ const Home = () => {
 
 
     return (
-        <div className="container-fluid m-0 p-0">
+        <div className="container">
         <div className="row">
             <div className="col">
                 <HeaderComponent/>
