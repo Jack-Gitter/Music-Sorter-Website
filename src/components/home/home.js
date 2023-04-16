@@ -41,11 +41,11 @@ const Home = () => {
 
 
     return (
-        <div className="container-fluid">
-        <div className="row w-100">
+        <div className="container-fluid p-0">
+        <div className="row m-auto">
                 <HeaderComponent/>
         </div>
-        <div className="row w-100">
+        <div className="row m-auto">
                 <PlaylistSelector/>
         </div>
         </div>
