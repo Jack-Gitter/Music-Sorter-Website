@@ -14,7 +14,7 @@ const WebPlayback = () => {
         for (let i = 0; i < songs.length && i < 774; i++) {
             songUris.push(songs[i].uri);
         }
-    })
+    }, [])
     
     return (
         <>
