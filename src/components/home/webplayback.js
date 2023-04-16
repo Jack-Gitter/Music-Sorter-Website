@@ -8,9 +8,9 @@ const WebPlayback = () => {
 
     const dispatcher = useDispatch()
     const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
+    let songUris = []
 
     useEffect(() => {
-        const songUris = []
         for (let i = 0; i < songs.length && i < 774; i++) {
             songUris.push(songs[i].uri);
         }
