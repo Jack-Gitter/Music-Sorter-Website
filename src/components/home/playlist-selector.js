@@ -27,7 +27,7 @@ const PlaylistSelector = () => {
         <div className="row mb-3 p-0">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 position-relative col-md-4 col-lg-3 pt-2 increase-size">
-                <Link className="link-tag" onClick={dispatcher(setSongs([]))}
+                <Link className="link-tag" 
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white m-2 position-absolute album-title">{plist.name}</span>
                         <img className={`playlist-img rounded mt-3`} src={`

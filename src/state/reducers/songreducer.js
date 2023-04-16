@@ -48,6 +48,7 @@ const userInfo = createSlice({
         },
         setSongs(state, action) {
             state.songs = action.payload
+            state.songUris = [];
             for (let i = 0; i < state.songs.length && i < 774; i++) {
                 state.songUris.push(state.songs[i].uri);
             }
@@ -92,7 +93,7 @@ const userInfo = createSlice({
                 payload.sort((song1, song2) => song1.curated_value - song2.curated_value)
                 state.songs = payload
                 console.log(state.songs)
-
+                state.songUris = []
                 for (let i = 0; i < state.songs.length && i < 774; i++) {
                     state.songUris.push(state.songs[i].uri);
                 }
