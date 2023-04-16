@@ -42,16 +42,16 @@ const Home = () => {
 
     return (
         <div className="container-fluid">
-        <div className="row w-100">
-            {/*<div className="col w-100">
-            </div>*/}
+        {/*<div className="row w-100">
+            {<div className="col w-100">
+            </div>}
+        </div>*/}
                 <HeaderComponent/>
-        </div>
-        <div className="row w-100">
+        {/*<div className="row w-100">
             {/*<div className="col w-100">
-            </div>*/}
+            </div>}
+        </div>*/}
                 <PlaylistSelector/>
-        </div>
         </div>
     );
 }
