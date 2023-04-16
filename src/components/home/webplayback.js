@@ -11,7 +11,7 @@ const WebPlayback = () => {
     const [songUris, songUrisUpdater] = useState([])
 
     for (let i = 0; i < songs.length && i < 774; i++) {
-        songUrisUpdater(songUris.push(songs[i].uri))
+        songUrisUpdater([...songUris, songs[i].uri])
         //songUris.push(songs[i].uri);
     }
     
