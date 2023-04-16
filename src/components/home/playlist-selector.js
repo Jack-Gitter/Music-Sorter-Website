@@ -6,7 +6,6 @@ import { setLoadingSongs, setSongs } from "../../state/reducers/songreducer";
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
 import { Link, useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 const PlaylistSelector = () => {
 
@@ -29,7 +28,6 @@ const PlaylistSelector = () => {
         {playlists.map((plist, index) => 
             <div className="col-sm-6 position-relative col-md-4 col-lg-3 pt-2 increase-size">
                 <Link className="link-tag" onClick={dispatcher(setSongs([]))}
-                
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white m-2 position-absolute album-title">{plist.name}</span>
                         <img className={`playlist-img rounded mt-3`} src={`
