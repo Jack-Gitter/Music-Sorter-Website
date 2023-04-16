@@ -48,6 +48,11 @@ const userInfo = createSlice({
         },
         setSongs(state, action) {
             state.songs = action.payload
+            
+            for (let i = 0; i < state.songs.length && i < 774; i++) {
+                state.songUris.push(state.songs[i].uri);
+            }
+            
         },
         setLoadingSongs(state, action) {
             state.loadingSongs = action.payload
