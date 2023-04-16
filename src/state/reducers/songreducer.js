@@ -99,11 +99,6 @@ const userInfo = createSlice({
                 }
 
             },
-        [getTracksFromPlaylistThunk.pending]:
-            (state, {payload} ) => {
-                state.songUris = []
-                state.songs = []
-            },
         [getTracksFromPlaylistThunk.rejected]:
             (state, {payload}) => {
                 state.loadingSongs = false;
