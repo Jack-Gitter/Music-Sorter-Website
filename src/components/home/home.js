@@ -44,13 +44,13 @@ const Home = () => {
         <div className="container-fluid">
         <div className="row w-100">
             {/*<div className="col w-100">
-                <HeaderComponent/>
             </div>*/}
+                <HeaderComponent/>
         </div>
         <div className="row w-100">
             {/*<div className="col w-100">
-                <PlaylistSelector/>
             </div>*/}
+                <PlaylistSelector/>
         </div>
         </div>
     );
