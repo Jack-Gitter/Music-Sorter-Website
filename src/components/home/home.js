@@ -48,7 +48,7 @@ const Home = () => {
             </div>
         </div>
         <div className="row">
-            <div className="col">
+            <div className="col m-0 p-0">
                 <PlaylistSelector/>
             </div>
         </div>
