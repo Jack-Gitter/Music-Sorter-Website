@@ -8,12 +8,6 @@ const WebPlayback = () => {
 
     const dispatcher = useDispatch()
     const {currentPlaylist, loadingSongs, songUris, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-/*
-    const songUris = []
-    for (let i = 0; i < songs.length && i < 774; i++) {
-        songUris.push(songs[i].uri);
-    }
-    */
 
     return (
         <>
