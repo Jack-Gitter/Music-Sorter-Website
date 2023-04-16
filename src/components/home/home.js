@@ -50,7 +50,7 @@ const Home = () => {
         <div className="row w-100">
             {/*<div className="col w-100">
                 <PlaylistSelector/>
-        </div>*/}
+            </div>*/}
         </div>
         </div>
     );
