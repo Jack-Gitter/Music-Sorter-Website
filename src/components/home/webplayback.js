@@ -19,6 +19,7 @@ const WebPlayback = () => {
         useEffect(() => {
             console.log(songUris)
         })
+
     return (
         <>
         {songUris.length > 0 && <SpotifyPlayer 

@@ -6,10 +6,12 @@ import { setLoadingSongs, setSongs } from "../../state/reducers/songreducer";
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
 import { Link, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const PlaylistSelector = () => {
 
 
+    const dispatcher = useDispatch()
     // eslint-disable-next-line
     const {loadingMetrics, currentPlaylist,loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
     const getPlaylistID = (n) => {
@@ -26,7 +28,9 @@ const PlaylistSelector = () => {
         <div className="row mb-3 p-0">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 position-relative col-md-4 col-lg-3 pt-2 increase-size">
-                <Link className="link-tag" to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
+                <Link className="link-tag" onClick={dispatcher(setSongs([]))}
+                
+                to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white m-2 position-absolute album-title">{plist.name}</span>
                         <img className={`playlist-img rounded mt-3`} src={`
                             ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}

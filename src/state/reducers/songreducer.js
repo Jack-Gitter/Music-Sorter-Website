@@ -48,11 +48,10 @@ const userInfo = createSlice({
         },
         setSongs(state, action) {
             state.songs = action.payload
-            
             for (let i = 0; i < state.songs.length && i < 774; i++) {
                 state.songUris.push(state.songs[i].uri);
             }
-            
+
         },
         setLoadingSongs(state, action) {
             state.loadingSongs = action.payload
@@ -98,6 +97,11 @@ const userInfo = createSlice({
                     state.songUris.push(state.songs[i].uri);
                 }
 
+            },
+        [getTracksFromPlaylistThunk.pending]:
+            (state, {payload} ) => {
+                state.songUris = []
+                state.songs = []
             },
         [getTracksFromPlaylistThunk.rejected]:
             (state, {payload}) => {
