@@ -7,14 +7,15 @@ import { setPlayerState } from "../../state/reducers/songreducer";
 const WebPlayback = () => {
 
     const dispatcher = useDispatch()
-    const {currentPlaylist, loadingSongs, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-    const [songUris, songUrisUpdater] = useState([])
+    const {currentPlaylist, loadingSongs, songUris, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
 
+    /*
+    const songUris = []
     for (let i = 0; i < songs.length && i < 774; i++) {
-        songUrisUpdater([...songUris, songs[i].uri])
-        //songUris.push(songs[i].uri);
+        songUris.push(songs[i].uri);
     }
-    
+    */
+
     return (
         <>
         {songUris.length > 0 && <SpotifyPlayer 

@@ -18,6 +18,7 @@ const userInfo = createSlice({
         refreshToken: "",
         playlists: [],
         songs: [],
+        songUris: [],
         playlistIMG: "",
         playerState: {},
         firstSongDisplayedIDX: 0,
@@ -87,6 +88,11 @@ const userInfo = createSlice({
                 payload.sort((song1, song2) => song1.curated_value - song2.curated_value)
                 state.songs = payload
                 console.log(state.songs)
+
+                for (let i = 0; i < state.songs.length && i < 774; i++) {
+                    state.songUris.push(state.songs[i].uri);
+                }
+
             },
         [getTracksFromPlaylistThunk.rejected]:
             (state, {payload}) => {
