@@ -31,7 +31,7 @@ const WebPlayback = () => {
           }}
         token={accessToken}
         layout={'responsive'}
-        play={false}
+        play={true}
         uris={songUris}
         callback={(state) => { dispatcher(setPlayerState(state)) }}
         />}
