@@ -42,13 +42,13 @@ const Home = () => {
 
     return (
         <div className="container-fluid">
-        <div className="row ">
+        <div className="row m-0 p-0">
             <div className="col no-pad">
                 <HeaderComponent/>
             </div>
         </div>
-        <div className="row">
-            <div className="col m-0 p-0">
+        <div className="row m-0 p-0">
+            <div className="col">
                 <PlaylistSelector/>
             </div>
         </div>
