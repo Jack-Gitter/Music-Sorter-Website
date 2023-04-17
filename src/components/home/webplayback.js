@@ -28,6 +28,7 @@ const WebPlayback = () => {
         play={true}
         uris={songUris}
         callback={(state) => { dispatcher(setPlayerState(state)) }}
+        magnifySliderOnHover={true}
         />}
         </>
     );
