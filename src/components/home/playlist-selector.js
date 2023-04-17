@@ -14,11 +14,9 @@ const PlaylistSelector = () => {
     useEffect(() => {
        if (promise) {
             promise.abort();
-            console.log('testing1');
        } 
         if (promiseBoundedVars) {
             promiseBoundedVars.abort();
-            console.log('testing');
         }
     })
 
