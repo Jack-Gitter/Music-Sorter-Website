@@ -6,9 +6,15 @@ import { setLoadingSongs, setSongs } from "../../state/reducers/songreducer";
 import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
 import { Link, useParams } from "react-router-dom";
+import { promise } from "./sliders";
 
 const PlaylistSelector = () => {
 
+    useEffect(() => {
+       if (promise) {
+            promise.abort();
+       } 
+    })
 
     const dispatcher = useDispatch()
     // eslint-disable-next-line

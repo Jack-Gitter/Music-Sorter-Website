@@ -8,7 +8,7 @@ import { getBoundedVariablesThunk, getTracksFromPlaylistThunk } from "../../serv
 import { Slider, ThemeProvider } from "@mui/material";
 import { Stack } from "@mui/system";
 import { Link } from "react-router-dom";
-
+export let promise;
 
 const Sliders = () => {
 
@@ -219,7 +219,7 @@ const Sliders = () => {
             if (valenceEnabled) {
                 slider_map.valence = valence/100
             }
-            dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
+            promise = dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
         </div>

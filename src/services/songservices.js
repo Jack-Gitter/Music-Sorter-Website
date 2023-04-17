@@ -60,8 +60,8 @@ export const getBoundedVariables = async (id) => {
     }
     return [max_duration, min_duration, max_tempo, min_tempo]
 }
-export const getTracksFromPlaylist = async (id, sliders) => {
 
+export const getTracksFromPlaylist = async (id, sliders) => {
     let res = [];
     const playlist = await spotifyWebApiHandler.getPlaylist(id);
     const num_tracks = playlist.tracks.total;
