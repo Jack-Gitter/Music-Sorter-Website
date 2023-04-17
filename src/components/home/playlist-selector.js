@@ -7,6 +7,7 @@ import { setCurrentPlaylist } from "../../state/reducers/songreducer";
 import { setLoadingMetrics } from "../../state/reducers/songreducer";
 import { Link, useParams } from "react-router-dom";
 import { promise } from "./sliders";
+import { promiseBoundedVars } from "../playlist/playlist-page";
 
 const PlaylistSelector = () => {
 
@@ -14,6 +15,9 @@ const PlaylistSelector = () => {
        if (promise) {
             promise.abort();
        } 
+        if (promiseBoundedVars) {
+            promiseBoundedVars.abort();
+        }
     })
 
     const dispatcher = useDispatch()

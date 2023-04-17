@@ -12,6 +12,7 @@ import { setAccessToken } from "../../state/reducers/songreducer";
 import { useLocation } from "react-router-dom";
 import { getPlaylist } from "../../services/songservices";
 import { useState } from "react";
+export let promiseBoundedVars;
 
 
 const PlaylistPage = () => {
@@ -30,7 +31,7 @@ const PlaylistPage = () => {
         dispatcher(setSongs([]))
         dispatcher(setCurrentPlaylist(plistID));
         dispatcher(setLoadingMetrics(true));
-        dispatcher(getBoundedVariablesThunk(plistID));
+        promiseBoundedVars = dispatcher(getBoundedVariablesThunk(plistID));
     }, [plistID])
     
     return (
