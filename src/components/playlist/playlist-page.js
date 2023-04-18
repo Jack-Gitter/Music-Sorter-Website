@@ -42,9 +42,9 @@ const PlaylistPage = () => {
                     {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
             </div>
             <div className="row position-absolute next-songs">
-                <ul cassName="list-group">
+                <ul cassName="">
                     {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                        <li className="list-group-item list-group-item-dark">
+                        <li className="">
                             {track.name}
                         </li>
                     )}
