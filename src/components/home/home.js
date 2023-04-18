@@ -41,7 +41,7 @@ const Home = () => {
 
 
     return (
-        <div className="container remove-all-margin">
+        <div className="container-fluid">
         <div className="row">
                 <HeaderComponent/>
         </div>
