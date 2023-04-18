@@ -95,6 +95,10 @@ body {
     z-index: 0;
 }
 
+.remove-all-margin{
+    margin:0 !important;
+}
+
 .increase-size:hover {
     transform: scale(1.07);
 }
