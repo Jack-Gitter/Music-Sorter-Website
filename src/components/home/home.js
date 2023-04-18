@@ -41,14 +41,16 @@ const Home = () => {
 
 
     return (
+        <>
+        <HeaderComponent/>
         <div className="container-fluid">
         <div className="row">
-                <HeaderComponent/>
         </div>
         <div className="row">
                 <PlaylistSelector/>
         </div>
         </div>
+        </>
     );
 }
 export default Home;
