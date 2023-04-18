@@ -85,7 +85,7 @@ body {
 }
 
 .playlist-img {
-    width: 95%;
+    width: 90%;
     height: 125px;
     object-fit: cover;
     object-position: 50% 50%;
