@@ -33,9 +33,9 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <div className="row">
+        <div className="row d-flex align-items-center">
         {playlists.map((plist, index) => 
-            <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size d-flex justify-content-center">
+            <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size"> 
                 <Link className="link-tag" 
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white position-absolute album-title">{plist.name}</span>
