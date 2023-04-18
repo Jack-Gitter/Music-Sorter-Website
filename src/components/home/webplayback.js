@@ -10,7 +10,7 @@ const WebPlayback = () => {
     const {currentPlaylist, loadingSongs, songUris, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
 
     return (
-        <div className="row">
+        <div className="row ms-2 me-2">
         {songUris.length > 0 && <SpotifyPlayer 
         styles={{
             activeColor: '#fff',
