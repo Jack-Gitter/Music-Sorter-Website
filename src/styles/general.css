@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-
 body {
     font-family: 'Oswald';
     background-color: #333333;
@@ -16,6 +15,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.br-0 {
+    border-radius: 0 !important;
 }
 
 .homepage-layout {
