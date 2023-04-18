@@ -82,6 +82,10 @@ body {
     border-width: 3px;
 }
 
+.next-songs {
+    left: 10%;
+    top:   20%;
+}
 .playlist-img {
     width: 93%;
     height: 125px;
