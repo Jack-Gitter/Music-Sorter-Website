@@ -147,3 +147,9 @@ input[type=range]::-moz-range-thumb {
 input[type=range]::-ms-thumb {
     background:#212020 
 }
+
+.container-fluid{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    overflow: hidden;
+}
