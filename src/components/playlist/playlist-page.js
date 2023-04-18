@@ -38,8 +38,6 @@ const PlaylistPage = () => {
         <div className="container-fluid">
             <div className="">
             <div className="row position-relative">
-                    {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big">{plistName}</span>}
-                    {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
                     <ul cassName="inline-block position-absolute next-songs">
                         {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
                             <li className="inline-block">
@@ -47,6 +45,8 @@ const PlaylistPage = () => {
                             </li>
                         )}
                     </ul>
+                    {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big">{plistName}</span>}
+                    {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
             </div>
             <div className="row">
                 <ul cassName="list-group">
