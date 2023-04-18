@@ -35,11 +35,11 @@ const PlaylistSelector = () => {
     return (
         <div className="row"> 
         {playlists.map((plist, index) => 
-            <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size text-center mt-2 mb-2"> 
+            <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size mt-2 mb-2"> 
                 <Link className="link-tag" 
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white position-absolute album-title">{plist.name}</span>
-                        <img className={`playlist-img rounded`} src={`
+                        <img className={`playlist-img rounded mx-auto d-block`} src={`
                             ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}
                         `}>
                         </img>
