@@ -89,6 +89,8 @@ ul {
 .next-songs {
     right: 6%;
     top:   5%;
+    font-family: 'Oswald';
+    font-size: 2.2em;
 }
 .playlist-img {
     width: 93%;
