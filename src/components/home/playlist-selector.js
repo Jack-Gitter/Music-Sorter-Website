@@ -33,7 +33,7 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <div className="row">
+        <div className="row justify-content-center">
         {playlists.map((plist, index) => 
             <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size">
                 <Link className="link-tag" 
