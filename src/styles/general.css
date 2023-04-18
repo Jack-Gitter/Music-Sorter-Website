@@ -83,7 +83,7 @@ body {
 }
 
 .playlist-img {
-    width: 95%;
+    width: 93%;
     height: 125px;
     object-fit: cover;
     object-position: 50% 50%;
@@ -95,7 +95,7 @@ body {
 
 
 .increase-size:hover {
-    transform: scale(1.07);
+    transform: scale(1.10);
 }
 
 .search-buttons {
