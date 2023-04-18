@@ -50,12 +50,8 @@ const PlaylistPage = () => {
                     )}
                 </ul>
             </div>
-            <div className="row">
-                <Sliders/>
-            </div>
-            <div className="row">
-                <WebPlayback/>
-            </div>
+            <Sliders/>
+            <WebPlayback/>
             </div>
         </div>
     );
