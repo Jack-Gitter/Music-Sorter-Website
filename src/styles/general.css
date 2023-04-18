@@ -129,6 +129,7 @@ body {
    padding: 0px;
    margin: 0px;
    width:93%;
+   word-wrap:break-word;
 }
 
 .slider-text-color {
