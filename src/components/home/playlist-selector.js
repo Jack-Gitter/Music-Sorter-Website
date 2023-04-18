@@ -33,7 +33,7 @@ const PlaylistSelector = () => {
     }
 
     return (
-        <div className="row"> 
+        <div className="row mt-4 mb-2"> 
         {playlists.map((plist, index) => 
             <div className="col-sm-6 col-md-4 col-lg-3 position-relative increase-size mt-2 mb-2"> 
                 <Link className="link-tag" 
