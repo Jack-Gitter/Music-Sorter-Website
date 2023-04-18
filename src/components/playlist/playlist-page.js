@@ -35,26 +35,28 @@ const PlaylistPage = () => {
     }, [plistID])
     
     return (
-        <div className="m-0 p-0">
-        <div className="row position-relative m-0 p-0">
-                {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big m-0 p-0">{plistName}</span>}
-                {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big m-0 p-0" src={playlistIMG}></img>}
-        </div>
-        <div className="row m-0 p-0">
-            <ul cassName="list-group m-0 p-0">
-                {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                    <li className="list-group-item list-group-item-dark m-0 p-0">
-                        {track.name}
-                    </li>
-                )}
-            </ul>
-        </div>
-        <div className="row">
-            <Sliders/>
-        </div>
-        <div className="row">
-            <WebPlayback/>
-        </div>
+        <div className="container-fluid">
+            <div className="m-0 p-0">
+            <div className="row position-relative m-0 p-0">
+                    {(playlistIMG !== 'none' && playlistIMG !== '') && <span className="position-absolute album-title-big m-0 p-0">{plistName}</span>}
+                    {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big m-0 p-0" src={playlistIMG}></img>}
+            </div>
+            <div className="row m-0 p-0">
+                <ul cassName="list-group m-0 p-0">
+                    {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
+                        <li className="list-group-item list-group-item-dark m-0 p-0">
+                            {track.name}
+                        </li>
+                    )}
+                </ul>
+            </div>
+            <div className="row">
+                <Sliders/>
+            </div>
+            <div className="row">
+                <WebPlayback/>
+            </div>
+            </div>
         </div>
     );
 }
