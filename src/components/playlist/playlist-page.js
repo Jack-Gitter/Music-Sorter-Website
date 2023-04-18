@@ -42,7 +42,7 @@ const PlaylistPage = () => {
                     {(playlistIMG !== 'none' && playlistIMG !== '') && <img className="playlist-img-big" src={playlistIMG}></img>}
                     <ul cassName="inline-block position-absolute next-songs">
                         {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                            <li className="">
+                            <li className="inline-block">
                                 {track.name}
                             </li>
                         )}
