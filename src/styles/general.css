@@ -76,6 +76,10 @@ body {
     transform: scale(.92);
 }
 
+ul {
+    list-style-type: none;
+}
+
 .increase-size:hover .playlist-img {
     border-style: solid;
     border-color: antiquewhite;

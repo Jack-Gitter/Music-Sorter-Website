@@ -44,7 +44,7 @@ const PlaylistPage = () => {
             <div className="row position-absolute next-songs">
                 <ul cassName="">
                     {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
-                        <li className="fg-white album-title">
+                        <li className="fg-white album-title-big">
                             {track.name}
                         </li>
                     )}
