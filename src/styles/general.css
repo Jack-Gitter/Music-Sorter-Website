@@ -95,8 +95,9 @@ body {
     z-index: 0;
 }
 
-.remove-all-margin{
-    margin:0 !important;
+.remove-all-margin {
+    right:0px !important;
+    left:0px !important;
 }
 
 .increase-size:hover {
