@@ -79,7 +79,7 @@ body {
 .increase-size:hover .playlist-img {
     border-style: solid;
     border-color: antiquewhite;
-    border-width: 3px;
+    border-width: 1.5px;
 }
 
 .next-songs {
