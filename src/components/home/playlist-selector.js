@@ -39,7 +39,7 @@ const PlaylistSelector = () => {
                 <Link className="link-tag" 
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
                 <span className="fg-white position-absolute album-title">{plist.name}</span>
-                        <img className={`playlist-img rounded mx-auto d-block`} src={`
+                        <img className={`playlist-img rounded mx-auto d-block m-1`} src={`
                             ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}
                         `}>
                         </img>
