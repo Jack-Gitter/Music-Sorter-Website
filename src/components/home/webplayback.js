@@ -14,7 +14,7 @@ const WebPlayback = () => {
         {songUris.length > 0 && <SpotifyPlayer 
         styles={{
             activeColor: '#fff',
-            bgColor: '#fff',
+            bgColor: '#212529',
             color: '#fff',
             loaderColor: '#fff',
             sliderColor: '#1cb954',
