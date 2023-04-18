@@ -9,7 +9,7 @@ const Search = () => {
     const [searchQuery, updateSearchQuery] = useState('')
     return (
         <>
-            <div className="col-sm-3 col-md-5 col-5 mt-4">
+            <div className="col-sm-3 col-md-5 col-5 mt-3">
             <div class="input-group">
                  <input type="text" 
                  onKeyDown={(e) =>{ if (e.key === 'Enter') {dispatcher(searchSpotifyThunk(searchQuery))}}}
@@ -20,10 +20,10 @@ const Search = () => {
             </div>
             </div>
             <div className="col-sm-2 col-md-2 col-1 text-center">
-                <button className='btn mt-4 btn-dark'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>Reload</button>
+                <button className='btn mt-3 btn-dark'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>Reload</button>
             </div>
             <div className="col-sm-2 col-md-2 col-1 text-center">
-                <Link to={'/'}><button className={'btn mt-4 btn-dark'}>Logout</button></Link>
+                <Link to={'/'}><button className={'btn mt-3 btn-dark'}>Logout</button></Link>
             </div>
         </>
     );
