@@ -97,6 +97,10 @@ ul {
     background-color: rgb(249, 238, 224);
 }
 
+input:focus {
+    background: rgb(249,238,224) !important;
+  }
+
 .playlist-img {
     width: 93%;
     height: 125px;
