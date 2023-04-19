@@ -31,7 +31,7 @@ body {
 }
 
 .fg-white {
-    color: antiquewhite;
+    color: #fff7ed;
 }
 
 .homepage-header {
@@ -94,7 +94,7 @@ ul {
 }
 
 .bg-awhite {
-    background-color: rgb(249, 238, 224);
+    background-color: #fff7ed;
 }
 
 input:focus {
