@@ -92,6 +92,11 @@ ul {
     font-family: 'Oswald';
     font-size: 1.1em;
 }
+
+.bg-awhite {
+    background-color: antiquewhite;
+}
+
 .playlist-img {
     width: 93%;
     height: 125px;
