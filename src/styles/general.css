@@ -98,7 +98,7 @@ ul {
 }
 
 input:focus {
-    background: rgb(249,238,224) !important;
+    background-color: #fff7ed !important;
   }
 
 .playlist-img {
