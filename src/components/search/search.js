@@ -13,7 +13,7 @@ const Search = () => {
             <div class="input-group">
                  <input type="text" 
                  onKeyDown={(e) =>{ if (e.key === 'Enter') {dispatcher(searchSpotifyThunk(searchQuery))}}}
-                 className='form-control bg-awhite'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
+                 className='form-control bg-awhite shadow-none'value={searchQuery} onChange={(e) => updateSearchQuery(e.target.value)}></input>
                 <button type="button" className="btn btn-dark" onClick={() => {dispatcher(searchSpotifyThunk(searchQuery));}}>
                     <i class="fa fas fa-search"></i>
                 </button>
