@@ -28,10 +28,12 @@ const PlaylistPage = () => {
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
         dispatcher(getPlaylistIMGThunk(plistID));
-        dispatcher(setSongs([]))
+        if (currentPlaylist !== plistID) {
         dispatcher(setCurrentPlaylist(plistID));
+        dispatcher(setSongs([]))
         dispatcher(setLoadingMetrics(true));
         promiseBoundedVars = dispatcher(getBoundedVariablesThunk(plistID));
+        }
     }, [plistID])
     
     return (
