@@ -19,7 +19,7 @@ const Presets = () => {
         valence: false
     }
     return (
-        <div className="row w-100">
+        <div className="row m-0">
         <div className="col  p-0 m-0">
             <button className="preset-button btn rounded-0 btn-success w-100 m-0"
             onClick={() => {
