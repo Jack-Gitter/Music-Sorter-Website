@@ -12,6 +12,7 @@ import { setAccessToken } from "../../state/reducers/songreducer";
 import { useLocation } from "react-router-dom";
 import { getPlaylist } from "../../services/songservices";
 import { useState } from "react";
+import Presets from "../home/presets";
 export let promiseBoundedVars;
 
 
@@ -52,6 +53,7 @@ const PlaylistPage = () => {
                     )}
                 </ul>
             </div>
+            <Presets/>
             <Sliders/>
             <WebPlayback/>
             </div>
