@@ -20,15 +20,18 @@ const Presets = () => {
     }
     return (
         <div className="row text-center">
-        <button className="btn btn-success"
-        onClick={() => {
-                dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, danceiability: true, tempo: true, valence: true}));
-                dispatcher(updateSliders({...sliders, energy: 70, danceiability: 70, tempo:60, valence:90}));
-            }
-        }>
-        Main Character
-        </button>
+        <div className="col-2">
+            <button className="btn btn-success"
+            onClick={() => {
+                    dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, danceiability: true, tempo: true, valence: true}));
+                    dispatcher(updateSliders({...sliders, energy: 70, danceiability: 70, tempo:60, valence:90}));
+                }
+            }>
+            Main Character
+            </button>
+        </div>
 
+        <div className="col-2">
         <button className="btn btn-info"
         onClick={() => {
                 dispatcher(updateSliderEnabled({...defaultDisabled, tempo: true, energy: true, instrumentalness: true, loudness: true, speechiness: true, valence: true}));
@@ -37,7 +40,9 @@ const Presets = () => {
         }>
         Study
         </button>
+        </div>
 
+        <div className="col-2">
         <button className="btn btn-danger"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, danceability: true, energy: true, loudness: true, tempo: true}));
@@ -46,7 +51,9 @@ const Presets = () => {
         }>
         Gym
         </button>
+        </div>
 
+        <div className="col-2">
         <button className="btn btn-warning"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, danceability: true, duration_ms: true, energy: true, instrumentalness: true, liveness: true, loudness: true, tempo: true, valence: true}));
@@ -55,6 +62,9 @@ const Presets = () => {
         }>
         Party
         </button>
+        </div>
+        
+        <div className="col-2">
         <button className="btn btn-secondary"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, acousticness: true, energy: true, valence: true, tempo: true, loudness: true}));
@@ -64,6 +74,7 @@ const Presets = () => {
 
         Post game vibes
         </button>
+        </div>
         </div>
     );
 }
