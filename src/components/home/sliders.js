@@ -61,12 +61,12 @@ const Sliders = () => {
                 <label for="duration-range">
                     <span className="slider-text-color me-2 ">duration</span>
                     <span className="slider-text-color ">{duration_ms}</span>
-            {sliderEnabled.duration && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration: false}))}>Disable</button>}
-            {!sliderEnabled.duration && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration: true}))}>Enable</button>}
+            {sliderEnabled.duration_ms && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: false}))}>Disable</button>}
+            {!sliderEnabled.duration_ms && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: true}))}>Enable</button>}
                 </label>
             </div> 
             <div className="row">
-                <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
+                <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration_ms}onChange={(e) => durationUpdater(e.target.value)} type='range' min='0' max='100' value={duration_ms}></input>
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
@@ -184,7 +184,7 @@ const Sliders = () => {
             if (sliderEnabled.danceability) {
                 slider_map.danceability = danceability/100
             }
-            if (sliderEnabled.duration) {
+            if (sliderEnabled.duration_ms) {
                 slider_map.duration_ms = ((duration_ms) / 100) * (maxDuration - minDuration) + minDuration
                 console.log('duration is' + slider_map.duration_ms)
             }
