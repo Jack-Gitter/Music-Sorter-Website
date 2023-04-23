@@ -33,6 +33,18 @@ const userInfo = createSlice({
             speechiness: 50,
             tempo: 50,
             valence: 50,
+        },
+        sliderEnabled: {
+            acousticness: true,
+            danceability: true,
+            duration_ms: true,
+            energy: true,
+            instrumentalness: true,
+            liveness: true,
+            loudness: true,
+            speechiness: true,
+            tempo: true,
+            valence: true
         }
     },
     reducers: {
@@ -45,6 +57,9 @@ const userInfo = createSlice({
         },
         updateSliders(state, action) {
             state.sliders = action.payload;
+        },
+        updateSliderEnabled(state, action) {
+            state.sliderEnabled = action.payload
         },
         setSongs(state, action) {
             state.songs = action.payload
@@ -123,5 +138,5 @@ const userInfo = createSlice({
     },
 })
 
-export const {setPlaylistIMG, setPlayerState, setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
+export const {updateSliderEnabled, setPlaylistIMG, setPlayerState, setSongs, setLoadingMetrics, setCurrentPlaylist, setLoadingSongs, setAccessToken, setRefreshToken, updateSliders, initiateLogin} = userInfo.actions;
 export default userInfo.reducer;
