@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { updateSliderEnabled, updateSliders } from "../../state/reducers/songreducer";
 
 const Presets = () => {
