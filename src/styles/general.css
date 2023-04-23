@@ -97,9 +97,6 @@ ul {
     background-color: #fff7ed;
 }
 
-input:focus {
-    background-color: #fff7ed !important;
-  }
 
 .playlist-img {
     width: 93%;
