@@ -20,7 +20,7 @@ const Presets = () => {
     }
     return (
         <div className="row w-100">
-        <div className="col-2 p-0 m-0">
+        <div className="col col-2 p-0 m-0">
             <button className="preset-button btn rounded-0 btn-success w-100 m-0"
             onClick={() => {
                     dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, danceiability: true, tempo: true, valence: true}));
@@ -31,7 +31,7 @@ const Presets = () => {
             </button>
         </div>
 
-        <div className="col-2 p-0 m-0">
+        <div className="col col-2 p-0 m-0">
         <button className="preset-button btn rounded-0 btn-info w-100 m-0"
         onClick={() => {
                 dispatcher(updateSliderEnabled({...defaultDisabled, tempo: true, energy: true, instrumentalness: true, loudness: true, speechiness: true, valence: true}));
@@ -42,7 +42,7 @@ const Presets = () => {
         </button>
         </div>
 
-        <div className="col-2 p-0 m-0">
+        <div className="col col-2 p-0 m-0">
         <button className="preset-button btn rounded-0 btn-danger w-100 m-0"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, danceability: true, energy: true, loudness: true, tempo: true}));
@@ -53,7 +53,7 @@ const Presets = () => {
         </button>
         </div>
 
-        <div className="col-2 p-0 m-0">
+        <div className="col col-2 p-0 m-0">
         <button className="preset-button btn rounded-0 btn-warning w-100 m-0"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, danceability: true, duration_ms: true, energy: true, instrumentalness: true, liveness: true, loudness: true, tempo: true, valence: true}));
@@ -64,7 +64,7 @@ const Presets = () => {
         </button>
         </div>
         
-        <div className="col-2 p-0 m-0">
+        <div className="col col-2 p-0 m-0">
         <button className="preset-button btn rounded-0 btn-secondary w-100 m-0"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, acousticness: true, energy: true, valence: true, tempo: true, loudness: true}));
