@@ -60,6 +60,7 @@ const userInfo = createSlice({
         },
         updateSliderEnabled(state, action) {
             state.sliderEnabled = action.payload
+            console.log(state.sliderEnabled)
         },
         setSongs(state, action) {
             state.songs = action.payload
