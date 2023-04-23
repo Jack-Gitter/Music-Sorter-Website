@@ -19,9 +19,9 @@ const Presets = () => {
         valence: false
     }
     return (
-        <div className="row text-center">
+        <div className="row text-center justify-content-center align-items-center">
         <div className="col-2">
-            <button className="btn btn-success"
+            <button className="btn btn-success w-100"
             onClick={() => {
                     dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, danceiability: true, tempo: true, valence: true}));
                     dispatcher(updateSliders({...sliders, energy: 70, danceiability: 70, tempo:60, valence:90}));
