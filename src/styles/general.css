@@ -123,6 +123,10 @@ ul {
     justify-content: center;
 }
 
+.preset-button {
+    filter: brightness(75%)
+}
+
 .playlist-img-big {
     width:100%;
     height: 300px;
