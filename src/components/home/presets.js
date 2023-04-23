@@ -19,7 +19,7 @@ const Presets = () => {
         valence: false
     }
     return (
-        <div className="row text-center justify-content-center align-items-center w-100">
+        <div className="row text-center w-100">
         <div className="col-2 p-0 m-0">
             <button className="preset-button btn btn-success w-100 m-0"
             onClick={() => {
