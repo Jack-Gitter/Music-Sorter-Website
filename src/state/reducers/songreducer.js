@@ -127,6 +127,7 @@ const userInfo = createSlice({
                 state.maxTempo = payload[2];
                 state.minTempo = payload[3];
                 state.loadingMetrics = false;
+                console.log('we loaded bounded vars')
             }, 
         [getBoundedVariablesThunk.rejected]:
             (state, {payload}) => {
