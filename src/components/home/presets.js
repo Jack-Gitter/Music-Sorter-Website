@@ -27,7 +27,7 @@ const Presets = () => {
                     dispatcher(updateSliders({...sliders, energy: 70, danceiability: 70, tempo:60, valence:90}));
                 }
             }>
-            Main Character
+            main character
             </button>
         </div>
 
@@ -38,7 +38,7 @@ const Presets = () => {
                 dispatcher(updateSliders({...sliders, tempo: 30, energy: 50, instrumentalness:60, loudness:30, speechiness: 35, valence: 50}));
             }
         }>
-        Study
+        study
         </button>
         </div>
 
@@ -49,7 +49,7 @@ const Presets = () => {
             dispatcher(updateSliders({...sliders, danceability: 80, energy: 100, loudness: 85, tempo: 90}));
         }
         }>
-        Gym
+        gym
         </button>
         </div>
 
@@ -60,7 +60,7 @@ const Presets = () => {
             dispatcher(updateSliders({...sliders, danceability: 100, duration_ms: 40, energy: 100, instrumentalness: 20, liveness: 0, loudness: 70, tempo: 70, valence: 80}));
         }
         }>
-        Party
+        party
         </button>
         </div>
         
@@ -72,7 +72,7 @@ const Presets = () => {
         }
         }>
 
-        Post game vibes
+        post game vibes
         </button>
         </div>
         </div>
