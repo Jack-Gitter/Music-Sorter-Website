@@ -19,7 +19,7 @@ const Presets = () => {
         valence: false
     }
     return (
-        <>
+        <div className="row text-center">
         <button className="btn btn-success"
         onClick={() => {
                 dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, danceiability: true, tempo: true, valence: true}));
@@ -64,7 +64,7 @@ const Presets = () => {
 
         Post game vibes
         </button>
-        </>
+        </div>
     );
 }
 export default Presets;
