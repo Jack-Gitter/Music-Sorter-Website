@@ -46,8 +46,8 @@ const Sliders = () => {
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
                         <span className="slider-text-color ">{acousticness}</span>
-                        {acousticnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, acousticness: false})}>Disable</button>}
-                        {!acousticnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => acousticnessStatus({...sliderEnabled, acousticness: true})}>Enable</button>}
+                        {acousticnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: false}))}>Disable</button>}
+                        {!acousticnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: true}))}>Enable</button>}
                     </label>
                 </div>
                 <div className="row">
@@ -59,8 +59,8 @@ const Sliders = () => {
                 <label for="danceability-range">
                     <span className="slider-text-color me-2 ">danceability</span>
                     <span className="slider-text-color ">{danceability}</span>
-            {danceabilityEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, danceability: false})}>Disable</button>}
-            {!danceabilityEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, danceability: true})}>Enable</button>}
+            {danceabilityEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
+            {!danceabilityEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>}
                 </label>
             </div>
             <div className="row">
@@ -72,8 +72,8 @@ const Sliders = () => {
                 <label for="duration-range">
                     <span className="slider-text-color me-2 ">duration</span>
                     <span className="slider-text-color ">{duration_ms}</span>
-            {durationEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, duration: false})}>Disable</button>}
-            {!durationEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, acousticness: true})}>Enable</button>}
+            {durationEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration: false}))}>Disable</button>}
+            {!durationEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: true}))}>Enable</button>}
                 </label>
             </div> 
             <div className="row">
@@ -85,8 +85,8 @@ const Sliders = () => {
                 <label for="energy-range">
                     <span className="slider-text-color me-2 ">energy</span>
                     <span className="slider-text-color ">{energy}</span>
-            {energyEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, energy: false})}>Disable</button>}
-            {!energyEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, energy: true})}>Enable</button>}
+            {energyEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: false}))}>Disable</button>}
+            {!energyEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: true}))}>Enable</button>}
                 </label>
             </div>
             <div className="row">
@@ -98,8 +98,8 @@ const Sliders = () => {
             <label for="instrumental-range">
                 <span className="slider-text-color me-2 ">instrumentalness</span>
                 <span className="slider-text-color ">{instrumentalness}</span>
-            {instrumentalnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, instrumentalness: false})}>Disable</button>}
-            {!instrumentalnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, instrumentalness: true})}>Enable</button>}
+            {instrumentalnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: false}))}>Disable</button>}
+            {!instrumentalnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
@@ -111,8 +111,8 @@ const Sliders = () => {
             <label for="liveness-range">
                 <span className="slider-text-color me-2 ">liveness</span>
                 <span className="slider-text-color ">{liveness}</span>
-            {livenessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, liveness: false})}>Disable</button>}
-            {!livenessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, liveness: true})}>Enable</button>}
+            {livenessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: false}))}>Disable</button>}
+            {!livenessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
@@ -124,8 +124,8 @@ const Sliders = () => {
             <label for="loudness-range">
                 <span className="slider-text-color me-2 ">loudness</span>
                 <span className="slider-text-color ">{loudness}</span>
-            { loudnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, loudness: false})}>Disable</button>}
-            {!loudnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, loudness: true})}>Enable</button>}
+            { loudnessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: false}))}>Disable</button>}
+            {!loudnessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
@@ -137,8 +137,8 @@ const Sliders = () => {
             <label for="speechiness-range">
                 <span className="slider-text-color me-2 ">speechiness</span>
                 <span className="slider-text-color ">{speechiness}</span>
-            {speechinessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, speechiness: false})}>Disable</button>}
-            {!speechinessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, speechiness: true})}>Enable</button>}
+            {speechinessEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: false}))}>Disable</button>}
+            {!speechinessEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
@@ -150,8 +150,8 @@ const Sliders = () => {
             <label for="tempo-range">
                 <span className="slider-text-color me-2 ">tempo</span>
                 <span className="slider-text-color  ">{tempo}</span>
-            {tempoEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, tempo: false})}>Disable</button>}
-            {!tempoEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, tempo: true})}>Enable</button>}
+            {tempoEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: false}))}>Disable</button>}
+            {!tempoEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
@@ -163,8 +163,8 @@ const Sliders = () => {
            <label for="valence-range">
                 <span className="slider-text-color me-2 ">valence</span>
                 <span className="slider-text-color  ">{valence}</span>
-            {valenceEnabled && <button className={'btn btn-dark ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, valence: false})}>Disable</button>}
-            {!valenceEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => updateSliderEnabled({...sliderEnabled, valence: true})}>Enable</button>}
+            {valenceEnabled && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: false}))}>Disable</button>}
+            {!valenceEnabled && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: true}))}>Enable</button>}
             </label>
             </div>
             <div className="row">
