@@ -82,9 +82,9 @@ ul {
 }
 
 .increase-size:hover .playlist-img {
-    border-style: solid;
+    /*border-style: solid;
     border-color: antiquewhite;
-    border-width: 1px;
+    border-width: 1px;*/
 }
 
 .next-songs {
