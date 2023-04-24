@@ -24,6 +24,9 @@ body {
     background-color: rgb(148, 107, 107);
 }
 
+.btn-gray {
+    background-color: rgb(155, 154, 154);
+}
 
 .login-page {
     overflow: hidden;

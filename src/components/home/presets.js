@@ -65,7 +65,7 @@ const Presets = () => {
         </div>
         
         <div className="col  p-0 m-0">
-        <button className="preset-button btn rounded-0 btn-secondary w-100 m-0"
+        <button className="preset-button btn rounded-0 btn-gray w-100 m-0"
         onClick={() => {
             dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, valence: true, loudness: true}));
             dispatcher(updateSliders({...sliders, energy: 0, loudness: 35, valence: 100 }));
