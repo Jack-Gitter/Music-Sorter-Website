@@ -23,7 +23,7 @@ const Sliders = () => {
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
                         <span className="slider-text-color ">{sliders.acousticness}</span>
-                        {sliderEnabled.acousticness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: false}))}>Disable</button>}
+                        {sliderEnabled.acousticness && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: false}))}>Disable</button>}
                         {!sliderEnabled.acousticness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: true}))}>Enable</button>}
                     </label>
                 </div>
@@ -36,7 +36,7 @@ const Sliders = () => {
                 <label for="danceability-range">
                     <span className="slider-text-color me-2 ">danceability</span>
                     <span className="slider-text-color ">{sliders.danceability}</span>
-            {sliderEnabled.danceability && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
+            {sliderEnabled.danceability && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
             {!sliderEnabled.danceability && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>}
                 </label>
             </div>
@@ -49,7 +49,7 @@ const Sliders = () => {
                 <label for="duration-range">
                     <span className="slider-text-color me-2 ">duration</span>
                     <span className="slider-text-color ">{sliders.duration_ms}</span>
-            {sliderEnabled.duration_ms && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: false}))}>Disable</button>}
+            {sliderEnabled.duration_ms && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: false}))}>Disable</button>}
             {!sliderEnabled.duration_ms && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: true}))}>Enable</button>}
                 </label>
             </div> 
@@ -62,7 +62,7 @@ const Sliders = () => {
                 <label for="energy-range">
                     <span className="slider-text-color me-2 ">energy</span>
                     <span className="slider-text-color ">{sliders.energy}</span>
-            {sliderEnabled.energy && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: false}))}>Disable</button>}
+            {sliderEnabled.energy && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: false}))}>Disable</button>}
             {!sliderEnabled.energy && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: true}))}>Enable</button>}
                 </label>
             </div>
@@ -75,7 +75,7 @@ const Sliders = () => {
             <label for="instrumental-range">
                 <span className="slider-text-color me-2 ">instrumentalness</span>
                 <span className="slider-text-color ">{sliders.instrumentalness}</span>
-            {sliderEnabled.instrumentalness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: false}))}>Disable</button>}
+            {sliderEnabled.instrumentalness && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: false}))}>Disable</button>}
             {!sliderEnabled.instrumentalness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: true}))}>Enable</button>}
             </label>
             </div>
@@ -88,7 +88,7 @@ const Sliders = () => {
             <label for="liveness-range">
                 <span className="slider-text-color me-2 ">liveness</span>
                 <span className="slider-text-color ">{sliders.liveness}</span>
-            {sliderEnabled.liveness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: false}))}>Disable</button>}
+            {sliderEnabled.liveness && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: false}))}>Disable</button>}
             {!sliderEnabled.liveness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: true}))}>Enable</button>}
             </label>
             </div>
@@ -101,7 +101,7 @@ const Sliders = () => {
             <label for="loudness-range">
                 <span className="slider-text-color me-2 ">loudness</span>
                 <span className="slider-text-color ">{sliders.loudness}</span>
-            { sliderEnabled.loudness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: false}))}>Disable</button>}
+            { sliderEnabled.loudness && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: false}))}>Disable</button>}
             {!sliderEnabled.loudness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: true}))}>Enable</button>}
             </label>
             </div>
@@ -114,7 +114,7 @@ const Sliders = () => {
             <label for="speechiness-range">
                 <span className="slider-text-color me-2 ">speechiness</span>
                 <span className="slider-text-color ">{sliders.speechiness}</span>
-            {sliderEnabled.speechiness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: false}))}>Disable</button>}
+            {sliderEnabled.speechiness && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: false}))}>Disable</button>}
             {!sliderEnabled.speechiness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: true}))}>Enable</button>}
             </label>
             </div>
@@ -127,7 +127,7 @@ const Sliders = () => {
             <label for="tempo-range">
                 <span className="slider-text-color me-2 ">tempo</span>
                 <span className="slider-text-color  ">{sliders.tempo}</span>
-            {sliderEnabled.tempo && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: false}))}>Disable</button>}
+            {sliderEnabled.tempo && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: false}))}>Disable</button>}
             {!sliderEnabled.tempo && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: true}))}>Enable</button>}
             </label>
             </div>
@@ -140,7 +140,7 @@ const Sliders = () => {
            <label for="valence-range">
                 <span className="slider-text-color me-2 ">valence</span>
                 <span className="slider-text-color  ">{sliders.valence}</span>
-            {sliderEnabled.valence && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: false}))}>Disable</button>}
+            {sliderEnabled.valence && <button className={'btn btn-success ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: false}))}>Disable</button>}
             {!sliderEnabled.valence && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: true}))}>Enable</button>}
             </label>
             </div>
@@ -148,7 +148,7 @@ const Sliders = () => {
                 <input id="valence-range" className="form-range p-4" disabled={!sliderEnabled.valence} onChange={(e) => dispatcher(updateSliders({...sliders, valence: e.target.value}))} type='range' min='0' max='100' value={sliders.valence}></input>
             </div>
         </div>
-            <button className={'btn btn-dark br-0 ms-2 mt-2 me-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
+            <button className={'btn btn-success br-0 ms-2 mt-2 me-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
             dispatcher(setLoadingSongs(true));
                 // when we are calling this, make sure to only include the metrics that are enabled on the website
             let slider_map = {}
