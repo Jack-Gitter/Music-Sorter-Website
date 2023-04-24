@@ -71,7 +71,6 @@ const Presets = () => {
             dispatcher(updateSliders({...sliders, energy: 0, loudness: 35, valence: 100 }));
         }
         }>
-
         post game vibes
         </button>
         </div>
