@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #3F3D58;
 }
 
 .br-0 {
@@ -105,7 +106,7 @@ ul {
     object-position: 50% 50%;
     overflow: hidden;
     transition: transform .2s;
-    filter: brightness(75%);
+    filter: brightness(60%);
     z-index: 0;
 }
 
