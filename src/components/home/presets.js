@@ -45,7 +45,7 @@ const Presets = () => {
         <div className="col  p-0 m-0">
         <button className="preset-button btn rounded-0 btn-danger w-100 m-0"
         onClick={() => {
-            dispatcher(updateSliderEnabled({...defaultDisabled, danceability: true, energy: true, loudness: true, tempo: true}));
+            dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, loudness: true, valence: true}));
             dispatcher(updateSliders({...sliders, danceability: 80, energy: 100, loudness: 85, tempo: 90}));
         }
         }>
@@ -67,8 +67,8 @@ const Presets = () => {
         <div className="col  p-0 m-0">
         <button className="preset-button btn rounded-0 btn-secondary w-100 m-0"
         onClick={() => {
-            dispatcher(updateSliderEnabled({...defaultDisabled, acousticness: true, energy: true, valence: true, tempo: true, loudness: true}));
-            dispatcher(updateSliders({...sliders, acousticness: 50, energy: 25, valence: 40, tempo: 30, loudness: 30}));
+            dispatcher(updateSliderEnabled({...defaultDisabled, energy: true, valence: true, loudness: true}));
+            dispatcher(updateSliders({...sliders, energy: 0, loudness: 35, valence: 100 }));
         }
         }>
 
