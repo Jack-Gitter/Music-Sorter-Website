@@ -8,6 +8,22 @@ body {
     background-color: #2e2e2e;
 }
 
+.btn-green {
+    background-color: green;
+}
+
+.btn-yellow {
+    background-color: yellow;
+}
+
+.btn-blue {
+    background-color: blue;
+}
+
+.btn-red {
+    background-color: red;
+}
+
 
 .login-page {
     overflow: hidden;
