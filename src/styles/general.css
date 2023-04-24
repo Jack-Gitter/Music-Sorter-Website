@@ -8,6 +8,10 @@ body {
     background-color: #262626;
 }
 
+.btn {
+    background-color: #2f4f2d
+}
+
 .login-page {
     overflow: hidden;
     position: absolute;
