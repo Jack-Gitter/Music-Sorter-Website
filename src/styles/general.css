@@ -12,20 +12,38 @@ body {
     background-color: rgb(94, 130, 94)
 }
 
+.btn-green:hover {
+    background-color: rgb(69, 96, 69)
+}
+
 .btn-yellow {
     background-color: rgb(147, 147, 102);
+}
+
+.btn-yellow:hover {
+    background-color: rgb(118, 118, 82);
 }
 
 .btn-blue {
     background-color: rgb(115, 115, 158);
 }
 
+.btn-blue:hover {
+    background-color: rgb(86, 86, 117);
+}
+
 .btn-red {
     background-color: rgb(148, 107, 107);
+}
+.btn-red:hover {
+    background-color: rgb(118, 85, 85);
 }
 
 .btn-gray {
     background-color: rgb(155, 154, 154);
+}
+.btn-gray:hover {
+    background-color: rgb(125, 124, 124);
 }
 
 .login-page {
