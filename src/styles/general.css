@@ -9,7 +9,7 @@ body {
 }
 
 .btn {
-    color: #2f4f2d
+    background-color: #2f4f2d !important;
 }
 
 .login-page {
