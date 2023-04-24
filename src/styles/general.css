@@ -9,19 +9,19 @@ body {
 }
 
 .btn-green {
-    background-color: green;
+    background-color: rgb(81, 112, 81)
 }
 
 .btn-yellow {
-    background-color: yellow;
+    background-color: rgb(132, 132, 91);
 }
 
 .btn-blue {
-    background-color: blue;
+    background-color: rgb(83, 83, 113);
 }
 
 .btn-red {
-    background-color: red;
+    background-color: rgb(105, 74, 74);
 }
 
 
