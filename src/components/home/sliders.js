@@ -36,9 +36,11 @@ const Sliders = () => {
                 <label for="danceability-range">
                     <span className="slider-text-color me-2 ">danceability</span>
                     <span className="slider-text-color ">{sliders.danceability}</span>
-                    <input class="form-check form-switch form-check-input" type="checkbox" role="switch"/>
-            {sliderEnabled.danceability && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
-            {!sliderEnabled.danceability && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>}
+                    <span class="form-check form-switch">
+                        <input onClick={dispatcher(updateSliderEnabled({...sliderEnabled, danceability: !danceability}))}  class="form-check-input" type="checkbox" role="switch" checked/>
+                    </span>
+            {/*sliderEnabled.danceability && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
+            {!sliderEnabled.danceability && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>*/}
                 </label>
             </div>
             <div className="row">
