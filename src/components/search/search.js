@@ -20,7 +20,7 @@ const Search = () => {
             </div>
             </div>
             <div className="col-sm-2 col-md-2 col-1 text-center">
-                <button className='btn mt-3 btn-dark'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>Reload</button>
+                <button className='btn mt-3 btn-dark'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>My Playlists</button>
             </div>
             <div className="col-sm-2 col-md-2 col-1 text-center">
                 <Link to={'/'}><button className={'btn mt-3 btn-dark'}>Logout</button></Link>
