@@ -149,6 +149,8 @@ ul {
 }
 .list-group-item {
     border-radius: 0px;
+    background-color: black; 
+    border-color: red;
 }
 
 .list-group::-webkit-scrollbar {
