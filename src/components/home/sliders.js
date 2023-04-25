@@ -18,7 +18,7 @@ const Sliders = () => {
 
     return (
         <div className="row align-items-center justify-content-center ms-3 mt-4 me-3">
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0"> 
+        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0 bg-dark"> 
                 <div className="row text-center">
                 <span class="form-check form-switch">
                     <label className="form-label" for="acousticness-range">
@@ -34,7 +34,7 @@ const Sliders = () => {
                     <input id="acousticness-range" className="form-range p-4" disabled={!sliderEnabled.acousticness} onChange={(e) => dispatcher(updateSliders({...sliders, acousticness: e.target.value}))} type='range' min='0' max='100' value={sliders.acousticness}></input>
                 </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0 bg-dark">
             <div className="row text-center">
                 <span class="form-check form-switch">
                 <label for="danceability-range">
