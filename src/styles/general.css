@@ -194,7 +194,7 @@ ul {
     object-position: 50% 50%;
     overflow: hidden;
     transition: transform .2s;
-    filter: brightness(60%);
+    filter: brightness(80%);
     z-index: 0;
 }
 
