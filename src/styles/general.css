@@ -131,12 +131,13 @@ ul {
 }
 
 .list-group {
-    overflow: scroll
+    max-height: 300px;
+    margin-bottom: 20px;
+    overflow: scroll;
 }
 .next-songs {
     font-family: 'Baloo 2', cursive;
     font-size: 1.1em;
-    max-height: 300px;
 }
 
 .bg-awhite {
