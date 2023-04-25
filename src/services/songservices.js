@@ -74,6 +74,15 @@ export const getTracksFromPlaylist = async (id, sliders) => {
     let counter = 0;
     while (counter < num_tracks) {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
+
+        // need to clear out all things that are null from the track.items
+        console.log('track items before')
+        console.log(tracks.items)
+        const trackItems = tracks.items.filter((item) => item.track !== null)
+        tracks.items = trackItems;
+        console.log('track items after')
+        console.log(tracks.items)
+
         const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
             if (Object.is(tracks.items[j].track, null)) {
@@ -89,6 +98,7 @@ export const getTracksFromPlaylist = async (id, sliders) => {
             console.log('calculating curated value for: ' + trackIds[j])
             let curated_value = calculateCuratedValue(audioFeatures.audio_features[j], sliders);
             res.push({...tracks.items[j].track, curated_value: curated_value});
+            // this is wrong, track actually has 50 tracks, not 47. need to
         }
         counter+=100;
     }
