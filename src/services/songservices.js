@@ -46,11 +46,8 @@ export const getBoundedVariables = async (id) => {
             }
             trackIds.push(tracks.items[j].track.id);
         }
-        console.log(trackIds)
 
         let audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds)
-
-        console.log(audioFeatures)
 
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
             if (Object.is(audioFeatures.audio_features[j], null)) {
@@ -81,9 +78,13 @@ export const getTracksFromPlaylist = async (id, sliders) => {
             }
             trackIds.push(tracks.items[j].track.id);
         }
+        console.log('track ids are: ' + trackIds)
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
+        console.log('audiofeatures are: ' + audioFeatures)
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
             if (Object.is(audioFeatures.audio_features[j], null)) {
+                // remove the item from the trackIDs array
+                trackIds.splice(j, 1);
                 continue;
             }
             let curated_value = calculateCuratedValue(audioFeatures.audio_features[j], sliders);
