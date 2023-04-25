@@ -25,7 +25,6 @@ const Sliders = () => {
                         <span className="slider-text-color me-2 ">acousticness</span>
                         {sliderEnabled.acousticness && <span className="slider-text-color ">{sliders.acousticness}</span>}
                         <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: !sliderEnabled.acousticness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.acousticness}/>
-                        <i className="fa fas fa-circle-info text-color-green"></i>
                     </label>
                 </span>
                 </div>
@@ -197,6 +196,7 @@ const Sliders = () => {
             promise = dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
+        <i className="fa fas fa-circle-info"></i>
         </div>
     );
 }
