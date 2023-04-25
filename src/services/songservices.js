@@ -22,7 +22,10 @@ const calculateCuratedValue = (audioFeatures, sliders) => {
     let res = 0;
     for (const [key, value] of Object.entries(sliders)) {
         res += Math.abs(value - audioFeatures[key])
+        console.log('requested duration is: ' + value)
+        console.log('track duration is: ' + audioFeatures[key])
     }
+    console.log('result is: ' + res);
     return res;
 }
 // can get the playlist, find out how many tracks it has from .items.tracks.total then do a loop
@@ -78,17 +81,12 @@ export const getTracksFromPlaylist = async (id, sliders) => {
             }
             trackIds.push(tracks.items[j].track.id);
         }
-        console.log('tracks are')
-        console.log(tracks) 
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
-        console.log('audiofeatures are: ')
-        console.log(audioFeatures)
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
             if (Object.is(audioFeatures.audio_features[j], null)) {
-                // remove the item from the trackIDs array
-                trackIds.splice(j, 1);
                 continue;
             }
+            console.log('calculating curated value for: ' + trackIds[j])
             let curated_value = calculateCuratedValue(audioFeatures.audio_features[j], sliders);
             res.push({...tracks.items[j].track, curated_value: curated_value});
         }
