@@ -47,7 +47,7 @@ const PlaylistPage = () => {
             <Presets/>
             <Sliders/>
             <WebPlayback/>
-                <ul cassName="list-group">
+                <ul className="list-group">
                     {songs.map((track) => 
                         <li className="next-songs list-group-item fg-white">
                             {track.name}
