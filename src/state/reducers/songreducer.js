@@ -105,6 +105,8 @@ const userInfo = createSlice({
             },
         [getTracksFromPlaylistThunk.fulfilled]:
             (state, {payload}) => {
+                console.log('raw payload of songs and curated values are') 
+                console.log(payload)
                 state.loadingSongs = false;
                 payload = payload.filter((song) => song.album !== undefined) 
                 payload.sort((song1, song2) => song1.curated_value - song2.curated_value)
