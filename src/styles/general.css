@@ -196,6 +196,11 @@ ul {
     border-color: #484747;
 }
 
+.form-check {
+
+    min-height:250px;
+}
+
 .list-group-item {
     border-radius: 0px;
     background-color: #212529; 
