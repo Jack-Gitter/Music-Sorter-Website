@@ -78,8 +78,8 @@ export const getTracksFromPlaylist = async (id, sliders) => {
             }
             trackIds.push(tracks.items[j].track.id);
         }
-        console.log('track ids are: ')
-        console.log(trackIds) 
+        console.log('tracks are')
+        console.log(tracks) 
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
         console.log('audiofeatures are: ')
         console.log(audioFeatures)
