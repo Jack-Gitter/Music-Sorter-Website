@@ -23,7 +23,7 @@ const calculateCuratedValue = (audioFeatures, sliders) => {
     for (const [key, value] of Object.entries(sliders)) {
         res += Math.abs(value - audioFeatures[key])
         console.log('song duration is: ' + audioFeatures[key])
-        console.log('max duration is: ' + max_duration)
+        console.log('max duration is: ' + value)
     }
     return res;
 }
@@ -42,7 +42,8 @@ export const getBoundedVariables = async (id) => {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
         const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
-            if (Object.is(tracks.items[j].track, null)) {
+            if (Object.is(tracks.items[j].track, null) ||
+                tracks.items[j].track.album === undefined) {
                 continue;
             }
             trackIds.push(tracks.items[j].track.id);
