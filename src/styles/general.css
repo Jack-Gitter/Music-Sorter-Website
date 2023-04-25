@@ -83,6 +83,10 @@ body {
     color: #fff7ed;
 }
 
+.bg-white {
+   background-color: #fff7ed; 
+}
+
 .homepage-header {
     position: relative;
     width: 100%;
