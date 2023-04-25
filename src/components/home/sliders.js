@@ -33,8 +33,8 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
-                <span class="form-check form-switch m-0 p-0">
-                <label for="danceability-range form-check form-switch">
+                <span class="form-check form-switch">
+                <label for="danceability-range">
                         <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: !sliderEnabled.danceability}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.danceability}/>
                         <span className="slider-text-color me-2 ">danceability</span>
                         <span className="slider-text-color ">{sliders.danceability}</span>
@@ -49,12 +49,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0 ">
             <div className="row text-center">
+                <span class="form-check form-switch">
                 <label for="duration-range">
+                    <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: !sliderEnabled.duration_ms}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.duration_ms}/>
                     <span className="slider-text-color me-2 ">duration</span>
                     <span className="slider-text-color ">{sliders.duration_ms}</span>
-            {sliderEnabled.duration_ms && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: false}))}>Disable</button>}
-            {!sliderEnabled.duration_ms && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: true}))}>Enable</button>}
+            {/*sliderEnabled.duration_ms && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: false}))}>Disable</button>}
+            {!sliderEnabled.duration_ms && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: true}))}>Enable</button>*/}
                 </label>
+                </span>
             </div> 
             <div className="row">
                 <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration_ms}onChange={(e) => dispatcher(updateSliders({...sliders, duration_ms: e.target.value}))} type='range' min='0' max='100' value={sliders.duration_ms}></input>
@@ -62,12 +65,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
+                <span class="form-check form-switch">
                 <label for="energy-range">
                     <span className="slider-text-color me-2 ">energy</span>
                     <span className="slider-text-color ">{sliders.energy}</span>
-            {sliderEnabled.energy && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: false}))}>Disable</button>}
-            {!sliderEnabled.energy && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: true}))}>Enable</button>}
+                    <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: !sliderEnabled.energy}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.energy}/>
+            {/*sliderEnabled.energy && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: false}))}>Disable</button>}
+            {!sliderEnabled.energy && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: true}))}>Enable</button>*/}
                 </label>
+                </span>
             </div>
             <div className="row">
                 <input id="energy-range" className="form-range p-4 d-block"disabled={!sliderEnabled.energy} onChange={(e) => dispatcher(updateSliders({...sliders, energy: e.target.value}))} type='range' min='0' max='100' value={sliders.energy}></input>
@@ -75,12 +81,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
+            <span class="form-check form-switch">
             <label for="instrumental-range">
                 <span className="slider-text-color me-2 ">instrumentalness</span>
                 <span className="slider-text-color ">{sliders.instrumentalness}</span>
-            {sliderEnabled.instrumentalness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: false}))}>Disable</button>}
-            {!sliderEnabled.instrumentalness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: !sliderEnabled.instrumentalness}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.instrumentalness}/>
+            {/*sliderEnabled.instrumentalness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: false}))}>Disable</button>}
+            {!sliderEnabled.instrumentalness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input id="instrumental-range" className="form-range p-4 " disabled={!sliderEnabled.instrumentalness} onChange={(e) => dispatcher(updateSliders({...sliders, instrumentalness: e.target.value}))} type='range' min='0' max='100' value={sliders.instrumentalness}></input>
@@ -88,12 +97,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
+            <span class="form-check form-switch">
             <label for="liveness-range">
                 <span className="slider-text-color me-2 ">liveness</span>
                 <span className="slider-text-color ">{sliders.liveness}</span>
-            {sliderEnabled.liveness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: false}))}>Disable</button>}
-            {!sliderEnabled.liveness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: !sliderEnabled.liveness}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.liveness}/>
+            {/*sliderEnabled.liveness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: false}))}>Disable</button>}
+            {!sliderEnabled.liveness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input  id="liveness-range" className="form-range p-4 " disabled={!sliderEnabled.liveness} onChange={(e) => dispatcher(updateSliders({...sliders, liveness: e.target.value}))} type='range' min='0' max='100' value={sliders.liveness}></input>
@@ -101,12 +113,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
+            <span class="form-check form-switch">
             <label for="loudness-range">
                 <span className="slider-text-color me-2 ">loudness</span>
                 <span className="slider-text-color ">{sliders.loudness}</span>
-            { sliderEnabled.loudness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: false}))}>Disable</button>}
-            {!sliderEnabled.loudness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: !sliderEnabled.loudness}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.loudness}/>
+            {/* sliderEnabled.loudness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: false}))}>Disable</button>}
+            {!sliderEnabled.loudness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input id="loudness-range" className="form-range p-4 " disabled={!sliderEnabled.loudness} onChange={(e) => dispatcher(updateSliders({...sliders, loudness: e.target.value}))} type='range' min='0' max='100' value={sliders.loudness}></input>
@@ -114,12 +129,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0">
             <div className="row text-center">
+            <span class="form-check form-switch">
             <label for="speechiness-range">
                 <span className="slider-text-color me-2 ">speechiness</span>
                 <span className="slider-text-color ">{sliders.speechiness}</span>
-            {sliderEnabled.speechiness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: false}))}>Disable</button>}
-            {!sliderEnabled.speechiness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: !sliderEnabled.speechiness}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.speechiness}/>
+            {/*sliderEnabled.speechiness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: false}))}>Disable</button>}
+            {!sliderEnabled.speechiness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input id="speechiness-range" className="form-range p-4 " disabled={!sliderEnabled.speechiness} onChange={(e) => dispatcher(updateSliders({...sliders, speechiness: e.target.value}))} type='range' min='0' max='100' value={sliders.speechiness}></input>
@@ -127,12 +145,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0 justify-content-center ">
             <div className="row text-center">
+            <span class="form-check form-switch">
             <label for="tempo-range">
                 <span className="slider-text-color me-2 ">tempo</span>
                 <span className="slider-text-color  ">{sliders.tempo}</span>
-            {sliderEnabled.tempo && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: false}))}>Disable</button>}
-            {!sliderEnabled.tempo && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: !sliderEnabled.tempo}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.tempo}/>
+            {/*sliderEnabled.tempo && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: false}))}>Disable</button>}
+            {!sliderEnabled.tempo && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input  id="tempo-range" className="form-range p-4 " disabled={!sliderEnabled.tempo} onChange={(e) => dispatcher(updateSliders({...sliders, tempo: e.target.value}))} type='range' min='0' max='100' value={sliders.tempo}></input>
@@ -140,12 +161,15 @@ const Sliders = () => {
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0  justify-content-center ">
            <div className="row text-center">
+            <span class="form-check form-switch">
            <label for="valence-range">
                 <span className="slider-text-color me-2 ">valence</span>
                 <span className="slider-text-color  ">{sliders.valence}</span>
-            {sliderEnabled.valence && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: false}))}>Disable</button>}
-            {!sliderEnabled.valence && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: true}))}>Enable</button>}
+                <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: !sliderEnabled.valence}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.valence}/>
+            {/*sliderEnabled.valence && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: false}))}>Disable</button>}
+            {!sliderEnabled.valence && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: true}))}>Enable</button>*/}
             </label>
+            </span>
             </div>
             <div className="row">
                 <input id="valence-range" className="form-range p-4" disabled={!sliderEnabled.valence} onChange={(e) => dispatcher(updateSliders({...sliders, valence: e.target.value}))} type='range' min='0' max='100' value={sliders.valence}></input>
