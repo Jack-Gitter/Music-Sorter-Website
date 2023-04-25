@@ -182,7 +182,7 @@ const Sliders = () => {
                 {sliderEnabled.valence && <span className="slider-text-color  ">{sliders.valence}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: !sliderEnabled.valence}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.valence}/>
                         <i class="m-2 fa fas fa-info-circle fg-white tt">
-                            <span className='ttt'>A measure from 0 to 100 describing the musical positiveness conveyed by a track. The closer to 100, the more happy sounding the track, the closer to zero the more sad</span>
+                            <span className='ttt'>describes the musical positiveness conveyed by a track. The closer to 100, the more happy sounding the track, the closer to zero the more sad</span>
                         </i>
             </label>
             </span>
