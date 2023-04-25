@@ -54,7 +54,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2e2e2e;
+    /*background-color: #2e2e2e;*/
+    background-image: url('../images/knobs.jpg')
+
 }
 
 .br-0 {
