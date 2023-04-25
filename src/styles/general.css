@@ -83,6 +83,10 @@ body {
     color: #fff7ed;
 }
 
+.fg-black {
+    color:black;
+}
+
 .bg-white {
    background-color: #fff7ed; 
 }
