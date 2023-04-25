@@ -57,7 +57,7 @@ const Sliders = () => {
                 </span>
             </div> 
             <div className="row">
-                {sliderEnabled.duration && <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration_ms}onChange={(e) => dispatcher(updateSliders({...sliders, duration_ms: e.target.value}))} type='range' min='0' max='100' value={sliders.duration_ms}></input>}
+                {sliderEnabled.duration_ms && <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration_ms}onChange={(e) => dispatcher(updateSliders({...sliders, duration_ms: e.target.value}))} type='range' min='0' max='100' value={sliders.duration_ms}></input>}
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
@@ -155,7 +155,7 @@ const Sliders = () => {
             </span>
             </div>
             <div className="row">
-                <input id="valence-range" className="form-range p-4" disabled={!sliderEnabled.valence} onChange={(e) => dispatcher(updateSliders({...sliders, valence: e.target.value}))} type='range' min='0' max='100' value={sliders.valence}></input>
+                {sliderEnabled.valence && <input id="valence-range" className="form-range p-4" disabled={!sliderEnabled.valence} onChange={(e) => dispatcher(updateSliders({...sliders, valence: e.target.value}))} type='range' min='0' max='100' value={sliders.valence}></input>}
             </div>
         </div>
             <button className={'btn btn-dark br-0 ms-2 mt-2 me-2'} disabled={loadingMetrics || loadingSongs || currentPlaylist == -1} onClick={() => { 
