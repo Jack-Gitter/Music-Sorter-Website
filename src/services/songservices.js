@@ -78,9 +78,11 @@ export const getTracksFromPlaylist = async (id, sliders) => {
             }
             trackIds.push(tracks.items[j].track.id);
         }
-        console.log('track ids are: ' + trackIds)
+        console.log('track ids are: ')
+        console.log(trackIds) 
         const audioFeatures = await spotifyWebApiHandler.getAudioFeaturesForTracks(trackIds);
-        console.log('audiofeatures are: ' + audioFeatures)
+        console.log('audiofeatures are: ')
+        console.log(audioFeatures)
         for (let j = 0; j < audioFeatures.audio_features.length; j++) {
             if (Object.is(audioFeatures.audio_features[j], null)) {
                 // remove the item from the trackIDs array
