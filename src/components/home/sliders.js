@@ -20,12 +20,15 @@ const Sliders = () => {
         <div className="row align-items-center justify-content-center ms-3 mt-4 me-3">
         <div className="col-sm-6 col-md-4 col-lg-3 m-0 p-0"> 
                 <div className="row text-center">
+                <span class="form-check form-switch">
                     <label className="form-label" for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
                         <span className="slider-text-color ">{sliders.acousticness}</span>
-                        {sliderEnabled.acousticness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: false}))}>Disable</button>}
-                        {!sliderEnabled.acousticness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: true}))}>Enable</button>}
+                        <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: !sliderEnabled.acousticness}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.acousticness}/>
+                        {/*sliderEnabled.acousticness && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: false}))}>Disable</button>}
+                        {!sliderEnabled.acousticness && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: true}))}>Enable</button>*/}
                     </label>
+                </span>
                 </div>
                 <div className="row">
                     <input id="acousticness-range" className="form-range p-4" disabled={!sliderEnabled.acousticness} onChange={(e) => dispatcher(updateSliders({...sliders, acousticness: e.target.value}))} type='range' min='0' max='100' value={sliders.acousticness}></input>

@@ -147,6 +147,9 @@ ul {
 .wp {
     bottom:18px;
 }
+.form-check-input {
+    background-color: #212020;
+}
 .list-group-item {
     border-radius: 0px;
     background-color: #212529; 
