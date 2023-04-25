@@ -196,7 +196,7 @@ const Sliders = () => {
             promise = dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
         } >Update</button>
-        <i className="fa fas fa-circle-info"></i>
+        <i className="fa fas fa-house"></i>
         </div>
     );
 }
