@@ -52,8 +52,8 @@ const PlaylistPage = () => {
             </div>
             <Presets/>
             <Sliders/>
-            <div className="row m-2">
-                <ul className="list-group m-2">
+            <div className="row m-3">
+                <ul className="list-group m-3">
                     {songs.slice(firstSongDisplayedIDX).map((track) => 
                         <li className="next-songs list-group-item list-group-item-dark">
                             <img className={"q-image mt-1 mb-1 me-3"} src={track.album.images[0].url}></img>
