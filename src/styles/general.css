@@ -158,6 +158,10 @@ ul {
     bottom:18px;
 }
 
+.text-color-green {
+    color: greenyellow;
+}
+
 .form-check-input[type='checkbox']:checked {
     background-color: #484747;
     border-color: #484747;

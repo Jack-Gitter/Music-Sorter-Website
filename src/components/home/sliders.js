@@ -18,17 +18,14 @@ const Sliders = () => {
 
     return (
         <div className="row align-items-center justify-content-center ms-3 mt-4 me-3">
-                        <i class="fa fa-duotone fa-circle-info"></i>
         <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark "> 
                 <div className="row text-center">
                 <span class="form-check form-switch">
                     <label for="acousticness-range">
-                        <i class="fa fa-duotone fa-circle-info"></i>
                         <span className="slider-text-color me-2 ">acousticness</span>
-                        <i class="fa fa-duotone fa-circle-info"></i>
                         {sliderEnabled.acousticness && <span className="slider-text-color ">{sliders.acousticness}</span>}
-                        <i class="fa fa-duotone fa-circle-info"></i>
                         <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: !sliderEnabled.acousticness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.acousticness}/>
+                        <i class="fa fas fa-sharp fa-solid fa-circle-info text-color-green"></i>
                     </label>
                 </span>
                 </div>
