@@ -31,7 +31,7 @@ const Sliders = () => {
                 </span>
                 </div>
                 <div className="row">
-                    <input id="acousticness-range" className="form-range p-4" disabled={!sliderEnabled.acousticness} onChange={(e) => dispatcher(updateSliders({...sliders, acousticness: e.target.value}))} type='range' min='0' max='100' value={sliders.acousticness}></input>
+                    {sliderEnabled.acousticness && <input id="acousticness-range" className="form-range p-4" disabled={!sliderEnabled.acousticness} onChange={(e) => dispatcher(updateSliders({...sliders, acousticness: e.target.value}))} type='range' min='0' max='100' value={sliders.acousticness}></input>}
                 </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1 bg-dark">
@@ -143,7 +143,7 @@ const Sliders = () => {
             </span>
             </div>
             <div className="row">
-                <input id="speechiness-range" className="form-range p-4 " disabled={!sliderEnabled.speechiness} onChange={(e) => dispatcher(updateSliders({...sliders, speechiness: e.target.value}))} type='range' min='0' max='100' value={sliders.speechiness}></input>
+                {sliderEnabled.speechiness && <input id="speechiness-range" className="form-range p-4 " disabled={!sliderEnabled.speechiness} onChange={(e) => dispatcher(updateSliders({...sliders, speechiness: e.target.value}))} type='range' min='0' max='100' value={sliders.speechiness}></input>}
             </div>
         </div>
         <div className="col-sm-6 col-md-4 col-lg-3 m-1 p-1 bg-dark justify-content-center ">
