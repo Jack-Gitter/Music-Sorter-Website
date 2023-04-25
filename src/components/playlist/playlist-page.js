@@ -50,7 +50,7 @@ const PlaylistPage = () => {
                 <ul className="list-group m-2">
                     {songs.slice(firstSongDisplayedIDX).map((track) => 
                         <li className="next-songs list-group-item">
-                            {track.name} <span>&#8226;</span> {track.artists[0].name}
+                            <img src={track.album.images[0].url}></img>{track.name} <span>&#8226;</span> {track.artists[0].name}
                         </li>
                     )}
                 </ul>
