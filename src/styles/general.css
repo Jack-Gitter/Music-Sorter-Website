@@ -86,12 +86,13 @@ body {
 
 .tt .ttt {
     visibility: hidden;
-    width: 250px;
-    background-color: black;
+    width: 200px;
+    background-color: #2c3034;
     color: antiquewhite;
     text-align: center;
     padding: 5px;
     border-radius: 6px;
+    font-family: 'Baloo 2', cursive;
     
     position: absolute;
     z-index: 1;
@@ -148,7 +149,7 @@ body {
 .album-title {
    top:17%;  
    left:13%;
-   font-family: 'Baloo 2';
+   font-family: 'Baloo 2', cursive;
    font-weight: 600;
    font-size: 1.2em;
    z-index: 1;
