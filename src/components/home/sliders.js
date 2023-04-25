@@ -36,12 +36,12 @@ const Sliders = () => {
                 <label for="danceability-range">
                         <span className="slider-text-color me-2 ">danceability</span>
                         <span className="slider-text-color ">{sliders.danceability}</span>
+                        <span class="form-check form-switch m-0 p-0">
+                            <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: !sliderEnabled.danceability}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.danceability}/>
+                        </span>
             {/*sliderEnabled.danceability && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
             {!sliderEnabled.danceability && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>*/}
                 </label>
-                <span class="form-check form-switch">
-                    <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: !sliderEnabled.danceability}))}  class="form-check-input" type="checkbox" role="switch" checked={sliderEnabled.danceability}/>
-                </span>
             </div>
             <div className="row">
                 <input id="danceability-range" className="form-range p-4 " disabled={!sliderEnabled.danceability} onChange={(e) => dispatcher(updateSliders({...sliders, danceability: e.target.value}))} type='range' min='0' max='100' value={sliders.danceability}></input>
