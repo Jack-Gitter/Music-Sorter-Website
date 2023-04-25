@@ -158,15 +158,6 @@ ul {
     bottom:18px;
 }
 
-.fi {
-    animation:fadeIn 1s;
-}
-@keyframes fadeIn{ 
-    0%{opacity:0;}  
-    50%{opacity:.5;}
-    100%{opacity:1;}
-}
-
 .form-check-input[type='checkbox']:checked {
     background-color: #373636;
     border-color: #373636;
@@ -255,13 +246,13 @@ ul {
 
 
 input[type=range]::-webkit-slider-thumb {
-    background: #212020
+    background: #373636
 }
 input[type=range]::-moz-range-thumb {
-    background:#212020 
+    background:#373636 
 }
 input[type=range]::-ms-thumb {
-    background:#212020 
+    background:#373636 
 }
 
 .container-fluid{
