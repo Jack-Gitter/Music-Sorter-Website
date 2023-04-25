@@ -160,6 +160,7 @@ ul {
 
 .text-color-green {
     color: greenyellow;
+    font-size: 30px;
 }
 
 .form-check-input[type='checkbox']:checked {
