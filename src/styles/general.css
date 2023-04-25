@@ -141,8 +141,11 @@ ul {
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: #2e2e2e;
-    border-color: #141414
+    border-radius: 0px;
+}
+
+.list-group-item {
+    border-radius: 0px;
 }
 
 .list-group::-webkit-scrollbar {
