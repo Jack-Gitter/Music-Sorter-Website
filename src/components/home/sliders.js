@@ -26,8 +26,8 @@ const Sliders = () => {
                         {sliderEnabled.acousticness && <span className="slider-text-color ">{sliders.acousticness}</span>}
                         <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, acousticness: !sliderEnabled.acousticness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.acousticness}/>
                     </label>
-                    <i className="fa fa-regular fa-circle-info"></i>
-                    <i className="fa fa-regular fa-circle-question"></i>
+                    <i className="fa far fa-regular fa-circle-info"></i>
+                    <i className="fa far fa-regular fa-circle-question"></i>
                 </span>
                 </div>
                 <div className="row ">
