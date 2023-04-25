@@ -36,7 +36,9 @@ const Sliders = () => {
                 <label for="danceability-range">
                     <span className="slider-text-color me-2 ">danceability</span>
                     <span className="slider-text-color ">{sliders.danceability}</span>
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"/>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"/>
+                    </div>
             {sliderEnabled.danceability && <button className={'btn btn-dark ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: false}))}>Disable</button>}
             {!sliderEnabled.danceability && <button className={'btn btn-secondary ms-2'} onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: true}))}>Enable</button>}
                 </label>
