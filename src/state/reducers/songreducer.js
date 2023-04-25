@@ -107,6 +107,7 @@ const userInfo = createSlice({
             (state, {payload}) => {
                 state.loadingSongs = false;
                 payload.sort((song1, song2) => song1.curated_value - song2.curated_value)
+                payload = payload.filter((song) => song.album !== undefined) 
                 state.songs = payload
                 console.log(state.songs)
                 state.songUris = []
