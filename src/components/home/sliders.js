@@ -18,7 +18,7 @@ const Sliders = () => {
 
     return (
         <div className="row align-items-center justify-content-center ms-3 mt-4 me-3">
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark"> 
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi"> 
                 <div className="row text-center">
                 <span class="form-check form-switch">
                     <label for="acousticness-range">
@@ -28,11 +28,11 @@ const Sliders = () => {
                     </label>
                 </span>
                 </div>
-                <div className="row fi">
+                <div className="row ">
                     {sliderEnabled.acousticness && <input id="acousticness-range" className="form-range p-4" disabled={!sliderEnabled.acousticness} onChange={(e) => dispatcher(updateSliders({...sliders, acousticness: e.target.value}))} type='range' min='0' max='100' value={sliders.acousticness}></input>}
                 </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
                 <span class="form-check form-switch">
                 <label for="danceability-range">
@@ -42,11 +42,11 @@ const Sliders = () => {
                 </label>
                 </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.danceability && <input id="danceability-range" className="form-range p-4 " disabled={!sliderEnabled.danceability} onChange={(e) => dispatcher(updateSliders({...sliders, danceability: e.target.value}))} type='range' min='0' max='100' value={sliders.danceability}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
                 <span class="form-check form-switch">
                 <label for="duration-range">
@@ -56,11 +56,11 @@ const Sliders = () => {
                 </label>
                 </span>
             </div> 
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.duration_ms && <input id="duration-range" className="form-range p-4 " disabled={!sliderEnabled.duration_ms}onChange={(e) => dispatcher(updateSliders({...sliders, duration_ms: e.target.value}))} type='range' min='0' max='100' value={sliders.duration_ms}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
                 <span class="form-check form-switch">
                 <label for="energy-range">
@@ -70,11 +70,11 @@ const Sliders = () => {
                 </label>
                 </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.energy && <input id="energy-range" className="form-range p-4 d-block"disabled={!sliderEnabled.energy} onChange={(e) => dispatcher(updateSliders({...sliders, energy: e.target.value}))} type='range' min='0' max='100' value={sliders.energy}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
             <span class="form-check form-switch">
             <label for="instrumental-range">
@@ -84,11 +84,11 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.instrumentalness && <input id="instrumental-range" className="form-range p-4 " disabled={!sliderEnabled.instrumentalness} onChange={(e) => dispatcher(updateSliders({...sliders, instrumentalness: e.target.value}))} type='range' min='0' max='100' value={sliders.instrumentalness}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
             <span class="form-check form-switch">
             <label for="liveness-range">
@@ -98,11 +98,11 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.liveness && <input  id="liveness-range" className="form-range p-4 " disabled={!sliderEnabled.liveness} onChange={(e) => dispatcher(updateSliders({...sliders, liveness: e.target.value}))} type='range' min='0' max='100' value={sliders.liveness}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
             <span class="form-check form-switch">
             <label for="loudness-range">
@@ -112,11 +112,11 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi ">
+            <div className="row  ">
                 {sliderEnabled.loudness && <input id="loudness-range" className="form-range p-4 " disabled={!sliderEnabled.loudness} onChange={(e) => dispatcher(updateSliders({...sliders, loudness: e.target.value}))} type='range' min='0' max='100' value={sliders.loudness}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi">
             <div className="row text-center">
             <span class="form-check form-switch">
             <label for="speechiness-range">
@@ -126,11 +126,11 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.speechiness && <input id="speechiness-range" className="form-range p-4 " disabled={!sliderEnabled.speechiness} onChange={(e) => dispatcher(updateSliders({...sliders, speechiness: e.target.value}))} type='range' min='0' max='100' value={sliders.speechiness}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi justify-content-center ">
             <div className="row text-center">
             <span class="form-check form-switch">
             <label for="tempo-range">
@@ -140,11 +140,11 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi">
+            <div className="row ">
                 {sliderEnabled.tempo && <input  id="tempo-range" className="form-range p-4 " disabled={!sliderEnabled.tempo} onChange={(e) => dispatcher(updateSliders({...sliders, tempo: e.target.value}))} type='range' min='0' max='100' value={sliders.tempo}></input>}
             </div>
         </div>
-        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark  justify-content-center ">
+        <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark fi  justify-content-center ">
            <div className="row text-center">
             <span class="form-check form-switch">
            <label for="valence-range">
@@ -154,7 +154,7 @@ const Sliders = () => {
             </label>
             </span>
             </div>
-            <div className="row fi">
+            <div className="row">
                 {sliderEnabled.valence && <input id="valence-range" className="form-range p-4" disabled={!sliderEnabled.valence} onChange={(e) => dispatcher(updateSliders({...sliders, valence: e.target.value}))} type='range' min='0' max='100' value={sliders.valence}></input>}
             </div>
         </div>
