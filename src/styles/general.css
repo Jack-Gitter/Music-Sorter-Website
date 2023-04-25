@@ -134,7 +134,14 @@ ul {
     max-height: 125px;
     margin-bottom: 20px;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+.list-group::-webkit-scrollbar {
+    display:none
+}
+
 .next-songs {
     font-family: 'Baloo 2', cursive;
     font-size: 1.1em;
