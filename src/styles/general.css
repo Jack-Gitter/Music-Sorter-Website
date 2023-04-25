@@ -46,6 +46,11 @@ body {
     background-color: rgb(125, 124, 124);
 }
 
+.btn-opacity {
+    opacity: 0.8;
+    filter: alpha(opacity=80); 
+}
+
 .login-page {
     overflow: hidden;
     position: absolute;
@@ -55,7 +60,9 @@ body {
     justify-content: center;
     align-items: center;
     /*background-color: #2e2e2e;*/
-    background-image: url('../images/knobs.jpg')
+    background-image: url('../images/knobs.jpg');
+    background-size: cover;
+    filter: grayscale(80%)
 
 }
 
