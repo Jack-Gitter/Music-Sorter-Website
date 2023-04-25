@@ -130,6 +130,11 @@ ul {
     border-width: 1px;*/
 }
 
+.q-image {
+    width: 15px;
+    height: 15px;
+}
+
 .list-group {
     max-height: 125px;
     margin-bottom: 20px;
