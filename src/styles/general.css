@@ -159,8 +159,8 @@ ul {
 }
 
 .form-check-input[type='checkbox']:checked {
-    background-color: #373636;
-    border-color: #373636;
+    background-color: #484747;
+    border-color: #484747;
   }
 
 .list-group-item {
@@ -246,13 +246,13 @@ ul {
 
 
 input[type=range]::-webkit-slider-thumb {
-    background: #373636
+    background: #484747
 }
 input[type=range]::-moz-range-thumb {
-    background:#373636 
+    background:#484747 
 }
 input[type=range]::-ms-thumb {
-    background:#373636 
+    background:#484747 
 }
 
 .container-fluid{
