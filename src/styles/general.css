@@ -81,6 +81,9 @@ body {
     justify-content: center;
 }
 
+.ovf-h {
+    overflow: hidden;
+}
 
 .no-pad {
     padding-right:0;
@@ -110,7 +113,6 @@ body {
    width: 77%;
    word-wrap:break-word;
    overflow: hidden;
-   max-width: 75ch;
 }
 
 
