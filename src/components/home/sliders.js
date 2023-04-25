@@ -148,7 +148,7 @@ const Sliders = () => {
                 {sliderEnabled.speechiness && <span className="slider-text-color ">{sliders.speechiness}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: !sliderEnabled.speechiness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.speechiness}/>
                         <i class="m-2 fa fas fa-info-circle fg-white tt">
-                            <span className='ttt'>Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 100 the attribute value. Values above 66 describe tracks that are probably made entirely of spoken words. Values between 33 and 66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 33 most likely represent music and other non-speech-like tracks.</span> 
+                            <span className='ttt'>Speechiness detects the presence of spoken words in a track. the more the audio is just speech the closer to 100 the attribute value</span> 
                         </i>
             </label>
             </span>
@@ -182,7 +182,7 @@ const Sliders = () => {
                 {sliderEnabled.valence && <span className="slider-text-color  ">{sliders.valence}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: !sliderEnabled.valence}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.valence}/>
                         <i class="m-2 fa fas fa-info-circle fg-white tt">
-                            <span className='ttt'>A measure from 0 to 100 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</span>
+                            <span className='ttt'>A measure from 0 to 100 describing the musical positiveness conveyed by a track. The closer to 100, the more happy sounding the track, the closer to zero the more sad</span>
                         </i>
             </label>
             </span>
