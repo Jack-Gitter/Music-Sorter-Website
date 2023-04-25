@@ -46,7 +46,7 @@ const PlaylistPage = () => {
             </div>
             <Presets/>
             <Sliders/>
-            <div className="row">
+            <div className="row m-2">
                 <ul className="list-group m-2">
                     {songs.slice(firstSongDisplayedIDX).map((track) => 
                         <li className="next-songs list-group-item">
