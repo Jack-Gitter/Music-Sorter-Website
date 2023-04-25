@@ -136,7 +136,7 @@ ul {
 }
 
 .list-group {
-    max-height: 125px;
+    max-height: 150px;
     margin-bottom: 20px;
     overflow: scroll;
     -ms-overflow-style: none;
