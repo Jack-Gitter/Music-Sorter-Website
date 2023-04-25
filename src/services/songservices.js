@@ -70,7 +70,8 @@ export const getTracksFromPlaylist = async (id, sliders) => {
         const tracks = await spotifyWebApiHandler.getPlaylistTracks(id, {offset: counter});
         const trackIds = [];
         for (let j = 0; j < tracks.items.length; j++) {
-            if (Object.is(tracks.items[j].track, null)) {
+            if (Object.is(tracks.items[j].track, null) ||
+                (Object.is(tracks.items[j].track.album, undefined))) {
                 continue;
             }
             trackIds.push(tracks.items[j].track.id);
