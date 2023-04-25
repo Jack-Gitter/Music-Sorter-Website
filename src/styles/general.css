@@ -109,6 +109,8 @@ body {
    z-index: 1;
    width: 77%;
    word-wrap:break-word;
+   overflow: hidden;
+   max-width: 75ch;
 }
 
 
