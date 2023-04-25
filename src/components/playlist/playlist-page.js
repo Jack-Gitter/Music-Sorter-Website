@@ -25,6 +25,12 @@ const PlaylistPage = () => {
     const access_start = location.indexOf('access_token')
     const access_token = location.substring(access_start + 'access_token='.length);
     
+    const millisToMinutesAndSeconds = (millis) => {
+        var minutes = Math.floor(millis / 60000);
+        var seconds = ((millis % 60000) / 1000).toFixed(0);
+        return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+      }
+    
 
     useEffect(() => {
         dispatcher(setAccessToken(access_token));
@@ -50,7 +56,11 @@ const PlaylistPage = () => {
                 <ul className="list-group m-2">
                     {songs.slice(firstSongDisplayedIDX).map((track) => 
                         <li className="next-songs list-group-item">
-                            <img className={"q-image m-1"} src={track.album.images[0].url}></img>{track.name} <span>&#8226;</span> {track.artists[0].name}
+                            <img className={"q-image m-3"} src={track.album.images[0].url}></img>
+                            {track.name} 
+                            <span>&#8226;</span> 
+                            {track.artists[0].name}
+                            {millisToMinutesAndSeconds(track.duration_ms)}
                         </li>
                     )}
                 </ul>
