@@ -149,8 +149,9 @@ ul {
 }
 .list-group-item {
     border-radius: 0px;
-    background-color: black; 
-    border-color: red;
+    background-color: #414548; 
+    border-color: #747373;
+    color: antiquewhite;
 }
 
 .list-group::-webkit-scrollbar {
