@@ -18,11 +18,11 @@ const Sliders = () => {
 
     return (
         <div className="row align-items-center justify-content-center ms-3 mt-4 me-3">
-        <i class="fa fas fa-search"></i>
+        <i class="fa fas fa-search fg-white"></i>
         <div className="col-sm-6 col-md-4 col-lg-3 m-2 p-2 bg-dark "> 
-        <i class="fa fas fa-search"></i>
+        <i class="fa fas fa-search fg-white"></i>
                 <div className="row text-center">
-                <i class="fa fas fa-search"></i>
+                <i class="fa fas fa-search fg-white"></i>
                 <span class="form-check form-switch">
                     <label for="acousticness-range">
                         <span className="slider-text-color me-2 ">acousticness</span>
