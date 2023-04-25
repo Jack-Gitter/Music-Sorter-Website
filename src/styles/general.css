@@ -150,9 +150,9 @@ ul {
 .list-group-item {
     border-radius: 0px;
     background-color: #212529; 
-    border-bottom: none;
+    /*border-top: none;
     border-left: none;
-    border-right: none;
+    border-right: none;*/
     border-color: #747373;
     color: antiquewhite;
 }
