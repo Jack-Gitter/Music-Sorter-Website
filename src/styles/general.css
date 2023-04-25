@@ -131,10 +131,9 @@ ul {
 }
 
 .next-songs {
-    right: 4%;
-    top:   4%;
     font-family: 'Baloo 2', cursive;
     font-size: 1.1em;
+    max-height: 300px;
 }
 
 .bg-awhite {
