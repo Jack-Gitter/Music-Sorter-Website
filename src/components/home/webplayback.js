@@ -8,7 +8,7 @@ const WebPlayback = () => {
 
     const dispatcher = useDispatch()
     const {currentPlaylist, loadingSongs, songUris, accessToken, refreshToken, playlists, songs, sliders} = useSelector((store) => store.userInfoReducer);
-
+    if (!accessToken) return null
     return (
         <div className="row ms-3 me-3 position-relative wp">
         {songUris.length > 0 && <SpotifyPlayer 
