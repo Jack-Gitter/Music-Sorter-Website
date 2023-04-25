@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap');
 
 body {
     font-family: 'Oswald';
@@ -116,7 +116,8 @@ body {
 .album-title {
    top:17%;  
    left:13%;
-   font-family: 'Baloo 2', cursive;
+   font-family: 'Baloo 2';
+   font-weight: 600;
    font-size: 1.2em;
    z-index: 1;
    width: 77%;
