@@ -50,7 +50,7 @@ const PlaylistPage = () => {
             <div className="row">
                 <ul className="list-group">
                     {songs.map((track) => 
-                        <li className="next-songs list-group-item fg-white">
+                        <li className="next-songs list-group-item">
                             {track.name}
                         </li>
                     )}
