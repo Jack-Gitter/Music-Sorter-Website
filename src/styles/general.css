@@ -79,6 +79,30 @@ body {
     height: 100%;
 }
 
+.tt {
+    position: relative;
+    display: inline-block;
+}
+
+.tt .ttt {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    
+    position: absolute;
+    z-index: 1;
+}
+
+.tt:hover .ttt {
+    visibility: visible;
+
+}
+
+
 .fg-white {
     color: #fff7ed;
 }
