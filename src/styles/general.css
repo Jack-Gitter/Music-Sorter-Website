@@ -148,7 +148,11 @@ ul {
     bottom:18px;
 }
 
-input[type=checkbox]{accent-color:#212020;};
+
+.form-check-input {
+    accent-color: #212020;
+    enable-background: #212020;
+}
 
 .list-group-item {
     border-radius: 0px;
