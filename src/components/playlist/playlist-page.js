@@ -55,6 +55,8 @@ const PlaylistPage = () => {
             <div className="row ms-3 me-3">
                 <ul className="list-group p-0">
                     {songs.slice(firstSongDisplayedIDX).map((track) => 
+                        <>
+                        {console.log(track)}
                         <li className="next-songs list-group-item">
                             <img className={"q-image mt-1 mb-1 me-3"} 
                             src={(track.album !== undefined && track.album.images !== undefined && track.album.images[0] !== undefined) ? track.album.images[0].url: ''}></img>
@@ -65,6 +67,7 @@ const PlaylistPage = () => {
                                 {millisToMinutesAndSeconds(track.duration_ms)}
                             </span>
                         </li>
+                        </>
                     )}
                 </ul>
             </div>
