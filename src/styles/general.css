@@ -141,6 +141,7 @@ ul {
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background-color: #2e2e2e;
 }
 
 .list-group::-webkit-scrollbar {
