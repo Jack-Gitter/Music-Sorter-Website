@@ -49,7 +49,7 @@ const PlaylistPage = () => {
             <WebPlayback/>
             <div className="row next-songs">
                 <ul cassName="list-group">
-                    {songs.slice(firstSongDisplayedIDX,firstSongDisplayedIDX+5).map((track) => 
+                    {songs.map((track) => 
                         <li className="list-group-item fg-white">
                             {track.name}
                         </li>
