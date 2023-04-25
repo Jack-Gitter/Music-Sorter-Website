@@ -59,7 +59,9 @@ const Sliders = () => {
                     <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, duration_ms: !sliderEnabled.duration_ms}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.duration_ms}/>
                     <span className="slider-text-color me-2 ">duration</span>
                     {sliderEnabled.duration_ms && <span className="slider-text-color ">{sliders.duration_ms}</span>}
-                        <i title="duration"class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i className="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>Represents the duration of tracks for a given playlist, where 100 is the longest track on the playlist and 0 is the shortest track on the playlist</span>
+                        </i>
                 </label>
                 </span>
             </div> 
@@ -74,7 +76,9 @@ const Sliders = () => {
                 <span className="slider-text-color me-2 ">energy</span>
                     {sliderEnabled.energy && <span className="slider-text-color ">{sliders.energy}</span>}
                     <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, energy: !sliderEnabled.energy}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.energy}/>
-                        <i title="energy" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>Energy is a measure from 0 to 100 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</span>
+                        </i>
                 </label>
                 </span>
             </div>
@@ -89,7 +93,12 @@ const Sliders = () => {
                 <span className="slider-text-color me-2 ">instrumentalness</span>
                 {sliderEnabled.instrumentalness && <span className="slider-text-color ">{sliders.instrumentalness}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, instrumentalness: !sliderEnabled.instrumentalness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.instrumentalness}/>
-                        <i title="instrumentalness" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="tt m-2 fa fas fa-info-circle fg-white">
+                            <span className='ttt'>Predicts whether a track contains no vocals. 
+                                                    "Ooh" and "aah" sounds are treated as instrumental in this context. 
+                                                    Rap or spoken word tracks are clearly "vocal". The closer the instrumentalness value is to 100, the greater likelihood the track contains no vocal content. Values above 50 are intended to represent instrumental tracks, but confidence is higher as the value approaches 100.
+                            </span>
+                        </i>
             </label>
             </span>
             </div>
@@ -104,7 +113,9 @@ const Sliders = () => {
             <span className="slider-text-color me-2 ">liveness</span>
                 {sliderEnabled.liveness && <span className="slider-text-color ">{sliders.liveness}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, liveness: !sliderEnabled.liveness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.liveness}/>
-                        <i title="liveness" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 80 provides strong likelihood that the track is live.</span>
+                        </i>
             </label>
             </span>
             </div>
@@ -119,7 +130,9 @@ const Sliders = () => {
                 <span className="slider-text-color me-2 ">loudness</span>
                 {sliderEnabled.loudness && <span className="slider-text-color ">{sliders.loudness}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, loudness: !sliderEnabled.loudness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.loudness}/>
-                        <i title="loudness" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i  class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>How loud the song is. 100 is the loudest song on the track, and 0 is the quietest</span>
+                        </i>
             </label>
             </span>
             </div>
@@ -134,7 +147,9 @@ const Sliders = () => {
              <span className="slider-text-color me-2 ">speechiness</span>
                 {sliderEnabled.speechiness && <span className="slider-text-color ">{sliders.speechiness}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, speechiness: !sliderEnabled.speechiness}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.speechiness}/>
-                        <i title="speechiness" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 100 the attribute value. Values above 66 describe tracks that are probably made entirely of spoken words. Values between 33 and 66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 33 most likely represent music and other non-speech-like tracks.</span> 
+                        </i>
             </label>
             </span>
             </div>
@@ -149,7 +164,9 @@ const Sliders = () => {
              <span className="slider-text-color me-2 ">tempo</span>
                 {sliderEnabled.tempo && <span className="slider-text-color  ">{sliders.tempo}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, tempo: !sliderEnabled.tempo}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.tempo}/>
-                        <i title="tempo" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>The overall beats per minute of a track. 100 represents the song with the highest tempo in the playlist, and 0 is the lowest</span>
+                        </i>
             </label>
             </span>
             </div>
@@ -164,7 +181,9 @@ const Sliders = () => {
             <span className="slider-text-color me-2 ">valence</span>
                 {sliderEnabled.valence && <span className="slider-text-color  ">{sliders.valence}</span>}
                 <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, valence: !sliderEnabled.valence}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.valence}/>
-                        <i title="valence" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className='ttt'>A measure from 0 to 100 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</span>
+                        </i>
             </label>
             </span>
             </div>
