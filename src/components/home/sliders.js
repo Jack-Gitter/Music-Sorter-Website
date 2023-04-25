@@ -42,7 +42,9 @@ const Sliders = () => {
                         <input onClick={() => dispatcher(updateSliderEnabled({...sliderEnabled, danceability: !sliderEnabled.danceability}))}  class="form-check-input " type="checkbox" role="switch" checked={sliderEnabled.danceability}/>
                         <span className="slider-text-color me-2 ">danceability</span>
                         {sliderEnabled.danceability && <span className="slider-text-color ">{sliders.danceability}</span>}
-                        <i title="danceability" class="m-2 fa fas fa-info-circle fg-white"></i>
+                        <i class="m-2 fa fas fa-info-circle fg-white tt">
+                            <span className="ttt">Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0 is least danceable and 100 is most danceable.</span>
+                        </i>
                 </label>
                 </span>
             </div>
