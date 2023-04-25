@@ -158,6 +158,14 @@ ul {
     bottom:18px;
 }
 
+.fi {
+    animation:fadeIn 2s;
+}
+@keyframes fadeIn{ 
+    0%{opacity:0;}  
+    80%{opacity:0;}
+    100%{opacity:1;}
+}
 
 .form-check-input[type='checkbox']:checked {
     background-color: #373636;
