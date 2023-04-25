@@ -60,7 +60,9 @@ const PlaylistPage = () => {
                             {track.name} 
                             <span>&#8226;</span> 
                             {track.artists[0].name}
-                            {millisToMinutesAndSeconds(track.duration_ms)}
+                            <span className="float-right">
+                                {millisToMinutesAndSeconds(track.duration_ms)}
+                            </span>
                         </li>
                     )}
                 </ul>
