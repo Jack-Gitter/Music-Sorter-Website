@@ -197,8 +197,8 @@ ul {
 }
 
 .form-check {
-
-    min-height:250px;
+    min-height:50px;
+    max-height:50px;
 }
 
 .list-group-item {
