@@ -197,8 +197,13 @@ ul {
 }
 
 .form-check {
-    min-height:50px;
-    max-height:50px;
+    min-height:30px;
+    max-height:30px;
+}
+
+.if {
+    min-height:10px;
+    max-height: 10px;
 }
 
 .list-group-item {
