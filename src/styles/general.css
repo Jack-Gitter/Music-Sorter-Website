@@ -202,8 +202,8 @@ ul {
 }
 
 .if {
-    min-height:10px;
-    max-height: 10px;
+    min-height:25px;
+    max-height: 25px;
 }
 
 .list-group-item {
