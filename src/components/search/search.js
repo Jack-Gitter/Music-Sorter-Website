@@ -19,10 +19,10 @@ const Search = () => {
                 </button>
             </div>
             </div>
-            <div className="col-3 col-md-2 col-1 text-center">
+            <div className="col-6 col-md-2 col-1 text-center">
                 <button className='btn mt-3 mb-3 btn-dark'onClick={() => {dispatcher(getUserPlaylistsThunk());}}>My Playlists</button>
             </div>
-            <div className="col-3 col-md-2 col-1 text-center">
+            <div className="col-6 col-md-2 col-1 text-center">
                 <Link to={'/'}><button className={'btn mt-3 btn-dark'}>Logout</button></Link>
             </div>
         </>
