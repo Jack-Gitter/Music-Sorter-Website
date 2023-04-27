@@ -227,7 +227,7 @@ const Sliders = () => {
             }
             promise = dispatcher(getTracksFromPlaylistThunk({id: currentPlaylist, sliders: slider_map}));
             }
-        } >Update</button>
+        } >Play</button>
         </div>
     );
 }
