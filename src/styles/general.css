@@ -283,7 +283,7 @@ ul {
     margin:0px;
 }
 
-.album-title:hover .playlist-img {
+.album-title:hover + .playlist-img {
     filter:brightness(30%)
 }
 .album-title-big {
