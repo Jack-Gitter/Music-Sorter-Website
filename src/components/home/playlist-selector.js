@@ -38,7 +38,7 @@ const PlaylistSelector = () => {
             <div className="col-sm-6 col-md-4 col-lg-3 ovf-h position-relative increase-size mt-2 mb-2 p-0"> 
                 <Link className="link-tag" 
                 to={`/playlist/${getPlaylistID(plist.name)}/${plist.name}/access_token=${accessToken}`}>
-                <span className="fg-white position-absolute album-title">{plist.name}</span>
+                <span className="fg-white position-absolute album-title appear-on-hover">{plist.name}</span>
                         <img className={`playlist-img rounded mx-auto d-block m-0`} src={`
                             ${ plist.images[0] === undefined ? 'https://picsum.photos/200/300' : plist.images[0].url}
                         `}>

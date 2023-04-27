@@ -241,6 +241,13 @@ ul {
     z-index: 0;
 }
 
+.appear-on-hover {
+    visibility: hidden;
+} 
+
+.increase-size:hover .appear-on-hover {
+    visibility: visible;
+}
 
 .increase-size:hover {
     transform: scale(1.05);
