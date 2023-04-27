@@ -241,6 +241,10 @@ ul {
     z-index: 0;
 }
 
+.playlist-img: hover {
+    filter: brightness(30%);
+}
+
 .appear-on-hover {
     visibility: hidden;
 } 
