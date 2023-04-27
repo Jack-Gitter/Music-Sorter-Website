@@ -241,7 +241,7 @@ ul {
     z-index: 0;
 }
 
-.playlist-img: hover {
+.playlist-img:hover {
     filter: brightness(30%);
 }
 
