@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Oswald';
-    background-color: #2e2e2e;
+    background-color: #121212;
 }
 
 .btn-green {
@@ -208,8 +208,8 @@ ul {
 
 .list-group-item {
     border-radius: 0px;
-    background-color: #212529; 
-    border-color: #373636;
+    background-color: #303133; 
+    border-color: #545252;
     color: antiquewhite;
 }
 
