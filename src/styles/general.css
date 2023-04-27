@@ -173,6 +173,8 @@ ul {
     border-width: 1px;*/
 }
 
+
+
 .q-image {
     width: 50px;
     height: 50px;
@@ -281,6 +283,9 @@ ul {
     margin:0px;
 }
 
+.album-title:hover .playlist-img {
+    filter:brightness(30%)
+}
 .album-title-big {
    bottom:20%;  
    left:5%;
