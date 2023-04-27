@@ -136,7 +136,8 @@ body {
 
 
 .header-color {
-    background-color: #E24A37;
+    background-color: #802c21;
+    filter: opacity(50%)
 }
 
 .link-tag {
